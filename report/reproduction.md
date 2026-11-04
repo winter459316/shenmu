@@ -5,13 +5,13 @@
 ## 一、准备文件与环境
 
 1. 安装 Python 3.12 x64、串口驱动及支持 WebGL 2 的浏览器。
-2. 解压完整复现包，保持 `shenmu` 和 `private_runtime` 位于同一级目录。
+2. 克隆完整仓库，保留根目录的 `private_runtime` 文件夹。
 3. 连接双目 USB 摄像头、PS_ETH 网口、串口和 HDMI 显示器。
 4. 开发板使用配套厂商 AArch64 Linux 基础系统；基础系统镜像需单独准备。
 
 ## 二、安装电脑端
 
-1. 运行 `setup.cmd`。
+1. 运行 `setup.cmd`，安装器自动合并 `private_runtime` 中的资产分卷。
 2. 需要指定 Python 或资产位置时，改用以下命令：
 
    ```powershell

@@ -1,0 +1,242 @@
+{
+  "stage_seconds": {
+    "capture": 0.22394861999998739,
+    "pause_preview": 0.4318600600000764,
+    "load_pl": 0.9332645939999793,
+    "rectification": 0.7673168039999609,
+    "fast_inference": 20.739624949000017,
+    "restore_preview": 2.322067854000011,
+    "geometry": 0.06773190699993847
+  },
+  "stage_began": 595.844352226,
+  "job_id": "3ddbe9fdd3534aeb904db25b38fc322c",
+  "stage": "ready",
+  "updated": 1643422095.0030675,
+  "busy": false,
+  "error": "",
+  "started": 1643422069.5169628,
+  "video_frame_input": true,
+  "rectification": {
+    "transport_optimized": true,
+    "breakdown_seconds": {
+      "imports": 0.0003729840000232798,
+      "setup": 0.13631812300002366,
+      "input_copy": 0.015712777000089773,
+      "output_copy": 0.018910759000164035,
+      "pl": 0.4848884890000136,
+      "parity": 0.07804619000000912,
+      "archive": 0.018650207000064256
+    },
+    "pl_rectification_seconds": 0.4848884890000136,
+    "rectification_parity": true,
+    "native_sha256": "f509cf065e51b5ee9d3f773943c56f8b5ae5c79c099200f020b7bc1fa8df4e00",
+    "resident_worker": true
+  },
+  "processing_preview": {
+    "job_id": "3ddbe9fdd3534aeb904db25b38fc322c",
+    "pid": 3155,
+    "running": false,
+    "segments": [
+      {
+        "profile": "pl2",
+        "sha256": "8b74614cbcea280f18a8c26f34771a8c6a2fa7be3f74cfed5cde6d8409452ff8",
+        "start_monotonic": 571.934790463,
+        "vdma_drained": true,
+        "frame_sha256": "34e864b23bc7a8bc51429ae13da84d5c71e870514f043506ed4ca5c0ef5a344c",
+        "end_monotonic": 581.147673517
+      },
+      {
+        "profile": "pl3",
+        "sha256": "b02da0fbf2725ca63b8b0e1a05c64426db12dc5c7d317e6967f384baf4ccb5ba",
+        "start_monotonic": 581.406220792,
+        "vdma_drained": true,
+        "frame_sha256": "34e864b23bc7a8bc51429ae13da84d5c71e870514f043506ed4ca5c0ef5a344c",
+        "end_monotonic": 584.505572391
+      },
+      {
+        "profile": "pl2",
+        "sha256": "8b74614cbcea280f18a8c26f34771a8c6a2fa7be3f74cfed5cde6d8409452ff8",
+        "start_monotonic": 584.718333259,
+        "vdma_drained": true,
+        "frame_sha256": "34e864b23bc7a8bc51429ae13da84d5c71e870514f043506ed4ca5c0ef5a344c",
+        "end_monotonic": 593.457584895
+      }
+    ],
+    "error": "",
+    "native_sha256": "f509cf065e51b5ee9d3f773943c56f8b5ae5c79c099200f020b7bc1fa8df4e00",
+    "frame_sha256": "34e864b23bc7a8bc51429ae13da84d5c71e870514f043506ed4ca5c0ef5a344c",
+    "framebuffer": [
+      "0x679e0000",
+      "0x67c83000"
+    ],
+    "frames": 3,
+    "display_mode": "captured_still",
+    "vdma_drained": true
+  },
+  "restore_breakdown_seconds": {
+    "static_hdmi_stop": 0.18269791699992766,
+    "bit_restore": 0.1818978489999381,
+    "geometry": 0.06798365999998168,
+    "resume_detail": {
+      "restore_mmio_and_thaw": 0.025518175000001975,
+      "uvc_reopen_and_fresh_preview": 1.8440173830000504,
+      "keys_and_ownership_verification": 0.061752928000032625
+    },
+    "camera_keys_resume": 1.9372767760000897
+  },
+  "total_seconds": 25.465186561999985,
+  "stable_restored": true,
+  "package_sha256": "e7386d62268cdb0b3e919787c221ab9145eed104e9b5442495295f14b03444e0",
+  "package_bytes": 5077138,
+  "inference": {
+    "job_id": "3ddbe9fdd3534aeb904db25b38fc322c",
+    "backend": "Fast-FoundationStereo: A53 + PL INT16/INT48 convolution blocks plus two FP32 ConvTranspose3D nodes; three further Conv3D nodes PL3 exact FP32; other network operations A53 FP32",
+    "rectification": "PL fixed-point calibrated maps; exact preview parity checked",
+    "geometry": "PL FGP1 FP64 Q projection, FP32 XYZ mm",
+    "input_wh": [
+      320,
+      360
+    ],
+    "iterations": 2,
+    "max_disparity": 192,
+    "threads": 4,
+    "arithmetic": "INT16 x INT16 / INT48 accumulation in two PL blocks; FP32 elsewhere",
+    "load_seconds": 0.0,
+    "model_resident": true,
+    "model_initial_load_seconds": 4.578043227999984,
+    "worker_completed_before": 1,
+    "forward_seconds": 20.37069640900006,
+    "peak_rss_kib": 453340,
+    "pl": {
+      "copyin_seconds": 0.012511424999956944,
+      "device_seconds": 2.9004060590000336,
+      "copyout_seconds": 0.19789353900000606,
+      "calls": 2
+    },
+    "conv_pl": {
+      "copyin_seconds": 0.20455353399995602,
+      "device_seconds": 2.929032386000131,
+      "copyout_seconds": 0.1919518299999936,
+      "calls": 5
+    },
+    "hole_filling": false,
+    "pl3": {
+      "enabled": true,
+      "candidate_sha256": "b02da0fbf2725ca63b8b0e1a05c64426db12dc5c7d317e6967f384baf4ccb5ba",
+      "clock_mhz": 160.0,
+      "nodes": [
+        {
+          "index": 827,
+          "input_sha256": null,
+          "output_sha256": null,
+          "tensor_digest_recording": false,
+          "exact_independent_photo_trace": false,
+          "commands": 2160,
+          "active_cycles": 227111323,
+          "seconds": {
+            "upload_and_descriptors": 0.025140671000031034,
+            "dispatch_and_compute": 1.4282278140000244,
+            "download": 0.11728033300005336,
+            "bias_and_exact_trace_check": 0.0068853190000481845
+          }
+        },
+        {
+          "index": 830,
+          "input_sha256": null,
+          "output_sha256": null,
+          "tensor_digest_recording": false,
+          "exact_independent_photo_trace": false,
+          "commands": 2160,
+          "active_cycles": 83709942,
+          "seconds": {
+            "upload_and_descriptors": 0.03270462700004373,
+            "dispatch_and_compute": 0.5314692250000235,
+            "download": 0.12063119599997663,
+            "bias_and_exact_trace_check": 0.006163131999983307
+          }
+        },
+        {
+          "index": 831,
+          "input_sha256": null,
+          "output_sha256": null,
+          "tensor_digest_recording": false,
+          "exact_independent_photo_trace": false,
+          "commands": 2160,
+          "active_cycles": 99007664,
+          "seconds": {
+            "upload_and_descriptors": 0.049638046999916696,
+            "dispatch_and_compute": 0.6270137509999358,
+            "download": 0.1161016410000002,
+            "bias_and_exact_trace_check": 0.0064287249999779306
+          }
+        }
+      ],
+      "interval": {
+        "load_pl3_seconds": 0.15333057399993777,
+        "backup_seconds": 0.0,
+        "dead_scratch_contents_not_preserved": true,
+        "restore_pl2_with_byte_verification_seconds": 0.15547947599998224,
+        "preserved_native_last_epoch": 2316556823454292304
+      },
+      "commands": 6480,
+      "backend": "PL3 exact FP32 Conv3D MAC; PS bias and existing activations",
+      "automatic_switch": true,
+      "speedup_qualified": false
+    },
+    "pl3_nodes": [
+      827,
+      830,
+      831
+    ],
+    "automatic_pl2_pl3": true,
+    "input_preparation_seconds": 0.06524497299994891,
+    "geometry_pending": false,
+    "transpose_accelerated": true,
+    "inference_optimized": true,
+    "sampling_backend": "A53 four-way exact FP32 Sample1D",
+    "transport_optimized": true,
+    "layout_optimized": true,
+    "layout_model_sha256": "f563d58f06cc8bdc735fe14984e32d517a0c55dd8572e1acc83ba0f8d5f840e5",
+    "layout_operation": "FP32 bit-preserving matrix transpose; shared by both iterations",
+    "mixed_blocks": 2,
+    "mixed_pl": {
+      "initial_clipped": 0,
+      "intermediate_clipped": 0,
+      "fp32_fallback_blocks": 0,
+      "integer_stage_calls": 5
+    },
+    "hardware_profile": "fast_infer2_v1",
+    "hardware_sha256": "8b74614cbcea280f18a8c26f34771a8c6a2fa7be3f74cfed5cde6d8409452ff8",
+    "removed_blocks": [
+      "sgm",
+      "geometry",
+      "completion"
+    ],
+    "geometry_seconds": 0.0254023640000014,
+    "geometry_pl": {
+      "backend": "PL FGP1 in preview/section image",
+      "input": "unchanged FP32 disparity",
+      "intermediate": "FP64",
+      "output": "FP32 XYZ millimetres",
+      "valid_points": 115107,
+      "points": 115200,
+      "packing_seconds": 0.005764557000020432,
+      "copyin_seconds": 0.002165762000004179,
+      "device_seconds": 0.005680946999973457,
+      "copyout_seconds": 0.007034839999960241,
+      "total_seconds": 0.0254023640000014,
+      "calls": 1
+    },
+    "valid_pixels": 115107,
+    "result_encoding": "NPZ ZIP_STORED; lossless array bytes",
+    "archive_seconds": 0.033426144000031854
+  },
+  "trace_monotonic": {
+    "api_received": 569.613052192,
+    "script_entered": 569.779664219,
+    "checks_done": 570.359524348,
+    "core_finished": 595.8247087,
+    "ready": 595.843777351
+  },
+  "server_monotonic": 595.915392877
+}

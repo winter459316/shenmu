@@ -1,5 +1,5 @@
 {
-  "purpose": "Submission file integrity manifest",
+  "purpose": "Repository file integrity manifest",
   "files": [
     {
       "path": ".gitattributes",
@@ -8,8 +8,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 225,
-      "sha256": "71c0effaf29fde207337a80f0e41252c47a14c237bd8a793f2ddf50714879c3b"
+      "bytes": 300,
+      "sha256": "2278c79a0e6e9eb8468a2a366f803c32c5a8aff2407d1cb91b6803517f962182"
     },
     {
       "path": "board/bitstreams/pl1/binary_receipt.json",
@@ -68,13 +68,18 @@
     },
     {
       "path": "board/config/runtime_assets.json",
-      "bytes": 31647,
-      "sha256": "3ea6d3953e63107a0d38a94160f2686adaefcde1f668df11634bf5edbda3764c"
+      "bytes": 31631,
+      "sha256": "53e6c5dd04860df62847dfc2611c602e27c2ada3f55691cd95453b095a0284dd"
     },
     {
       "path": "board/config/source_map.json",
       "bytes": 113989,
       "sha256": "ad09b9e14e2280b055ce90206d2848ebee1863cc825b8f956242de14d52b85db"
+    },
+    {
+      "path": "board/deploy/assemble_runtime_assets.py",
+      "bytes": 2658,
+      "sha256": "8c8125a6dbd1d2720bc621c0fef6c712bae383d63f185d387ffbe8472e169c87"
     },
     {
       "path": "board/deploy/boot/boot_reserved.py",
@@ -953,8 +958,8 @@
     },
     {
       "path": "build/tools/verify_package.py",
-      "bytes": 2278,
-      "sha256": "fa171e37c6ee790c90c9e357335a0306dea11681aaf0c6e0a8dabf36280f694d"
+      "bytes": 2357,
+      "sha256": "e8c4becb29cf1b82bbeddcdb161e5702b8599ad40e9188a558ac8ac77d104c7a"
     },
     {
       "path": "build/tools/verify_software.py",
@@ -1014,7 +1019,7 @@
     {
       "path": "data/provenance/source_files.json",
       "bytes": 18246,
-      "sha256": "b946ad1e1f3377408fec1cacde2d31e10bdca09046bc20b870fe77efb41d2d21"
+      "sha256": "e2cd66605876791e34ce4c2ac0adb10a505654c98bfd670c865f098b6e2f66f3"
     },
     {
       "path": "data/reference/array_keys.json",
@@ -1067,9 +1072,79 @@
       "sha256": "2b5b4cbf80b54c11bacd0b5cfc7f9e2ff28f669d95846322ac912a4789d61c33"
     },
     {
+      "path": "private_runtime/asset_parts.json",
+      "bytes": 1325,
+      "sha256": "c193ea6e1d1b4939ce10734a8ff46eb079ad518c95f8d21ee346b61628ba40b8"
+    },
+    {
+      "path": "private_runtime/model_license.txt",
+      "bytes": 4432,
+      "sha256": "31d25add799ce214240be337f584be7be1f4a6ae21a2ce04c33fdba939c8430e"
+    },
+    {
+      "path": "private_runtime/README.md",
+      "bytes": 1089,
+      "sha256": "2380c65eb23a0d881619f4b50a98590cb059365720f6542772626dbbcbe05368"
+    },
+    {
+      "path": "private_runtime/runtime_assets.part001",
+      "bytes": 50331648,
+      "sha256": "5f74c088362a85b16f2779730451861dc05bf978521f744e34bd8809bef5d326"
+    },
+    {
+      "path": "private_runtime/runtime_assets.part002",
+      "bytes": 50331648,
+      "sha256": "62b735c5cbec43d63e4464a21120b108f0f25b94e7332c4010d01c263b822b16"
+    },
+    {
+      "path": "private_runtime/runtime_assets.part003",
+      "bytes": 50331648,
+      "sha256": "8b642120bb4291fc1b4d35fd523c7e453adfa41ae2b03b03bb2a43d820d8d07e"
+    },
+    {
+      "path": "private_runtime/runtime_assets.part004",
+      "bytes": 50331648,
+      "sha256": "5604c602930d2bfbb2059a0987ca3ec8bd0f2a31134835e2f51c5a5f0713c391"
+    },
+    {
+      "path": "private_runtime/runtime_assets.part005",
+      "bytes": 50331648,
+      "sha256": "ea17af35ab537a338bc51dc3c8c19a0ed0d30b61dabff8f213ee73547bf247f7"
+    },
+    {
+      "path": "private_runtime/runtime_assets.part006",
+      "bytes": 50331648,
+      "sha256": "80eccf7958b947fa9400c6691cd64e8601a8726ebf6fd2e2eae632236f204fde"
+    },
+    {
+      "path": "private_runtime/runtime_assets.part007",
+      "bytes": 6879141,
+      "sha256": "ee719b393ea039eb1d87a2b7fe92919d3f87b2fc7a97a851fbcecae087597e58"
+    },
+    {
+      "path": "private_runtime/sample/3ddbe9fdd3534aeb904db25b38fc322c/board_result.npz",
+      "bytes": 5077138,
+      "sha256": "e7386d62268cdb0b3e919787c221ab9145eed104e9b5442495295f14b03444e0"
+    },
+    {
+      "path": "private_runtime/sample/3ddbe9fdd3534aeb904db25b38fc322c/board_status.json",
+      "bytes": 8677,
+      "sha256": "7de2b1b44c1189def37bac600dff152229c03f63b179a9f9de9243bad71abdb1"
+    },
+    {
+      "path": "private_runtime/wheels/numpy-2.2.6-cp312-cp312-win_amd64.whl",
+      "bytes": 12614190,
+      "sha256": "c1f9540be57940698ed329904db803cf7a402f3fc200bfe599334c9bd84a40b2"
+    },
+    {
+      "path": "private_runtime/wheels/opencv_python_headless-5.0.0.93-cp37-abi3-win_amd64.whl",
+      "bytes": 43825962,
+      "sha256": "829717b6a95554f273e49e357cee3b3a2a26b6f4842fbc1bed2b45bdd8f87e0e"
+    },
+    {
       "path": "README.md",
-      "bytes": 4264,
-      "sha256": "b889bf45f09576b3570ec202f7afdc98ca8de58773984a4216aa256d0df291b6"
+      "bytes": 4602,
+      "sha256": "4fc000d9d506445ba84ed4d5c70ac4ad713f0236ed4dc718fd02f5a00c995bee"
     },
     {
       "path": "report/architecture.md",
@@ -1108,8 +1183,8 @@
     },
     {
       "path": "report/reproduction.md",
-      "bytes": 2958,
-      "sha256": "957d3822f159171faa62397ceeb31a9a9dfe0e4aee9888ee66de7dc2d35d490e"
+      "bytes": 3003,
+      "sha256": "8c2ce831598bc3b21780e26c7319a60d67d61a0983e4aebdd8c383d16ad1a7d9"
     },
     {
       "path": "report/shenmu_design_report.pdf",
@@ -1218,8 +1293,8 @@
     },
     {
       "path": "setup.ps1",
-      "bytes": 1851,
-      "sha256": "831b66a82ac0c83d83d59a5d81dba53d0b37292f88d50b128e264466be9cb1a8"
+      "bytes": 2345,
+      "sha256": "4b7faa2792759f9d35343df0f907566b26a3aba4a9a8afc109bb72280a763f3b"
     },
     {
       "path": "sim/camera/test_camera_recovery.py",
@@ -1698,8 +1773,8 @@
     },
     {
       "path": "sim/verify_software.py",
-      "bytes": 2481,
-      "sha256": "559583166b6a6c2991cc62138110d2f7ce85c88962bad89b523e7710aa74d019"
+      "bytes": 2560,
+      "sha256": "3c712b41f46a5860645d65c467d33694afccb894e09b27046ae0f694268249ef"
     },
     {
       "path": "skill/dma_handoff.md",

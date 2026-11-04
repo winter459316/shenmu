@@ -1,11 +1,11 @@
 {
-  "distribution": "private",
-  "reason": "Includes session credentials and original qualification/provenance metadata; do not publish this archive.",
+  "distribution": "public_demo",
+  "reason": "Public demonstration assets; original active-board access codes are not included.",
   "files": {
     "AGENTS.md": {
       "sha256": "f0da7c51ce9294cd74c9f88b303ba4d26e2d8f3ec6e0461e318d1a98feaee3ca",
       "bytes": 875,
-      "sensitive": true
+      "sensitive": false
     },
     "candidates/usb_320_hdmifps/board_hdmifps_evidence.json": {
       "sha256": "effe740aaee66453ae8ad39ca6a3b218dead26bc0fd6c0db2863ac711e0f97c7",
@@ -303,8 +303,8 @@
       "sensitive": false
     },
     "candidates/usb_fast_infer2/section_payload/manifest.json": {
-      "sha256": "b7d39174d7e305997f37282844f0a7147cfdea6a324ef97d33bdb4801677448e",
-      "bytes": 552,
+      "sha256": "6b7d0fead220811364e8cfb1a8b2ef6d23848cba437ea166221991f37992a489",
+      "bytes": 546,
       "sensitive": false
     },
     "candidates/usb_fast_infer2/section_payload/section_config.json": {
@@ -323,14 +323,14 @@
       "sensitive": false
     },
     "candidates/usb_fast_infer2/section_payload/token.txt": {
-      "sha256": "c2f8a2c62826e9255eee8a78ef2ddb5ca0e3d113e4452fd0d34f4a831b8dbd18",
+      "sha256": "91f5b63ac8f54c797852c77b945569946c52e1439a67b836bc2927ef243c33c1",
       "bytes": 64,
-      "sensitive": true
+      "sensitive": false
     },
     "candidates/usb_fast_infer2/section_token.txt": {
-      "sha256": "c2f8a2c62826e9255eee8a78ef2ddb5ca0e3d113e4452fd0d34f4a831b8dbd18",
+      "sha256": "91f5b63ac8f54c797852c77b945569946c52e1439a67b836bc2927ef243c33c1",
       "bytes": 64,
-      "sensitive": true
+      "sensitive": false
     },
     "candidates/usb_fast_infer2/speed_config.json": {
       "sha256": "2ffb72cafdb1513d5947e802d6ec39b89d578ac400d57a03f3f0c943d9134067",
@@ -398,7 +398,7 @@
       "sensitive": false
     },
     "experiments/geometry_fast_20261024/promotion_verified.json": {
-      "sha256": "f09af516d28ee2cb91ba029560128fc2b5328f0421a81919d2a7fc44422ba61e",
+      "sha256": "5ba30853f32a90c28d3299e97283a0a9fe9802c5aadf0de232e897e5855434a2",
       "bytes": 33493,
       "sensitive": false
     },
@@ -715,7 +715,7 @@
     "HANDOFF_NEXT_CHAT.txt": {
       "sha256": "9ade8f98d56b4564652af0dc36c97a5eacca5936026ba0974d1ffd847febf987",
       "bytes": 1009,
-      "sensitive": true
+      "sensitive": false
     },
     "launcher/config.json": {
       "sha256": "8b9ed75484b4cd90069f2cb23aa1831f52b90f5872ba76c40d3c5438f3f6b248",

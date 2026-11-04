@@ -19,7 +19,9 @@ import export_capture, mesh_limits, viewer_export
 def main():
     for module in (export_capture,mesh_limits,viewer_export):
         assert Path(module.__file__).resolve().is_relative_to(RUNTIME.resolve()),module.__file__
-    fixture=ROOT.parent/'private_runtime/sample/3ddbe9fdd3534aeb904db25b38fc322c/board_result.npz'
+    assets=ROOT/'private_runtime'
+    if not assets.is_dir():assets=ROOT.parent/'private_runtime'
+    fixture=assets/'sample/3ddbe9fdd3534aeb904db25b38fc322c/board_result.npz'
     digest=hashlib.sha256(fixture.read_bytes()).hexdigest()
     with tempfile.TemporaryDirectory() as folder:
         capture=Path(folder)/fixture.parent.name

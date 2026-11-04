@@ -1,7 +1,10 @@
-﻿param([string]$PythonExe='', [string]$PrivateRoot='')
+param([string]$PythonExe='', [string]$PrivateRoot='')
 $ErrorActionPreference='Stop'
 $packageRoot=$PSScriptRoot
-if(-not $PrivateRoot){$PrivateRoot=[IO.Path]::GetFullPath((Join-Path $packageRoot '../private_runtime'))}
+if(-not $PrivateRoot){
+    $PrivateRoot=Join-Path $packageRoot 'private_runtime'
+    if(-not(Test-Path -LiteralPath $PrivateRoot)){$PrivateRoot=[IO.Path]::GetFullPath((Join-Path $packageRoot '../private_runtime'))}
+}
 if(-not $PythonExe){
     $launcher=Get-Command py.exe -ErrorAction SilentlyContinue
     if($launcher){$PythonExe=(& $launcher.Source -3.12 -c 'import sys; print(sys.executable)')}
@@ -11,6 +14,11 @@ if(-not $PythonExe){
 if($LASTEXITCODE -ne 0){throw 'Python 3.12 x64 is required.'}
 $prepare=Join-Path $packageRoot 'board/deploy/prepare_runtime.py'
 $assets=Join-Path $PrivateRoot 'runtime_assets.zip'
+if(Test-Path -LiteralPath (Join-Path $PrivateRoot 'asset_parts.json')){
+    $assets=Join-Path $packageRoot '.runtime/cache/runtime_assets.zip'
+    & $PythonExe -X utf8 (Join-Path $packageRoot 'board/deploy/assemble_runtime_assets.py') --parts-directory $PrivateRoot --output $assets
+    if($LASTEXITCODE -ne 0){throw 'Runtime asset parts could not be verified or assembled.'}
+}
 & $PythonExe -X utf8 $prepare --assets $assets
 if($LASTEXITCODE -ne 0){throw 'Runtime source/asset verification failed.'}
 $runtime=Join-Path $packageRoot '.runtime/zu4ev_stereo'

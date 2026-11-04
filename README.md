@@ -15,6 +15,7 @@
 | data | 模型说明、参考数组与性能数据 |
 | skill | 文件检查、数组比较和资源交接操作流程 |
 | report | 设计报告、接口说明与复现手册 |
+| private_runtime | 模型、原生库、离线依赖及参考样例 |
 
 ## 运行环境
 
@@ -26,26 +27,20 @@
 
 ## 首次安装
 
-1. 将完整复现包解压至本机短路径，保留以下目录关系：
+1. 克隆本仓库，完整保留根目录的 `private_runtime` 文件夹；无需单独获取模型包。
+2. 安装 Python 3.12 x64、串口驱动及支持 WebGL 2 的浏览器。
+3. 在仓库根目录运行 `setup.cmd`。安装器自动校验并合并运行资产分卷，建立虚拟环境并安装离线依赖。
+4. 打开 `.runtime/zu4ev_stereo/launcher/config.json`，设置设备管理器显示的实际串口号。
+5. 将电脑有线网卡设置为 `192.168.137.1/24`，板卡设置为 `192.168.137.2/24`。
+6. 按 [硬件连接说明](board/hardware_setup.md) 连接并启动板卡。全新板卡需先准备配套厂商 Linux 基础系统，该系统镜像不包含在仓库内。
 
-   ```text
-   amd_submission_2026/
-     shenmu/
-     private_runtime/
-   ```
-
-2. 在 `shenmu` 目录运行 `setup.cmd`，等待运行目录和 Python 环境建立完成。
-3. 打开 `.runtime/zu4ev_stereo/launcher/config.json`，将串口设置为设备管理器显示的实际端口。
-4. 将电脑有线网卡设置为 `192.168.137.1/24`，板卡设置为 `192.168.137.2/24`。
-5. 按 [硬件连接说明](board/hardware_setup.md) 连接并启动板卡。
-
-如需指定 Python 或资产目录，在项目根目录执行：
+可指定本机 Python 路径：
 
 ```powershell
-./setup.ps1 -PythonExe 'C:/Python312/python.exe' -PrivateRoot 'D:/shenmu_assets'
+./setup.ps1 -PythonExe 'C:/Python312/python.exe'
 ```
 
-以上路径应替换为本机实际目录。运行目录根据 `board/config/source_map.json` 和 `board/config/runtime_assets.json` 组装。
+运行资源说明见 [private_runtime/README.md](private_runtime/README.md)。分卷合并后的缓存位于 `.runtime/cache`。运行文件根据 `board/config/source_map.json` 和 `board/config/runtime_assets.json` 组装。使用同级配套资产目录的独立交付包仍可通过 `-PrivateRoot` 指定资产位置。
 
 ## 启动和使用
 

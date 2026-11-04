@@ -22,3 +22,6 @@ build/output/
 *.dll
 captures/
 recordings/
+
+# Published offline installation wheels
+!/private_runtime/wheels/*.whl

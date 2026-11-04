@@ -327,17 +327,17 @@
   {
     "file": "skill/dma_handoff.md",
     "origin": "dma_handoff.md",
-    "sha256": "0d570e70b813381ed2020956543c274ea8fd91bf079304665af84fa05c75ca9a"
+    "sha256": "64003b2a987ad5aa8d7d5f88d114c09f8cbeafee6019f4e79d920e01783802c2"
   },
   {
     "file": "skill/performance_workflow.md",
     "origin": "performance_workflow.md",
-    "sha256": "2c3cb56f6247fcd733abb97e6f1b52c5305945e171efce3777d8241f20fbd482"
+    "sha256": "1d8e0926acceeef21b7b5d75ec731350b3e1731352c6a845cc9c3fcf21ff62a2"
   },
   {
     "file": "skill/README.md",
     "origin": "README.md",
-    "sha256": "30418ca2629550896b2d6eda6148735dc5e40d4790edc77780a397cd67ea2c1a"
+    "sha256": "52d82b1ac9ed61a3430b4e2ead19dd739f7216435385f161a57c502cdfba4187"
   },
   {
     "file": "skill/verify_artifacts.py",

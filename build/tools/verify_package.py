@@ -30,7 +30,9 @@ def main():
     for item in source_map:
         assert hashlib.sha256((ROOT/item['source']).read_bytes()).hexdigest()==item['sha256'],item['source']
     required=('numpy-2.2.6-cp312-cp312-win_amd64.whl','opencv_python_headless-5.0.0.93-cp37-abi3-win_amd64.whl')
-    for name in required:assert (ROOT.parent/'private_runtime/wheels'/name).is_file(),name
+    assets=ROOT/'private_runtime'
+    if not assets.is_dir():assets=ROOT.parent/'private_runtime'
+    for name in required:assert (assets/'wheels'/name).is_file(),name
     evidence=dict(passed=True,scope='Offline file completeness, not Vivado 2026.1 validation',
                   hardware_profiles=3,ip_file_references=references,hardware_files_verified=len(provenance),
                   mapped_runtime_sources_verified=len(source_map),hardware_build_deferred=False)
