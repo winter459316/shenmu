@@ -1,0 +1,41 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date              : Fri Oct 30 20:04:50 2026
+| Host              : LAPTOP-GLT7S1ON running 64-bit major release  (build 9200)
+| Command           : report_exceptions -file D:/convstore1030/exceptions_review.rpt
+| Design            : system_wrapper
+| Device            : xczu4ev-sfvc784
+| Speed File        : -2  PRODUCTION 1.20 05-21-2018
+| Temperature Grade : I
+-----------------------------------------------------------------------------------------
+
+Exceptions Report
+
+Position  From                                                                              Through                                            To                                                                                Setup           Hold            Status           
+--------  --------------------------------------------------------------------------------  -------------------------------------------------  --------------------------------------------------------------------------------  --------------  --------------  -----------------
+2         *                                                                                 *                                                  [get_pins -hier *cdc_to*/D]                                                       false           false           Invalid endpoint 
+3         *                                                                                 *                                                  [get_pins -hier *cdc_to*/D]                                                       false           false           Invalid endpoint 
+4         *                                                                                 *                                                  [get_pins -leaf -of_objects [get_cells -hier *cdc_tig* -filter is_sequential] -f  false           false           
+                                                                                                                                               ilter NAME=~*/D]                                                                                                  
+5         [get_cells -hier *cdc_from* -filter {is_sequential && (PRIMITIVE_GROUP!=CLOCK &&  *                                                  [get_cells -hier *cdc_to* -filter {is_sequential && (PRIMITIVE_GROUP!=CLOCK && P  false           false           
+           PRIMITIVE_GROUP!=CLK)}]                                                                                                             RIMITIVE_GROUP!=CLK) }]                                                                                           
+8         *                                                                                 *                                                  [get_pins -hier *cdc_to*/D]                                                       false           false           Invalid endpoint 
+9         [get_ports {pl_key1_n pl_key2_n}]                                                 *                                                  [get_pins -of_objects [get_cells -hier -filter {NAME =~ */pl_keys/inst/k*/key_d0  false           false           
+                                                                                                                                               _reg}] -filter {REF_PIN_NAME == D}]                                                                               
+10        [get_clocks -of [get_ports -scoped_to_current_instance clk]]                      *                                                  [all_registers -clock [get_clocks -of [get_ports -scoped_to_current_instance s_a  max_dpo=13.333  -               
+                                                                                                                                               xi_aclk]]]                                                                                                        
+11        [get_clocks -of [get_ports -scoped_to_current_instance s_axi_aclk]]               *                                                  [all_registers -clock [get_clocks -of [get_ports -scoped_to_current_instance clk  max_dpo=8.696   -               
+                                                                                                                                               ]]]                                                                                                               
+12        *                                                                                 [get_ports -scoped_to_current_instance src_arst]   [all_registers]                                                                   false           false           
+13        *                                                                                 [get_ports -scoped_to_current_instance src_arst]   [all_registers]                                                                   false           false           
+14        *                                                                                 [get_ports -scoped_to_current_instance src_arst]   [all_registers]                                                                   false           false           
+15        *                                                                                 [get_ports -scoped_to_current_instance src_arst]   [all_registers]                                                                   false           false           
+16        *                                                                                 [get_ports -scoped_to_current_instance src_arst]   [all_registers]                                                                   false           false           
+17        *                                                                                 [get_ports -scoped_to_current_instance src_arst]   [all_registers]                                                                   false           false           
+18        [get_cells src_gray_ff_reg*]                                                      *                                                  [get_cells {dest_graysync_ff_reg[0]*}]                                            max_dpo=13.333  -               
+20        [get_cells src_gray_ff_reg*]                                                      *                                                  [get_cells {dest_graysync_ff_reg[0]*}]                                            max_dpo=8.696   -               
+22        [get_cells src_gray_ff_reg*]                                                      *                                                  [get_cells {dest_graysync_ff_reg[0]*}]                                            max_dpo=8.696   -               
+24        *                                                                                 *                                                  [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+25        *                                                                                 *                                                  [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+

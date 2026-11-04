@@ -1,0 +1,19 @@
+{
+  "profile": "pl1",
+  "routed_checkpoint_review_passed": true,
+  "project_and_direct_export_bin_byte_exact": true,
+  "bitstream_payload_sha256": "96802d44051c4bac8ce75704894771543e5dca4e94a77c4f6b460a6beb327af4",
+  "wns_ns": 1.038,
+  "whs_ns": 0.011,
+  "wpws_ns": 0.098,
+  "board_tested": false,
+  "flow_status": "Retrying project write_bitstream step after preserving interrupted post-generation run",
+  "reports": {
+    "checkpoint_timing.rpt": "507378508f136927bb3a58615d2d22976cbf786a4369de1e6d9932ecaa52b67c",
+    "checkpoint_drc.rpt": "78696073a470b46baa92aeb559eb8a75473eb480194aa4681383d0aaa125d05d",
+    "checkpoint_bus_skew.rpt": "9feeddee33fdb9fc51a503aeee7f69d52c2c2d89a840c00986fcade6091198ab",
+    "checkpoint_cdc.rpt": "26f3f3c0c08c01d67ab7137f97d075cb2f7bad33cf3f9a153377c76fa01e0d61",
+    "checkpoint_utilization.rpt": "d2e535c22352ec152fe06a9509eed3789583bb632199488dd74f0e30f1e896c9",
+    "checkpoint_check_timing.rpt": "fad086e66a17d37429863a98dff939de67947a34ac144722889c4aba91b51723"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "purpose": "Report payload identities retained from the verified report; not deployment authorization",
+  "payloads": [
+    {
+      "configuration": "pl1_preview_geometry",
+      "kind": "bit.bin",
+      "sha256": "3d166a23a3dd3d60a2cc3a34d43b3b5dc76878edd6522f4f3de620688ac758fe"
+    },
+    {
+      "configuration": "pl2_115mhz",
+      "kind": "bit.bin",
+      "sha256": "8b74614cbcea280f18a8c26f34771a8c6a2fa7be3f74cfed5cde6d8409452ff8"
+    },
+    {
+      "configuration": "pl3_160mhz",
+      "kind": "bit.bin",
+      "sha256": "b02da0fbf2725ca63b8b0e1a05c64426db12dc5c7d317e6967f384baf4ccb5ba"
+    }
+  ]
+}

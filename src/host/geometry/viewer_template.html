@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>静态双目 · 三维渲染</title>
+<style>
+[hidden]{display:none!important}
+*{box-sizing:border-box}body{margin:0;background:#0b1020;color:#e5edf8;font:15px/1.6 "Microsoft YaHei",sans-serif}header{padding:24px 30px 20px;border-bottom:1px solid #243148;display:flex;justify-content:space-between;gap:20px}h1{font-size:25px;margin:1px 0 2px;font-weight:600}header p{margin:0;color:#96a8bd;font-size:13px}.eyebrow{font-size:11px;color:#55d3c3;letter-spacing:2px}main{display:grid;grid-template-columns:minmax(400px,1fr) 310px;min-height:650px;height:calc(100vh - 120px)}#stage{position:relative;overflow:hidden;background:radial-gradient(ellipse at center,#202e43,#0c1423)}canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}canvas:active{cursor:grabbing}.overlay{position:absolute;pointer-events:none;left:24px;top:18px;font-size:12px;color:#a7b9d0}#guide{position:absolute;bottom:19px;left:24px;font-size:12px;color:#c0cde0;background:#0c1423c9;border-radius:7px;padding:8px 12px;pointer-events:none}#error{position:absolute;inset:30%;display:none;color:#fca5a5}aside{padding:22px;border-left:1px solid #243148;overflow:auto;background:#111b2b}label{display:block;font-size:12px;color:#aabbd0;margin:14px 0 5px}select,button,a.download{font:inherit;color:#e5edf8;background:#1b2b42;border:1px solid #34465f;border-radius:7px;padding:8px 10px}select{width:100%}button{cursor:pointer;flex:1}button:hover,a.download:hover{background:#2b4160}.buttons{display:flex;gap:6px;margin-top:12px}input[type=range]{width:100%;accent-color:#52cbbb}#stats{color:#73e4d5;font-size:13px;margin-top:15px}#picked{padding:12px;background:#19263a;border-radius:8px;margin-top:16px;min-height:88px;font-size:13px}small{font-size:12px;color:#9aacc3}details{margin-top:18px;color:#afbed1;font-size:12px}summary{cursor:pointer}img{width:90px;height:101px;object-fit:contain;background:#020617;border-radius:5px;margin-top:10px;float:right}a{color:#8eddd3;text-decoration:none}.downloads{display:grid;gap:7px;margin-top:17px}.download{display:block;text-align:center;font-size:12px!important}.legend{font-size:12px;margin-top:12px;color:#abbcd0}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}.note{font-size:12px;color:#b5c5d9;margin-top:18px;line-height:1.7;border-top:1px solid #2a3a52;padding-top:14px}@media(max-width:800px){main{grid-template-columns:1fr;height:auto}#stage{height:65vh;min-height:400px}aside{border-left:0}header{padding:16px;display:block}header>div:last-child{margin-top:6px}h1{font-size:20px}#guide{right:15px;left:15px;font-size:11px}}
+</style><style>
+main{grid-template-columns:minmax(360px,1fr) 330px;height:calc(100vh - 152px);min-height:580px}aside{padding:16px 22px}#reference{display:block;width:100%;height:170px;object-fit:contain;float:none;margin:0;background:#090f1a}.reference{margin:0 0 12px}.reference summary{margin-bottom:6px}select:disabled,input:disabled{opacity:.45}.control-note{font-size:11px;color:#8fa5bf;line-height:1.5;margin:6px 0}#depth-scale{margin-top:12px;font-size:11px;color:#afc4de}#depth-gradient{height:7px;border-radius:4px;background:linear-gradient(90deg,#ff5721,#338cf2)}#depth-ticks{display:flex;justify-content:space-between}.export{width:100%;margin-top:10px}#render-info{font-size:11px;color:#9bafc6;margin-top:8px}.note{margin-top:12px;padding-top:10px}#picked{margin-top:12px;min-height:68px}#stats{margin-top:12px}#error{inset:25px;background:#102032dc;padding:16px;pointer-events:none;height:max-content}@media(max-width:800px){main{grid-template-columns:1fr;height:auto;min-height:0}#stage{height:60vh;min-height:330px}aside{overflow:visible}#reference{height:150px}}
+</style><style>input[type=number]{font:inherit;padding:7px 8px;background:#1b2b42;color:#e5edf8;border:1px solid #34465f;border-radius:6px}#section-panel{border-top:1px solid #2a3a52;padding-top:12px}#section-status{line-height:1.65}dialog{background:#111b2b;color:#e5edf8;border:1px solid #34465f;border-radius:10px;width:min(720px,92vw);max-height:92vh;padding:18px}dialog::backdrop{background:#020617cc}dialog h2{font-size:18px;margin:0 0 12px}#render-image{display:block;float:none;width:100%;height:auto;max-height:65vh;object-fit:contain;margin:0 0 12px}dialog .buttons{align-items:center}dialog .download{flex:1}</style></head><body data-viewer-version="surface-render-v2">
+<header><div><div class="eyebrow">STATIC STEREO / SURFACE</div><h1>静态双目 · 三维渲染</h1><p>彩色表面查看外观，纯色光照观察形状；单次拍摄只包含可见的一面。</p></div><div><small id="photo"></small><br><small id="processing-mode">PL 匹配与点云 · A53 表面处理 · 电脑显示</small></div></header>
+<main><section id="stage"><canvas id="canvas" aria-label="可拖动旋转的三维点云"></canvas><div class="overlay" id="overlay"></div><div id="error"></div><div id="guide">拖动旋转 · 滚轮缩放 · 右键拖动平移 · 单击点查看深度</div></section>
+<aside><details class="reference" open><summary>本次参考照片</summary><img id="reference" src="reference.png" alt="同一张参考照片"></details><label for="mode">显示形式</label><select id="mode"><option value="points">三维点云</option><option value="mesh" selected>彩色表面</option><option value="clay">纯色光照表面</option></select>
+<label for="geometry">表面处理</label><select id="geometry"><option value="dense" selected>平面修正＋适度断边</option></select><p class="control-note" id="geometry-note">优化坐标用于显示，原始匹配数据另行保留。</p>
+<label for="projection">观察方式</label><select id="projection"><option value="camera" selected>拍摄透视（正面更完整）</option><option value="orthographic">正交观察（原方式）</option></select><p class="control-note">透视使用相机标定。旋转后未拍到的遮挡区域仍可能留空。</p>
+<label for="source">参与显示的点</label><select id="source"><option value="filled">匹配来源 + 补全推测</option><option value="measured">仅匹配来源</option></select>
+<label for="color">着色方式</label><select id="color"><option value="rgb">照片颜色</option><option value="depth">深度颜色</option><option value="origin">区分匹配与推测</option><option value="solid">灰色表面</option></select>
+<label for="texture-mode">表面纹理</label><select id="texture-mode"><option value="photo" selected>原图纹理（保留照片颜色）</option><option value="vertex">逐点颜色（原效果对照）</option></select><p class="control-note" id="texture-note">原图纹理改善外观细节，深度仍来自原来的视差。</p>
+<label for="size">点的大小</label><input id="size" type="range" min="1" max="6" value="2.5" step=".5">
+<label for="shading">表面光照</label><select id="shading"><option value="smooth">柔和光照</option><option value="flat">逐三角面光照</option></select><p class="control-note">此选项只处理光照法线；不会改变点的深度。</p>
+<label for="light">灯光方向 <span id="light-value"></span></label><input id="light" type="range" min="-180" max="180" value="-40" step="5">
+<div id="depth-scale" hidden><div id="depth-gradient"></div><div id="depth-ticks"><span id="depth-near"></span><span id="depth-far"></span></div><div>颜色范围随照片调整，范围外颜色饱和；没有裁掉这些点。</div></div>
+<div class="buttons"><button id="front">正面</button><button id="oblique">斜侧面</button><button id="reset">复位</button></div>
+<div id="hdmi-panel" hidden><div class="buttons"><button id="hdmi-start">投到板上 HDMI</button><button id="hdmi-stop">恢复相机预览</button></div><p class="control-note" id="hdmi-status">三维画面由电脑渲染，经板上 HDMI 输出。</p></div>
+<details id="section-panel" open><summary>PL 截面分析</summary>
+<p class="control-note" id="section-engine">使用保留的原始板上坐标（平面修正前），电脑对照验证。</p>
+<label for="section-axis">截面方向</label><select id="section-axis"><option value="0">X · 左右位置（YZ 截面）</option><option value="1">Y · 上下位置（XZ 截面）</option><option value="2" selected>Z · 前后深度（XY 截面）</option></select>
+<div style="display:flex;gap:10px"><div style="flex:1"><label for="section-center">位置 / mm</label><input id="section-center" type="number" step="0.5" style="width:100%"></div><div style="flex:1"><label for="section-thickness">薄层厚度 / mm</label><input id="section-thickness" type="number" min="0" max="20000" step="0.5" value="4" style="width:100%"></div></div>
+<label><input id="section-inferred" type="checkbox"> 包含补全推测点</label>
+<div class="buttons"><button id="section-compute">板上计算截面</button><button id="section-clear">清除</button></div>
+<p id="section-status" role="status" class="control-note">默认仅使用匹配来源点。</p>
+<canvas id="section-plot" aria-label="截面二维轮廓" width="540" height="380" style="height:190px;background:#0a1423;border-radius:6px;cursor:default" hidden></canvas>
+<a id="section-download" class="download" download hidden>导出截面坐标 CSV</a>
+<p class="control-note">截面始终使用上一版 PL 原坐标；修正视差层用于点云和表面显示，高亮点采用原截面坐标。二维图是可见表面的薄层点集，未计算封闭面积。</p></details>
+<div id="stats"></div><div class="legend">按输入来源着色时：<br><span class="dot" style="background:#36c6b3"></span>匹配来源　<span class="dot" style="background:#ffab43"></span>补全推测</div>
+<div id="picked">单击一个点，查看它的相机深度 Z 和数据来源。</div>
+<div id="render-info"></div><button class="export" id="save-render">导出当前渲染图 PNG</button>
+<div class="note">当前点云和表面使用A53平面修正后的视差，由PL生成坐标；修正点属于推测。原始匹配及截面保留原坐标。旧版工程和照片另行保留。补回区域不是实测，物体边缘和未知背面可能仍有缺口。光轴深度 Z 不是突起高度。仅显示可见表面，毫米级精度未经实物验证，不用于医学判断。</div>
+<details><summary>数据与显示范围</summary><p id="details"></p><p>原始数据保存在 geometry.npz；PLY 使用米。相机坐标：X 向右，Y 向下，Z 向前。深度 Z 不是到相机的直线距离。</p></details>
+<div class="downloads"><a class="download" href="dense_surface.ply" download>下载适度断边表面 · PLY</a><a class="download" href="dense_points.ply" download>下载平面修正点云 · PLY</a><a class="download" href="matched_points_all.ply" download>下载原坐标匹配点云 · PLY</a><a class="download" href="completed_points_preview.ply" download>下载未优化含推测点云 · PLY</a></div>
+</aside></main><dialog id="render-export"><h2>当前渲染图</h2><img id="render-image" alt="导出的当前三维渲染图"><div class="buttons"><a class="download" id="download-render">下载 PNG</a><button id="close-export">关闭</button></div></dialog>
+<script id="cloud-data" type="application/json">__POINTCLOUD_DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('cloud-data').textContent),s=data.summary;
+function decode(text,Type){let b=Uint8Array.from(atob(text),c=>c.charCodeAt(0));return new Type(b.buffer)}
+const originalXYZ=decode(data.positions,Float32Array),rgb=decode(data.colors,Uint8Array),origins=decode(data.origins,Uint8Array),pixels=decode(data.pixels,Uint32Array),faces=decode(data.faces,Uint32Array),n=origins.length;
+const optimizedXYZ=data.optimized_positions?decode(data.optimized_positions,Float32Array):originalXYZ,optimizedValid=data.optimized_valid?decode(data.optimized_valid,Uint8Array):new Uint8Array(n),optimizedFaces=data.optimized_faces?decode(data.optimized_faces,Uint32Array):new Uint32Array();
+const detailXYZ=data.detail_positions?decode(data.detail_positions,Float32Array):originalXYZ,detailValid=data.detail_valid?decode(data.detail_valid,Uint8Array):new Uint8Array(n),detailFaces=data.detail_faces?decode(data.detail_faces,Uint32Array):new Uint32Array(),detailSupported=data.detail_supported?decode(data.detail_supported,Uint8Array):new Uint8Array(n);
+const repairedXYZ=data.repaired_positions?decode(data.repaired_positions,Float32Array):originalXYZ,repairedValid=data.repaired_valid?decode(data.repaired_valid,Uint8Array):new Uint8Array(n),repairedFaces=data.repaired_faces?decode(data.repaired_faces,Uint32Array):new Uint32Array(),repairedOrigins=data.repaired_origins?decode(data.repaired_origins,Uint8Array):origins;
+const originalValid=decode(data.original_valid,Uint8Array),denseXYZ=decode(data.dense_positions,Float32Array),denseOrigins=decode(data.dense_origins,Uint8Array),denseFaces=decode(data.dense_faces,Uint32Array);
+let xyz=originalXYZ;
+const $=id=>document.getElementById(id),canvas=$('canvas'),gl=canvas.getContext('webgl2',{antialias:true,preserveDrawingBuffer:true});
+const hasOptimized=optimizedValid.some(v=>v!==0),hasDetail=detailValid.some(v=>v!==0),hasRepaired=repairedValid.some(v=>v!==0);
+document.body.dataset.viewerVersion='direct-fast-surface-v1';
+if(!data.camera_intrinsics){$('projection').value='orthographic';$('projection').options[0].disabled=true;}
+const [gridWidth,gridHeight]=s.input_size_wh||[320,360];
+$('photo').textContent=`PHOTO ${s.photo} · ${gridWidth} × ${gridHeight}`;
+$('processing-mode').textContent=s.processing_label;
+$('details').textContent='当前点云和表面均使用板端平面修正结果。全部像素参与连面；原始点云和截面坐标另行保留。旧版表面请查看保留的旧照片。';
+function fail(message){$('error').style.display='block';$('error').textContent=message;document.body.dataset.renderStatus='error'}
+if(!gl){fail('浏览器不支持 WebGL 2，无法显示三维预览。PLY 数据仍可下载。');throw Error('WebGL2 unavailable')}
+const vertex=`#version 300 es
+precision highp float;precision highp int;in vec3 position;in vec3 color;in float origin;in vec3 normal;in vec2 imageUv;
+uniform vec2 gridSize;uniform bool cameraProjection;uniform vec4 cameraIntrinsics;uniform vec2 imageScale;uniform mat3 rotation;uniform vec3 center;uniform vec2 pan;uniform vec2 extent;uniform float clipDepth;uniform float pointSize;uniform int coloring;uniform vec2 depthRange;
+out vec3 vColor;out vec3 vPosition;out vec3 vNormal;out vec2 vUv;
+void main(){vec3 world=(position-center)*vec3(1.,-1.,-1.);vec3 view=rotation*world;vPosition=view;view.xy+=pan;
+if(cameraProjection){
+  float z=center.z-view.z;
+  vec2 pixel=cameraIntrinsics.xy*vec2(view.x+center.x,center.y-view.y)/z+cameraIntrinsics.zw;
+  vec2 ndc=vec2(2.*(pixel.x+.5)/gridSize.x-1.,1.-2.*(pixel.y+.5)/gridSize.y)*imageScale;
+  float nearPlane=.01,farPlane=clipDepth;
+  gl_Position=vec4(ndc*z,((farPlane+nearPlane)*z-2.*farPlane*nearPlane)/(farPlane-nearPlane),z);
+}else gl_Position=vec4(view.xy/extent,-view.z/clipDepth,1.);
+gl_PointSize=pointSize;vNormal=rotation*(normal*vec3(1.,-1.,-1.));vUv=imageUv;
+vColor=color;if(coloring==1){float t=clamp((position.z-depthRange.x)/(depthRange.y-depthRange.x),0.,1.);vColor=mix(vec3(1.,.34,.13),vec3(.2,.55,.95),t);}
+if(coloring==2)vColor=origin<.5?vec3(.21,.78,.70):vec3(1.,.67,.26);if(coloring==3)vColor=vec3(.68,.75,.83);
+}`;
+const fragment=`#version 300 es
+precision highp float;precision highp int;in vec3 vColor;in vec3 vPosition;in vec3 vNormal;in vec2 vUv;uniform sampler2D photoTexture;uniform bool useTexture;uniform bool photoMaterial;uniform bool isMesh;uniform bool selected;uniform bool smoothShading;uniform int coloring;uniform vec3 lightDirection;out vec4 outColor;
+void main(){
+  if(!isMesh && length(gl_PointCoord-vec2(.5))>.5)discard;
+  vec3 result=useTexture?texture(photoTexture,vUv).rgb:vColor;
+  if(isMesh && !photoMaterial && (coloring==0 || coloring==3)){
+    vec3 rawNormal=smoothShading?vNormal:cross(dFdx(vPosition),dFdy(vPosition));
+    vec3 norm=length(rawNormal)>1e-10?normalize(rawNormal):vec3(0.,0.,1.);
+    if(norm.z<0.)norm=-norm;
+    vec3 key=normalize(lightDirection),fill=normalize(vec3(-key.x,-.15,.8));
+    float diffuse=max(dot(norm,key),0.),bounce=max(dot(norm,fill),0.);
+    if(coloring==3){
+      float highlight=pow(max(dot(norm,normalize(key+vec3(0.,0.,1.))),0.),35.);
+      result=vColor*(.24+.60*diffuse+.15*bounce)+vec3(.10*highlight);
+    }else result=vColor*(.60+.32*diffuse+.08*bounce);
+  }
+  outColor=vec4(selected?vec3(1.,.95,.3):result,1.);
+}`;
+function compile(type,source){const shader=gl.createShader(type);gl.shaderSource(shader,source);gl.compileShader(shader);if(!gl.getShaderParameter(shader,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(shader));return shader}
+const program=gl.createProgram();gl.attachShader(program,compile(gl.VERTEX_SHADER,vertex));gl.attachShader(program,compile(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(program);
+if(!gl.getProgramParameter(program,gl.LINK_STATUS)){fail(gl.getProgramInfoLog(program));throw Error('Link error')}gl.useProgram(program);
+function attribute(name,array,size,type,normalized){let b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,array,gl.STATIC_DRAW);let a=gl.getAttribLocation(program,name);gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,size,type,normalized,0,0);return b}
+const positionBuffers={original:attribute('position',originalXYZ,3,gl.FLOAT,false),optimized:attribute('position',optimizedXYZ,3,gl.FLOAT,false),detail:attribute('position',detailXYZ,3,gl.FLOAT,false),repaired:attribute('position',repairedXYZ,3,gl.FLOAT,false)};attribute('color',rgb,3,gl.UNSIGNED_BYTE,true);
+const originBuffers={original:attribute('origin',origins,1,gl.UNSIGNED_BYTE,false),repaired:attribute('origin',repairedOrigins,1,gl.UNSIGNED_BYTE,false)};
+function textureCoordinates(pixelIds,width=320,height=360){const uv=new Float32Array(pixelIds.length*2);for(let i=0;i<pixelIds.length;i++){uv[2*i]=(pixelIds[i]%width+.5)/width;uv[2*i+1]=(Math.floor(pixelIds[i]/width)+.5)/height}return uv;}
+attribute('imageUv',textureCoordinates(pixels,gridWidth,gridHeight),2,gl.FLOAT,false);
+const photoTexture=gl.createTexture();let textureReady=false;
+gl.bindTexture(gl.TEXTURE_2D,photoTexture);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([255,255,255,255]));
+gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+if(data.texture_image){const photoImage=new Image();photoImage.onload=()=>{
+  if(photoImage.naturalWidth!==data.texture_size_wh[0]||photoImage.naturalHeight!==data.texture_size_wh[1]){$('texture-note').textContent='原图纹理尺寸异常，已保留逐点颜色。';return;}
+  gl.bindTexture(gl.TEXTURE_2D,photoTexture);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,false);gl.pixelStorei(gl.UNPACK_COLORSPACE_CONVERSION_WEBGL,gl.NONE);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,photoImage);
+  gl.generateMipmap(gl.TEXTURE_2D);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);
+  const anisotropy=gl.getExtension('EXT_texture_filter_anisotropic');if(anisotropy)gl.texParameterf(gl.TEXTURE_2D,anisotropy.TEXTURE_MAX_ANISOTROPY_EXT,Math.min(4,gl.getParameter(anisotropy.MAX_TEXTURE_MAX_ANISOTROPY_EXT)));
+  textureReady=true;document.body.dataset.textureStatus='ready';requestRender();
+};photoImage.onerror=()=>{$('texture-note').textContent='原图纹理加载失败，仍可使用逐点颜色。';};photoImage.src=data.texture_image;}
+else {$('texture-mode').value='vertex';$('texture-mode').options[0].disabled=true;}
+function indexBuffer(array){let b=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,b);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,array,gl.STATIC_DRAW);return {buffer:b,count:array.length}}
+const allPointIndices=Uint32Array.from({length:n},(_,i)=>i),originalPointIndices=allPointIndices.filter(i=>originalValid[i]),rawPointIndices=originalPointIndices.filter(i=>origins[i]===0);
+const rawFaces=[];for(let i=0;i<faces.length;i+=3)if(origins[faces[i]]===0&&origins[faces[i+1]]===0&&origins[faces[i+2]]===0)rawFaces.push(faces[i],faces[i+1],faces[i+2]);
+// Area-weighted lighting normals only; geometry and inferred provenance stay unchanged.
+// The measured surface has independent normals, so inferred faces cannot shade it.
+function normalsFromFaces(positions,triangles){
+  const normals=new Float32Array(positions.length);
+  for(let i=0;i<triangles.length;i+=3){
+    const a=triangles[i]*3,b=triangles[i+1]*3,c=triangles[i+2]*3;
+    const ux=positions[b]-positions[a],uy=positions[b+1]-positions[a+1],uz=positions[b+2]-positions[a+2];
+    const vx=positions[c]-positions[a],vy=positions[c+1]-positions[a+1],vz=positions[c+2]-positions[a+2];
+    const nx=uy*vz-uz*vy,ny=uz*vx-ux*vz,nz=ux*vy-uy*vx;
+    for(const j of [a,b,c]){normals[j]+=nx;normals[j+1]+=ny;normals[j+2]+=nz}
+  }
+  for(let i=0;i<normals.length;i+=3){
+    const length=Math.hypot(normals[i],normals[i+1],normals[i+2]);
+    if(length>1e-15){normals[i]/=length;normals[i+1]/=length;normals[i+2]/=length}else normals[i+2]=-1;
+  }
+  return normals;
+}
+const normalBuffers={filled:attribute('normal',normalsFromFaces(xyz,faces),3,gl.FLOAT,false),measured:attribute('normal',normalsFromFaces(xyz,rawFaces),3,gl.FLOAT,false)};
+const indices={filled:{points:indexBuffer(originalPointIndices),mesh:indexBuffer(faces)},measured:{points:indexBuffer(rawPointIndices),mesh:indexBuffer(new Uint32Array(rawFaces))}};
+const optimizedPointIndices=allPointIndices.filter(i=>optimizedValid[i]),optimizedRawIndices=optimizedPointIndices.filter(i=>origins[i]===0),optimizedRawFaces=[];
+for(let i=0;i<optimizedFaces.length;i+=3)if(origins[optimizedFaces[i]]===0&&origins[optimizedFaces[i+1]]===0&&origins[optimizedFaces[i+2]]===0)optimizedRawFaces.push(optimizedFaces[i],optimizedFaces[i+1],optimizedFaces[i+2]);
+const optimizedNormalBuffers={filled:attribute('normal',normalsFromFaces(optimizedXYZ,optimizedFaces),3,gl.FLOAT,false),measured:attribute('normal',normalsFromFaces(optimizedXYZ,optimizedRawFaces),3,gl.FLOAT,false)};
+const optimizedIndices={filled:{points:indexBuffer(optimizedPointIndices),mesh:indexBuffer(optimizedFaces)},measured:{points:indexBuffer(optimizedRawIndices),mesh:indexBuffer(new Uint32Array(optimizedRawFaces))}};
+const detailPointIndices=allPointIndices.filter(i=>detailValid[i]),detailRawIndices=detailPointIndices.filter(i=>origins[i]===0),detailRawFaces=[];
+for(let i=0;i<detailFaces.length;i+=3)if(origins[detailFaces[i]]===0&&origins[detailFaces[i+1]]===0&&origins[detailFaces[i+2]]===0)detailRawFaces.push(detailFaces[i],detailFaces[i+1],detailFaces[i+2]);
+const detailNormalBuffers={filled:attribute('normal',normalsFromFaces(detailXYZ,detailFaces),3,gl.FLOAT,false),measured:attribute('normal',normalsFromFaces(detailXYZ,detailRawFaces),3,gl.FLOAT,false)};
+const detailIndices={filled:{points:indexBuffer(detailPointIndices),mesh:indexBuffer(detailFaces)},measured:{points:indexBuffer(detailRawIndices),mesh:indexBuffer(new Uint32Array(detailRawFaces))}};
+const repairedPointIndices=allPointIndices.filter(i=>repairedValid[i]),repairedRawIndices=repairedPointIndices.filter(i=>repairedOrigins[i]===0),repairedRawFaces=[];
+for(let i=0;i<repairedFaces.length;i+=3)if(repairedOrigins[repairedFaces[i]]===0&&repairedOrigins[repairedFaces[i+1]]===0&&repairedOrigins[repairedFaces[i+2]]===0)repairedRawFaces.push(repairedFaces[i],repairedFaces[i+1],repairedFaces[i+2]);
+const repairedNormalBuffers={filled:attribute('normal',normalsFromFaces(repairedXYZ,repairedFaces),3,gl.FLOAT,false),measured:attribute('normal',normalsFromFaces(repairedXYZ,repairedRawFaces),3,gl.FLOAT,false)};
+const repairedIndices={filled:{points:indexBuffer(repairedPointIndices),mesh:indexBuffer(repairedFaces)},measured:{points:indexBuffer(repairedRawIndices),mesh:indexBuffer(new Uint32Array(repairedRawFaces))}};
+const layers={repaired:{positions:repairedXYZ,normals:repairedNormalBuffers,indices:repairedIndices,points:{filled:repairedPointIndices,measured:repairedRawIndices},label:'补洞表面'},original:{positions:originalXYZ,normals:normalBuffers,indices,points:{filled:originalPointIndices,measured:rawPointIndices},label:'未优化'},optimized:{positions:optimizedXYZ,normals:optimizedNormalBuffers,indices:optimizedIndices,points:{filled:optimizedPointIndices,measured:optimizedRawIndices},label:'平滑表面'},detail:{positions:detailXYZ,normals:detailNormalBuffers,indices:detailIndices,points:{filled:detailPointIndices,measured:detailRawIndices},label:'深度细节'}};
+
+layers.repaired.label='上一版表面';
+const denseRawPoints=allPointIndices.filter(i=>denseOrigins[i]===0),denseRawFaces=[];
+for(let i=0;i<denseFaces.length;i+=3)if(denseOrigins[denseFaces[i]]===0&&denseOrigins[denseFaces[i+1]]===0&&denseOrigins[denseFaces[i+2]]===0)denseRawFaces.push(denseFaces[i],denseFaces[i+1],denseFaces[i+2]);
+positionBuffers.dense=attribute('position',denseXYZ,3,gl.FLOAT,false);originBuffers.dense=attribute('origin',denseOrigins,1,gl.UNSIGNED_BYTE,false);
+layers.dense={positions:denseXYZ,label:'平面修正＋适度断边',points:{filled:allPointIndices,measured:denseRawPoints},
+normals:{filled:attribute('normal',normalsFromFaces(denseXYZ,denseFaces),3,gl.FLOAT,false),measured:attribute('normal',normalsFromFaces(denseXYZ,denseRawFaces),3,gl.FLOAT,false)},
+indices:{filled:{points:indexBuffer(allPointIndices),mesh:indexBuffer(denseFaces)},measured:{points:indexBuffer(denseRawPoints),mesh:indexBuffer(new Uint32Array(denseRawFaces))}}};
+
+function geometryKey(){return 'dense'}
+function usingOptimized(){return geometryKey()!=='original'}
+function activeOrigins(){return geometryKey()==='dense'?denseOrigins:geometryKey()==='repaired'?repairedOrigins:origins}
+function geometryLabel(){return layers[geometryKey()].label}
+function activePointIndices(){return layers[geometryKey()].points[$('source').value]}
+const selectedBuffer=gl.createBuffer(),u={};for(const name of ['gridSize','cameraProjection','cameraIntrinsics','imageScale','rotation','center','pan','extent','clipDepth','pointSize','coloring','depthRange','isMesh','selected','smoothShading','lightDirection','photoTexture','useTexture','photoMaterial'])u[name]=gl.getUniformLocation(program,name);
+const subset=rawPointIndices.length?rawPointIndices:allPointIndices;
+function percentiles(c){let a=Array.from(subset,i=>xyz[3*i+c]).sort((x,y)=>x-y);return [a[Math.floor(a.length*.02)],a[Math.min(a.length-1,Math.floor(a.length*.98))]]}
+let bounds=[0,1,2].map(percentiles),center=bounds.map(a=>(a[0]+a[1])/2),baseExtent=Math.max(.05,...bounds.map(a=>(a[1]-a[0])*.7));
+function medianPointCenter(points,indices){
+  // A distant minority must not place the orbit pivot behind the foreground.
+  // Identity camera projection cancels this pivot exactly; coordinates stay intact.
+  return [0,1,2].map(c=>{const a=Array.from(indices,i=>points[3*i+c]).filter(Number.isFinite).sort((a,b)=>a-b);if(!a.length)return 0;const k=Math.floor(a.length/2);return a.length%2?a[k]:(a[k-1]+a[k])/2;});
+}
+const cameraCenter=medianPointCenter(originalXYZ,subset);
+let yaw=data.camera_intrinsics?0:-.3,pitch=data.camera_intrinsics?0:.13,zoom=1,pan=[0,0],selection=-1,rotation,extent,imageScale=[1,1];
+function usingCamera(){return !!data.camera_intrinsics&&$('projection').value==='camera'}
+function cameraNdc(view,center,intrinsics,scale,width=320,height=360){const z=center[2]-view[2];if(z<=.01)return [Infinity,Infinity,view[2]];const u=intrinsics[0]*(view[0]+center[0])/z+intrinsics[2],v=intrinsics[1]*(center[1]-view[1])/z+intrinsics[3];return [(2*(u+.5)/width-1)*scale[0],(1-2*(v+.5)/height)*scale[1],view[2]];}
+function matrix(){const c=Math.cos(yaw),s=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);return new Float32Array([c,sp*s,-cp*s,0,cp,sp,s,-sp*c,cp*c])}
+let hdmiCapturing=false,wheelUntil=0,wheelDetailTimer=0;
+let renderPending=0;
+let sectionIndices=new Uint32Array(),sectionPending=false,sectionResult=null;
+const sectionBuffer=gl.createBuffer();
+function requestRender(){if(!renderPending)renderPending=requestAnimationFrame(()=>{renderPending=0;render()});}
+function render(outputWidth,outputHeight){
+const key=geometryKey(),layer=layers[key];xyz=layer.positions;
+center=usingCamera()?cameraCenter:bounds.map(a=>(a[0]+a[1])/2);
+gl.bindBuffer(gl.ARRAY_BUFFER,originBuffers[key==='dense'?'dense':key==='repaired'?'repaired':'original']);gl.vertexAttribPointer(gl.getAttribLocation(program,'origin'),1,gl.UNSIGNED_BYTE,false,0,0);
+gl.bindBuffer(gl.ARRAY_BUFFER,positionBuffers[key]);gl.vertexAttribPointer(gl.getAttribLocation(program,'position'),3,gl.FLOAT,false,0,0);
+const external=Number.isInteger(outputWidth)&&Number.isInteger(outputHeight);
+const ratio=external?1:Math.min(devicePixelRatio||1,2),w=external?outputWidth:Math.round(canvas.clientWidth*ratio),h=external?outputHeight:Math.round(canvas.clientHeight*ratio);
+if(!external&&(canvas.width!==w||canvas.height!==h)){canvas.width=w;canvas.height=h}gl.viewport(0,0,w,h);gl.clearColor(.045,.072,.12,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.disable(gl.CULL_FACE);
+rotation=matrix();const halfHeight=baseExtent/zoom*Math.max(1,h/w);extent=[halfHeight*w/h,halfHeight];gl.uniformMatrix3fv(u.rotation,false,rotation);gl.uniform3fv(u.center,center);gl.uniform2fv(u.pan,pan);gl.uniform2fv(u.extent,extent);gl.uniform1f(u.clipDepth,Math.max(5,baseExtent*30));gl.uniform1f(u.pointSize,Number($('size').value)*ratio);
+// The 320x360 grid has unequal X/Y sampling. Keep camera projection proportions
+// correct without adding pixels or changing any reconstructed coordinate.
+const displayAspect=(gridWidth/gridHeight)*(data.camera_intrinsics?data.camera_intrinsics[1]/data.camera_intrinsics[0]:1);
+imageScale=[.9*zoom*Math.min(1,displayAspect/(w/h)),.9*zoom*Math.min(1,(w/h)/displayAspect)];gl.uniform2f(u.gridSize,gridWidth,gridHeight);gl.uniform1i(u.cameraProjection,usingCamera());gl.uniform4fv(u.cameraIntrinsics,data.camera_intrinsics||[1,1,0,0]);gl.uniform2fv(u.imageScale,imageScale);
+const clay=$('mode').value==='clay',mesh=$('mode').value!=='points',coloring=clay?3:['rgb','depth','origin','solid'].indexOf($('color').value),range=[bounds[2][0],Math.max(bounds[2][0]+.01,bounds[2][1])];
+const photoMaterial=textureReady&&mesh&&coloring===0&&$('texture-mode').value==='photo';
+// Reuse captured area-average colors during interaction; restore the original
+// texture on release. Keep the same photographic lighting in both cases.
+const detailed=external?w===1280:!drag&&performance.now()>=wheelUntil,textured=photoMaterial&&detailed;
+gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,photoTexture);gl.uniform1i(u.photoTexture,0);gl.uniform1i(u.useTexture,textured);gl.uniform1i(u.photoMaterial,photoMaterial);
+gl.uniform1i(u.coloring,coloring);gl.uniform2fv(u.depthRange,range);gl.uniform1i(u.isMesh,mesh);gl.uniform1i(u.selected,0);
+const angle=Number($('light').value)*Math.PI/180;gl.uniform3fv(u.lightDirection,[Math.sin(angle)*.85,.55,Math.cos(angle)*.85]);gl.uniform1i(u.smoothShading,$('shading').value==='smooth');
+gl.bindBuffer(gl.ARRAY_BUFFER,layer.normals[$('source').value]);gl.vertexAttribPointer(gl.getAttribLocation(program,'normal'),3,gl.FLOAT,false,0,0);
+const ind=layer.indices[$('source').value][mesh?'mesh':'points'];gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ind.buffer);gl.drawElements(mesh?gl.TRIANGLES:gl.POINTS,ind.count,gl.UNSIGNED_INT,0);
+if(sectionIndices.length){
+ gl.bindBuffer(gl.ARRAY_BUFFER,positionBuffers.original);gl.vertexAttribPointer(gl.getAttribLocation(program,'position'),3,gl.FLOAT,false,0,0);
+ gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,sectionBuffer);gl.uniform1f(u.pointSize,5*ratio);gl.uniform1i(u.isMesh,0);gl.uniform1i(u.selected,1);gl.depthFunc(gl.LEQUAL);
+ gl.drawElements(gl.POINTS,sectionIndices.length,gl.UNSIGNED_INT,0);gl.depthFunc(gl.LESS);
+ gl.bindBuffer(gl.ARRAY_BUFFER,positionBuffers[key]);gl.vertexAttribPointer(gl.getAttribLocation(program,'position'),3,gl.FLOAT,false,0,0);
+}
+if(selection>=0){gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,selectedBuffer);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array([selection]),gl.DYNAMIC_DRAW);gl.uniform1f(u.pointSize,11*ratio);gl.uniform1i(u.isMesh,0);gl.uniform1i(u.selected,1);gl.depthFunc(gl.LEQUAL);gl.drawElements(gl.POINTS,1,gl.UNSIGNED_INT,0);gl.depthFunc(gl.LESS)}
+if(!external){
+$('stats').textContent=mesh?`${(ind.count/3).toLocaleString()} 个三角面`:`${ind.count.toLocaleString()} 个三维点`;
+$('overlay').textContent=`${layer.label} · ${usingCamera()?'拍摄透视':'正交'} · ${clay?'纯色光照表面':mesh?'彩色表面':'点云'} / ${$('source').value==='filled'?'含补全':'匹配来源'} · 厘米`;
+$('geometry-note').textContent=s.dense_geometry?.mesh_limits?'115,200 个点保留；适度切断深度跳变及过长连面，保留短距离连接。':'当前照片使用原版连面条件。';
+$('size').disabled=mesh;$('color').disabled=clay;$('shading').disabled=!mesh||coloring===1||coloring===2||photoMaterial;$('light').disabled=$('shading').disabled;
+$('texture-mode').disabled=!mesh||coloring!==0||!data.texture_image;
+$('texture-note').textContent=data.texture_image?'拖动时轻量显示，停下后恢复 320×360 校正图纹理；保留照片颜色，深度保持不变。':'这张历史模型没有原图纹理，使用原来的逐点颜色。';
+$('light-value').textContent=`${$('light').value}°`;$('depth-scale').hidden=coloring!==1;$('depth-near').textContent=`近 ${ (range[0]*100).toFixed(1)} cm`;$('depth-far').textContent=`远 ${(range[1]*100).toFixed(1)} cm`;
+$('render-info').textContent=textured?'原图纹理已启用；观察几何形状可切换“纯色光照表面”。':mesh?(ind.count?(key==='dense'?'光照使用补全表面的法线；短距离连接保留，明显深度跳变和拉长连面已限制。':'光照使用实际三维表面的法线；深度断层处保留断开。'):'当前来源没有可连接的三角面，可切换点云查看。'):'点云保留离散采样，可与表面效果对照。';
+}
+const err=gl.getError();document.body.dataset.renderStatus=err?'error':'ready';document.body.dataset.pointCount=String(n);document.body.dataset.viewPose=JSON.stringify({yaw,pitch,zoom,pan});if(err)fail('三维绘图错误：'+err);
+if(!hdmiCapturing)window.dispatchEvent(new Event('stereo-rendered'));
+}
+// Keep separate reusable GPU targets for HDMI: never resize/clear/redraw the
+// visible canvas for a transmission, and preserve its picking transform.
+const hdmiTargets=new Map();
+function hdmiTarget(w,h){
+  if(hdmiTargets.has(w))return hdmiTargets.get(w);
+  const framebuffer=gl.createFramebuffer(),texture=gl.createTexture(),depth=gl.createRenderbuffer();
+  gl.bindTexture(gl.TEXTURE_2D,texture);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA8,w,h,0,gl.RGBA,gl.UNSIGNED_BYTE,null);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);
+  gl.bindRenderbuffer(gl.RENDERBUFFER,depth);gl.renderbufferStorage(gl.RENDERBUFFER,gl.DEPTH_COMPONENT16,w,h);
+  gl.bindFramebuffer(gl.FRAMEBUFFER,framebuffer);gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,texture,0);gl.framebufferRenderbuffer(gl.FRAMEBUFFER,gl.DEPTH_ATTACHMENT,gl.RENDERBUFFER,depth);
+  if(gl.checkFramebufferStatus(gl.FRAMEBUFFER)!==gl.FRAMEBUFFER_COMPLETE)throw Error('HDMI 离屏画布创建失败');
+  const out=document.createElement('canvas');out.width=w;out.height=h;
+  const ctx=out.getContext('2d',{willReadFrequently:true}),pixels=new Uint8Array(w*h*4),image=ctx.createImageData(w,h),bgr=new Uint8Array(w*h*3);
+  const target={framebuffer,texture,depth,out,ctx,pixels,image,bgr};hdmiTargets.set(w,target);return target;
+}
+window.stereoCaptureHdmi=(width,height)=>{
+  if(!((width===640&&height===360)||(width===1280&&height===720)))throw Error('Unsupported HDMI size');
+  hdmiCapturing=true;const savedRotation=rotation,savedExtent=extent,savedImageScale=imageScale,started=performance.now();
+  try {
+    const target=hdmiTarget(width,height),{out,ctx,pixels,image,bgr}=target;
+    gl.bindFramebuffer(gl.FRAMEBUFFER,target.framebuffer);
+    render(width,height);
+    if(document.body.dataset.renderStatus!=='ready')throw Error('三维渲染未就绪');
+    gl.readPixels(0,0,width,height,gl.RGBA,gl.UNSIGNED_BYTE,pixels);
+    const stride=width*4;
+    for(let y=0;y<height;y++)image.data.set(pixels.subarray((height-1-y)*stride,(height-y)*stride),y*stride);
+    ctx.setTransform(1,0,0,1,0,0);ctx.putImageData(image,0,0);
+    const scale=width/1280;
+    ctx.scale(scale,scale);ctx.fillStyle='#0b1020dd';ctx.fillRect(0,0,1280,46);
+    ctx.fillStyle='#e5edf8';ctx.font='20px Microsoft YaHei,sans-serif';
+    ctx.fillText(`PHOTO ${s.photo} · ${$('mode').selectedOptions[0].textContent} · ${geometryLabel()} · ${usingCamera()?'拍摄透视':'正交'} · ${$('source').value==='filled'?'含补全推测':'仅匹配来源'}`,20,30);
+    if(selection>=0){ctx.fillStyle='#0b1020dd';ctx.fillRect(0,666,1280,54);ctx.fillStyle='#e5edf8';ctx.font='18px Microsoft YaHei,sans-serif';ctx.fillText(`选中点 Z ${(xyz[3*selection+2]*100).toFixed(2)} cm · 输入 Z ${(originalXYZ[3*selection+2]*100).toFixed(2)} cm · ${activeOrigins()[selection]===0?'匹配来源':'推测来源'}`,20,700);}
+    const rgba=ctx.getImageData(0,0,width,height).data;
+    for(let i=0,j=0;i<rgba.length;i+=4,j+=3){bgr[j]=rgba[i+2];bgr[j+1]=rgba[i+1];bgr[j+2]=rgba[i];}
+    return {bgr,canvas:out,width,height,captureMs:performance.now()-started};
+  } finally {gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.viewport(0,0,canvas.width,canvas.height);rotation=savedRotation;extent=savedExtent;imageScale=savedImageScale;hdmiCapturing=false;}
+};
+if(window.AUTO_CLOUD_REVISION&&window.HDMI_TOKEN){
+  let casting=false,sending=false,lastSent=0,dirty=true,generation=-1;
+  const note=$('hdmi-status'),headers={'X-Viewer-Token':window.HDMI_TOKEN};
+  const panel=$('hdmi-panel');
+  fetch('/api/hdmi/status').then(r=>r.json()).then(v=>{panel.hidden=!v.enabled;}).catch(()=>{});
+  window.addEventListener('stereo-rendered',()=>{dirty=true});
+  async function sendHdmi(){
+    if(!casting||sending||document.hidden||(!dirty&&Date.now()-lastSent<2000))return;
+    sending=true;dirty=false;
+    try{
+      const frame=window.stereoCaptureHdmi(1280,720);
+      const r=await fetch('/api/hdmi/frame',{method:'POST',headers:{...headers,'Content-Type':'application/octet-stream','X-Photo-Id':window.AUTO_CLOUD_REVISION,'X-Cast-Generation':String(generation)},body:frame.bgr});
+      const v=await r.json();if(!r.ok)throw Error(v.error||'投屏失败');
+      lastSent=Date.now();note.textContent='正在投屏，旋转和显示选项会同步到 HDMI。';
+    }catch(e){
+      casting=false;note.textContent=e.message;
+      try{const r=await fetch('/api/hdmi/status');const current=await r.json();
+        if(r.ok&&current.enabled&&!current.error&&current.generation!==generation)
+          note.textContent='投屏已因按键返回、待机或照片更新而停止。需要时请在当前照片中重新投屏。';
+      }catch(ignore){}
+    }
+    finally{sending=false;}
+  }
+  $('hdmi-start').onclick=async()=>{
+    try{const r=await fetch('/api/hdmi/status');const v=await r.json();if(!r.ok||!v.enabled||v.error)throw Error(v.error||'HDMI 尚未就绪');generation=v.generation;casting=true;dirty=true;sendHdmi();}
+    catch(e){note.textContent=e.message;}
+  };
+  $('hdmi-stop').onclick=async()=>{
+    casting=false;
+    try{const r=await fetch('/api/hdmi/preview',{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:'{}'});const v=await r.json();if(!r.ok)throw Error(v.error);note.textContent='已恢复相机预览。';}
+    catch(e){note.textContent=e.message;}
+  };
+  setInterval(sendHdmi,500);
+}
+function project(i){let v=[xyz[3*i]-center[0],center[1]-xyz[3*i+1],center[2]-xyz[3*i+2]],r=rotation;const view=[r[0]*v[0]+r[3]*v[1]+r[6]*v[2]+pan[0],r[1]*v[0]+r[4]*v[1]+r[7]*v[2]+pan[1],r[2]*v[0]+r[5]*v[1]+r[8]*v[2]];return usingCamera()?cameraNdc(view,center,data.camera_intrinsics,imageScale,gridWidth,gridHeight):[view[0]/extent[0],view[1]/extent[1],view[2]]}
+function pick(event){let rect=canvas.getBoundingClientRect(),mx=event.clientX-rect.left,my=event.clientY-rect.top,best=-1,bestZ=-Infinity;const ids=activePointIndices();
+for(const i of ids){let p=project(i),sx=(p[0]+1)*rect.width/2,sy=(1-p[1])*rect.height/2,dist=(mx-sx)**2+(my-sy)**2;if(dist<64&&p[2]>bestZ){best=i;bestZ=p[2]}}
+selection=best;if(best>=0){const kind=['输入为保留匹配（仍可能误匹配）','输入为小孔局部平面推测','输入为图像引导推测','输入为画面外推测','输入为异常候选剔除后推测','板上补洞推测（不是实测）'][activeOrigins()[best]],pixel=pixels[best];$('picked').innerHTML=`<b>${usingOptimized()?'优化显示':'输入'}深度 Z：${(xyz[3*best+2]*100).toFixed(2)} 厘米</b><br>${usingOptimized()?`优化前 Z：${(originalXYZ[3*best+2]*100).toFixed(2)} 厘米<br>`:''}${kind}<br><small>像素 (${pixel%gridWidth}, ${Math.floor(pixel/gridWidth)}) · X ${(xyz[3*best]*100).toFixed(1)} / Y ${(xyz[3*best+1]*100).toFixed(1)} 厘米</small>`}else $('picked').textContent='这里没有可选择的点。';render()}
+let drag=null;canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY,pan:e.button===2||e.shiftKey};canvas.setPointerCapture(e.pointerId)});
+canvas.addEventListener('pointermove',e=>{if(!drag)return;let dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(drag.pan){pan[0]+=dx/canvas.clientWidth*extent[0]*2;pan[1]-=dy/canvas.clientHeight*extent[1]*2}else{yaw+=dx*.006;pitch=Math.max(-1.5,Math.min(1.5,pitch+dy*.006))}drag.x=e.clientX;drag.y=e.clientY;requestRender()});
+canvas.addEventListener('pointerup',e=>{if(drag&&!drag.pan&&Math.hypot(e.clientX-drag.startX,e.clientY-drag.startY)<4)pick(e);drag=null;requestRender()});canvas.addEventListener('pointercancel',()=>{drag=null;requestRender()});canvas.addEventListener('contextmenu',e=>e.preventDefault());
+canvas.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.1,Math.min(15,zoom*Math.exp(-e.deltaY*.001)));wheelUntil=performance.now()+150;clearTimeout(wheelDetailTimer);wheelDetailTimer=setTimeout(requestRender,150);requestRender()},{passive:false});
+for(const name of ['mode','source','color','size','shading','light','geometry','texture-mode','projection'])$(name).addEventListener('input',()=>{if(name==='geometry'||name==='source'||name==='projection'){selection=-1;$('picked').textContent='单击点查看输入深度、显示深度和来源。'}render()});
+$('front').onclick=()=>{yaw=pitch=0;render()};$('oblique').onclick=()=>{yaw=-.6;pitch=.18;render()};$('reset').onclick=()=>{yaw=usingCamera()?0:-.3;pitch=usingCamera()?0:.13;zoom=1;pan=[0,0];selection=-1;$('picked').textContent='单击一个点，查看它的相机深度 Z 和数据来源。';render()};
+function clearSection(message='已清除截面显示。'){
+ sectionIndices=new Uint32Array();sectionResult=null;$('section-plot').hidden=true;$('section-download').hidden=true;
+ $('section-status').textContent=message;document.body.dataset.sectionStatus='idle';requestRender();
+}
+function drawSection(result){
+ const plot=$('section-plot'),ctx=plot.getContext('2d'),points=decode(result.xyz_q12,Int32Array),kinds=decode(result.origins,Uint8Array);
+ plot.hidden=false;ctx.clearRect(0,0,540,380);ctx.fillStyle='#0a1423';ctx.fillRect(0,0,540,380);
+ const axes=[0,1,2].filter(a=>a!==result.axis),names=['X','Y','Z'];
+ ctx.font='21px Microsoft YaHei,sans-serif';ctx.fillStyle='#a9bfd7';ctx.fillText(`${names[axes[0]]} / ${names[axes[1]]} · mm`,18,28);
+ if(!result.count){ctx.fillText('这个薄层内没有符合条件的点',25,190);return;}
+ const b=result.bounds_mm,lo=axes.map(a=>b[2*a]),hi=axes.map(a=>b[2*a+1]);
+ const scale=Math.min(430/Math.max(hi[0]-lo[0],1),270/Math.max(hi[1]-lo[1],1));
+ const mid=lo.map((v,i)=>(v+hi[i])/2),cx=290,cy=194;
+ ctx.strokeStyle='#24364c';ctx.lineWidth=1;ctx.strokeRect(60,48,460,284);
+ ctx.font='18px sans-serif';ctx.fillStyle='#94a9bf';ctx.fillText(lo[0].toFixed(1),60,360);ctx.fillText(hi[0].toFixed(1),450,360);
+ ctx.fillText(hi[1].toFixed(1),3,66);ctx.fillText(lo[1].toFixed(1),3,330);
+ for(let i=0;i<result.count;i++){
+   const x=cx+(points[3*i+axes[0]]/4096-mid[0])*scale,y=cy-(points[3*i+axes[1]]/4096-mid[1])*scale;
+   ctx.fillStyle=kinds[i]===0?'#36c6b3':'#ffab43';ctx.fillRect(x-1.5,y-1.5,3,3);
+ }
+}
+$('section-center').value=(cameraCenter[2]*1000).toFixed(2);
+$('section-compute').disabled=!s.pl_geometry||s.test_only;
+if(s.test_only){$('section-status').textContent='固定照片预览，实时截面控制正在接入。';$('processing-mode').title=s.note;}
+$('section-engine').textContent=`板上 PL 原坐标：${s.pl_geometry.valid_points.toLocaleString()} 点；本次拍照未做电脑逐值重算。`;
+if(s.pl_geometry)layers.original.label='PL 原坐标';
+for(const id of ['section-axis','section-center','section-thickness','section-inferred'])$(id).addEventListener('input',()=>{
+ if(id==='section-axis')$('section-center').value=(cameraCenter[Number($('section-axis').value)]*1000).toFixed(2);
+ clearSection('参数已改变，点击“板上计算截面”更新。');
+});
+$('section-clear').onclick=()=>clearSection();
+$('section-compute').onclick=async()=>{
+ if(sectionPending)return;
+ if(!window.AUTO_CLOUD_REVISION||!window.HDMI_TOKEN){$('section-status').textContent='请在本机自动更新页面中操作截面。';return;}
+ const center=Number($('section-center').value),thickness=Number($('section-thickness').value);
+ if(!Number.isFinite(center)||!Number.isFinite(thickness)||thickness<0||thickness>20000){$('section-status').textContent='请输入有效位置和 0–20000 mm 的厚度。';return;}
+ clearSection('PL 正在计算，电脑随后核对全部点…');sectionPending=true;document.body.dataset.sectionStatus='computing';
+ const controls=['section-compute','section-axis','section-center','section-thickness','section-inferred','section-clear'];controls.forEach(id=>$(id).disabled=true);
+ const abort=new AbortController(),timer=setTimeout(()=>abort.abort(),30000);
+ try{
+   const response=await fetch('/api/section',{method:'POST',headers:{'Content-Type':'application/json','X-Viewer-Token':window.HDMI_TOKEN},signal:abort.signal,
+    body:JSON.stringify({revision:window.AUTO_CLOUD_REVISION,axis:Number($('section-axis').value),center_mm:center,thickness_mm:thickness,include_inferred:$('section-inferred').checked})});
+   const result=await response.json();if(!response.ok||result.status!=='PASS')throw Error(result.error||'截面计算失败');
+   const selected=new Set(decode(result.indices,Uint32Array));sectionIndices=allPointIndices.filter(i=>selected.has(pixels[i]));sectionResult=result;
+   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,sectionBuffer);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,sectionIndices,gl.DYNAMIC_DRAW);
+   drawSection(result);$('section-download').href=result.csv_url;$('section-download').hidden=false;
+   const extent=result.bounds_mm?[0,1,2].map(a=>`${['X','Y','Z'][a]} ${(result.bounds_mm[2*a+1]-result.bounds_mm[2*a]).toFixed(2)}`).join(' / '):'空截面';
+   $('section-status').textContent=`${result.count.toLocaleString()} 点（匹配 ${result.measured.toLocaleString()} / 推测 ${result.inferred.toLocaleString()}）；跨度 ${extent} mm。板上 ${(result.board_ms/1000).toFixed(2)} 秒，逐点对照通过。三维预览内高亮 ${sectionIndices.length.toLocaleString()} 点。`;
+   document.body.dataset.sectionStatus='ready';document.body.dataset.sectionCount=String(result.count);requestRender();
+ }catch(error){$('section-status').textContent=error.name==='AbortError'?'连接超时，请检查板卡后重试。':String(error.message);document.body.dataset.sectionStatus='error';}
+ finally{clearTimeout(timer);sectionPending=false;controls.forEach(id=>$(id).disabled=false);}
+};
+new ResizeObserver(render).observe(canvas);render();
+$('save-render').onclick=async()=>{
+  render();const out=document.createElement('canvas');out.width=canvas.width;out.height=canvas.height+110;const context=out.getContext('2d');
+  context.fillStyle='#0b1020';context.fillRect(0,0,out.width,out.height);context.drawImage(canvas,0,60);
+  context.fillStyle='#e5edf8';context.font='18px Microsoft YaHei,sans-serif';context.fillText(`PHOTO ${s.photo} · ${geometryLabel()} · ${$('mode').selectedOptions[0].textContent}`,16,34);
+  context.fillStyle='#a7b9d0';context.font='12px Microsoft YaHei,sans-serif';context.fillText(`${$('source').value==='filled'?'含补全推测':'仅匹配来源'} · 单视角表面 · ${geometryKey()==='dense'?'补全视差PL投影':usingOptimized()?'显示坐标已降噪':'原始坐标'}`,16,out.height-19);
+  const url=out.toDataURL('image/png');$('render-image').src=url;$('download-render').href=url;$('download-render').download=`PHOTO_${s.photo}_${$('geometry').value}_${$('mode').value}_${$('source').value}.png`;$('render-export').showModal();
+  try{const png=Uint8Array.from(atob(url.split(',')[1]),c=>c.charCodeAt(0));const response=await fetch('/api/render-export',{method:'POST',headers:{'Content-Type':'image/png','X-Viewer-Token':window.HDMI_TOKEN||'','X-Photo-Id':window.AUTO_CLOUD_REVISION||''},body:png});if(response.ok){const saved=await response.json();$('download-render').href=saved.url;document.body.dataset.pngExport='saved';}}catch(error){document.body.dataset.pngExport='browser-only';}
+};
+$('close-export').onclick=()=>$('render-export').close();
+</script></body></html>

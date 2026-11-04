@@ -1,0 +1,5 @@
+{
+  "cases": 128,
+  "reference": "NumPy ordered IEEE FP64 operations and FP32 round-to-nearest conversion; normal finite input domain",
+  "seed": 717
+}

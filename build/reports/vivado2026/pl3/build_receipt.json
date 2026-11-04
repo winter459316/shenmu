@@ -1,0 +1,18 @@
+{
+  "profile": "pl3",
+  "vivado": "2026.1",
+  "physical_review_passed": true,
+  "methodology_review_passed": true,
+  "bit_sha256": "2d0902539b70ae9d62e26b14c01a5c8af7406b54dba07bfc48ef07a4fe7e0e72",
+  "checkpoint_sha256": "e069c110f08b468981e1a89f82deb3e49b082a66d44c845671826f9ba7595fda",
+  "board_tested": true,
+  "export_process_clean_exit": true,
+  "telemetry_data_collection_for_export": false,
+  "wns_ns_display": 0.0,
+  "whs_ns": 0.01,
+  "wpws_ns": 0.137,
+  "export_log": "D:/sm26/pl3_export_without_telemetry.log",
+  "board_validation_scope": "6480 FP32 convolution commands in saved-photo full network; full result 13 arrays byte-exact",
+  "board_evidence": "reports/board_qualification_final.json",
+  "cold_boot_retested": false
+}

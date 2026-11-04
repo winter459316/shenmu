@@ -1,0 +1,28 @@
+{
+  "toolchain": "2018.2 historical optimization",
+  "baseline_sha256": "8c00ff9e1cc6dc60d15bb14c5c7b539f095410a8925392ea00cd53fe1f254955",
+  "candidate_sha256": "8b74614cbcea280f18a8c26f34771a8c6a2fa7be3f74cfed5cde6d8409452ff8",
+  "resources": {
+    "lut": {
+      "before": 78045.0,
+      "after": 75242.0
+    },
+    "ff": {
+      "before": 110635.0,
+      "after": 76360.0
+    },
+    "bram": {
+      "before": 107.0,
+      "after": 107.0
+    },
+    "uram": {
+      "before": 24.0,
+      "after": 32.0
+    },
+    "dsp": {
+      "before": 668.0,
+      "after": 686.0
+    }
+  },
+  "source": "Preserved baseline hardware record and store2 implementation verification; distinct from 2026.1 migration"
+}

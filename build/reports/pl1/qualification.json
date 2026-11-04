@@ -1,0 +1,52 @@
+{
+  "qualified": true,
+  "sha256": "3d166a23a3dd3d60a2cc3a34d43b3b5dc76878edd6522f4f3de620688ac758fe",
+  "bit_sha256": "93825e9a7090c22da8ead67bf45e165c077e96d4bf62a7dd82ac7022eb67b49b",
+  "control": 2701918208,
+  "identity": 1179078705,
+  "memory_base": 1728053248,
+  "memory_bytes": 4194304,
+  "clock_mhz": 100,
+  "timing_passed": true,
+  "cdc_review_passed": true,
+  "combinational_loops": 0,
+  "wns_ns": 0.603,
+  "whs_ns": 0.011,
+  "wpws_ns": 0.126,
+  "resources": {
+    "CLB LUTs": {
+      "used": 61324.0,
+      "total": 87840,
+      "percent": 69.81329690346084
+    },
+    "CLB Registers": {
+      "used": 62358.0,
+      "total": 175680,
+      "percent": 35.49521857923497
+    },
+    "Block RAM Tile": {
+      "used": 84.0,
+      "total": 128,
+      "percent": 65.625
+    },
+    "URAM": {
+      "used": 10.0,
+      "total": 48,
+      "percent": 20.833333333333332
+    },
+    "DSPs": {
+      "used": 153.0,
+      "total": 728,
+      "percent": 21.016483516483518
+    }
+  },
+  "hls_source_unchanged": true,
+  "reports": {
+    "timing_100mhz.rpt": "5cb2d8e47c3f6e30ba7b358d39cf957078ce2232bd33df09776e392bf8f0aa65",
+    "cdc_details.rpt": "0802a8ea4ce55ea0d70000911a265cc94fac423210ebaf92ca68b94a0fe5e6cf",
+    "bus_skew.rpt": "e2ec347296892980e14c6854752a7c3f63f64869b33a726d052db874bfdfe9f5",
+    "drc.rpt": "12769d9718b25b6aeb4e56112550f11767736e19c84afdf57d5d2da270bdd199",
+    "utilization_total.rpt": "d4971adc73e3c95837205c5b2a9c7ab7d7a3b783c8f13a8fd0c8cf74fdf8d976",
+    "hardware_bd.tcl": "6c6f2f2c68336ac586424da77c336e7816ed014a949ea6c843004d3a8e7b725e"
+  }
+}

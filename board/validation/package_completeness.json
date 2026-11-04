@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scope": "Offline file completeness, not Vivado 2026.1 validation",
+  "hardware_profiles": 3,
+  "ip_file_references": 1289,
+  "hardware_files_verified": 799,
+  "mapped_runtime_sources_verified": 346,
+  "hardware_build_deferred": false
+}

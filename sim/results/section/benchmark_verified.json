@@ -1,0 +1,1344 @@
+{
+  "passed": true,
+  "job": "55ed2f8f5a864a9485bd4500696b3d1d",
+  "cuts": 68,
+  "reference_checks": 20,
+  "entries": [
+    {
+      "request_seconds": 0.4069999999992433,
+      "prepare_seconds": 0.0,
+      "enter_seconds": 0.375
+    },
+    {
+      "request_seconds": 0.4220000000004802,
+      "prepare_seconds": 0.0,
+      "enter_seconds": 0.39100000000144064
+    },
+    {
+      "request_seconds": 0.43800000000010186,
+      "prepare_seconds": 0.0,
+      "enter_seconds": 0.40600000000085856
+    }
+  ],
+  "nonempty_summary": {
+    "device_ms": {
+      "median": 4.451839499779453,
+      "p95": 6.136013150080543,
+      "maximum": 7.363754000834888
+    },
+    "total_ms": {
+      "median": 30.736662499293743,
+      "p95": 38.922594750420096,
+      "maximum": 41.43231499983813
+    },
+    "roundtrip_ms": {
+      "median": 61.99999999989814,
+      "p95": 78.00000000133878,
+      "maximum": 93.99999999914144
+    },
+    "client_ms": {
+      "median": 63.00000000010186,
+      "p95": 78.05000000125801,
+      "maximum": 93.99999999914144
+    },
+    "candidate_triangles": {
+      "median": 1313.0,
+      "p95": 2992.699999999999,
+      "maximum": 4069
+    }
+  },
+  "rows": [
+    {
+      "device_ms": 0.23693299954175018,
+      "total_ms": 4.251283000485273,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 5,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.030831000913167372,
+      "upload_ms": 0.013770000805379823,
+      "segments": 0,
+      "pixels": 0,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 0.0,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 3.137750998575939,
+      "total_ms": 14.948419000575086,
+      "roundtrip_ms": 30.999999999039574,
+      "candidate_triangles": 5,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.03312999979243614,
+      "upload_ms": 0.0022199983504833654,
+      "segments": 5,
+      "pixels": 0,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 100.0,
+      "client_ms": 30.999999999039574,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 4.613426999640069,
+      "total_ms": 30.934939000871964,
+      "roundtrip_ms": 61.99999999989814,
+      "candidate_triangles": 1534,
+      "original_triangles": 459588,
+      "broadphase_ms": 13.44918399991002,
+      "upload_ms": 0.48684499961382244,
+      "segments": 1531,
+      "pixels": 2472,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 11.166392202715006,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 4.149341000811546,
+      "total_ms": 30.075811000642716,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 1107,
+      "original_triangles": 459588,
+      "broadphase_ms": 13.56963599937444,
+      "upload_ms": 0.3729639993252931,
+      "segments": 1107,
+      "pixels": 1559,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 11.594963631286435,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.977669999585487,
+      "total_ms": 30.915699999241042,
+      "roundtrip_ms": 63.00000000010186,
+      "candidate_triangles": 962,
+      "original_triangles": 459588,
+      "broadphase_ms": 13.602746001197374,
+      "upload_ms": 0.3004730006068712,
+      "segments": 962,
+      "pixels": 1451,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 12.023535059857863,
+      "client_ms": 63.00000000010186,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.9116589978220873,
+      "total_ms": 29.97560999938287,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 816,
+      "original_triangles": 459588,
+      "broadphase_ms": 13.617336000606883,
+      "upload_ms": 0.257321999015403,
+      "segments": 816,
+      "pixels": 1373,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 12.45210648842929,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.9743500001350185,
+      "total_ms": 30.396264000955853,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 925,
+      "original_triangles": 459588,
+      "broadphase_ms": 13.978629998746328,
+      "upload_ms": 0.2878519990190398,
+      "segments": 925,
+      "pixels": 922,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 12.88067791700072,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.50706599986006,
+      "total_ms": 31.620416000805562,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 1392,
+      "original_triangles": 459588,
+      "broadphase_ms": 13.749036999797681,
+      "upload_ms": 0.43671499952324666,
+      "segments": 1392,
+      "pixels": 993,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 13.309249345572148,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.541106001852313,
+      "total_ms": 32.502304999070475,
+      "roundtrip_ms": 63.00000000010186,
+      "candidate_triangles": 1426,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.44943400019838,
+      "upload_ms": 0.45114500062481966,
+      "segments": 1426,
+      "pixels": 949,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 13.737820774143577,
+      "client_ms": 63.00000000010186,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.560875000606757,
+      "total_ms": 32.7108670007874,
+      "roundtrip_ms": 61.99999999989814,
+      "candidate_triangles": 1474,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.192161999744712,
+      "upload_ms": 0.4584849993989337,
+      "segments": 1472,
+      "pixels": 973,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 14.166392202715006,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 4.6351649980351795,
+      "total_ms": 33.96026900009019,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 1526,
+      "original_triangles": 459588,
+      "broadphase_ms": 15.238311998473364,
+      "upload_ms": 0.581536000026972,
+      "segments": 1526,
+      "pixels": 937,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 14.594963631286435,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.536235001069144,
+      "total_ms": 33.123552000688505,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 1449,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.325263999126037,
+      "upload_ms": 0.44287399941822514,
+      "segments": 1449,
+      "pixels": 874,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 15.023535059857863,
+      "client_ms": 63.00000000010186,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.437683999640285,
+      "total_ms": 32.17617100017378,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 1150,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.761917000214453,
+      "upload_ms": 0.35072399987257086,
+      "segments": 1150,
+      "pixels": 844,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 15.45210648842929,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.6925670010532485,
+      "total_ms": 30.66364599908411,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 644,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.199462000760832,
+      "upload_ms": 0.19548199998098426,
+      "segments": 644,
+      "pixels": 707,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 15.880677917000721,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.44446500093909,
+      "total_ms": 31.28801299862971,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 442,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.857337999274023,
+      "upload_ms": 0.13751199912803713,
+      "segments": 442,
+      "pixels": 576,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 16.309249345572148,
+      "client_ms": 63.00000000010186,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.4843060002458515,
+      "total_ms": 30.80555799897411,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 370,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.167782001095475,
+      "upload_ms": 0.11503099995024968,
+      "segments": 370,
+      "pixels": 2744,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 16.73782077414358,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.426104000027408,
+      "total_ms": 31.166802000370808,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 368,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.80848800019885,
+      "upload_ms": 0.11337099931552075,
+      "segments": 368,
+      "pixels": 2820,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 17.166392202715006,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 0.12030099969706498,
+      "total_ms": 4.974949999450473,
+      "roundtrip_ms": 30.999999999039574,
+      "candidate_triangles": 6,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.03556100091373082,
+      "upload_ms": 0.0029000002541579306,
+      "segments": 0,
+      "pixels": 0,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 0.0,
+      "client_ms": 30.999999999039574,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 3.4423350007273257,
+      "total_ms": 20.31394299956446,
+      "roundtrip_ms": 61.99999999989814,
+      "candidate_triangles": 6,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.032190000638365746,
+      "upload_ms": 0.00270000055024866,
+      "segments": 6,
+      "pixels": 0,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 100.0,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 4.5622159996128175,
+      "total_ms": 19.06070999939402,
+      "roundtrip_ms": 46.999999998661224,
+      "candidate_triangles": 1319,
+      "original_triangles": 459588,
+      "broadphase_ms": 2.244752000478911,
+      "upload_ms": 0.15378200077975634,
+      "segments": 1317,
+      "pixels": 637,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 62.472207776004396,
+      "client_ms": 46.999999998661224,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 4.375762999188737,
+      "total_ms": 19.756577999942238,
+      "roundtrip_ms": 30.999999999039574,
+      "candidate_triangles": 1324,
+      "original_triangles": 459588,
+      "broadphase_ms": 2.0621910007321276,
+      "upload_ms": 0.156332000187831,
+      "segments": 1324,
+      "pixels": 660,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 62.90077920457583,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.40188300126465,
+      "total_ms": 18.364513000051375,
+      "roundtrip_ms": 61.99999999989814,
+      "candidate_triangles": 1341,
+      "original_triangles": 459588,
+      "broadphase_ms": 1.7795479998312658,
+      "upload_ms": 0.15388100109703373,
+      "segments": 1341,
+      "pixels": 643,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 63.32935063314725,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.446923998330021,
+      "total_ms": 18.374513998423936,
+      "roundtrip_ms": 46.999999998661224,
+      "candidate_triangles": 1322,
+      "original_triangles": 459588,
+      "broadphase_ms": 1.5451660001417622,
+      "upload_ms": 0.14624100003857166,
+      "segments": 1322,
+      "pixels": 667,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 63.75792206171868,
+      "client_ms": 46.999999998661224,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.610224999851198,
+      "total_ms": 19.45154500026547,
+      "roundtrip_ms": 31.000000000858563,
+      "candidate_triangles": 1330,
+      "original_triangles": 459588,
+      "broadphase_ms": 1.3225029997556703,
+      "upload_ms": 0.14238099902286194,
+      "segments": 1330,
+      "pixels": 645,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 64.1864934902901,
+      "client_ms": 31.000000000858563,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.509055001108209,
+      "total_ms": 18.220691999886185,
+      "roundtrip_ms": 78.99999999972351,
+      "candidate_triangles": 1322,
+      "original_triangles": 459588,
+      "broadphase_ms": 1.1550409999472322,
+      "upload_ms": 0.16760200014687143,
+      "segments": 1322,
+      "pixels": 649,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 64.61506491886153,
+      "client_ms": 78.99999999972351,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.342282998550218,
+      "total_ms": 17.175831999338698,
+      "roundtrip_ms": 31.000000000858563,
+      "candidate_triangles": 1310,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.8944990004238207,
+      "upload_ms": 0.12954100020579062,
+      "segments": 1310,
+      "pixels": 621,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 65.04363634743297,
+      "client_ms": 31.000000000858563,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.34375400072895,
+      "total_ms": 16.989350000585546,
+      "roundtrip_ms": 46.999999998661224,
+      "candidate_triangles": 1307,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.656557000183966,
+      "upload_ms": 0.12681100088229869,
+      "segments": 1305,
+      "pixels": 625,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 65.4722077760044,
+      "client_ms": 46.999999998661224,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 4.579895999995642,
+      "total_ms": 17.292723001446575,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 1294,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.44835500011686236,
+      "upload_ms": 0.11412099956942257,
+      "segments": 1294,
+      "pixels": 637,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 65.90077920457583,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.390584001157549,
+      "total_ms": 16.85319900025206,
+      "roundtrip_ms": 61.99999999989814,
+      "candidate_triangles": 1260,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.2005520000238903,
+      "upload_ms": 0.10484099948371295,
+      "segments": 1260,
+      "pixels": 915,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 66.32935063314726,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.503055002714973,
+      "total_ms": 16.941138999754912,
+      "roundtrip_ms": 46.999999998661224,
+      "candidate_triangles": 1268,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.2857229992514476,
+      "upload_ms": 0.1114309998229146,
+      "segments": 1268,
+      "pixels": 941,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 66.75792206171869,
+      "client_ms": 46.999999998661224,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.342103999078972,
+      "total_ms": 16.90543900076591,
+      "roundtrip_ms": 31.000000000858563,
+      "candidate_triangles": 1274,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.5247150002105627,
+      "upload_ms": 0.11759200060623698,
+      "segments": 1274,
+      "pixels": 74,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 67.1864934902901,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.3436939995444845,
+      "total_ms": 17.121270999268745,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 1290,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.736457999664708,
+      "upload_ms": 0.12463100028980989,
+      "segments": 1290,
+      "pixels": 67,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 67.61506491886153,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.470044999834499,
+      "total_ms": 18.228111999633256,
+      "roundtrip_ms": 61.99999999989814,
+      "candidate_triangles": 1316,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.997990000541904,
+      "upload_ms": 0.16166199930012226,
+      "segments": 1316,
+      "pixels": 66,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 68.04363634743297,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.456755001228885,
+      "total_ms": 18.355194000832853,
+      "roundtrip_ms": 63.00000000010186,
+      "candidate_triangles": 1276,
+      "original_triangles": 459588,
+      "broadphase_ms": 1.1224409990973072,
+      "upload_ms": 0.13137099995219614,
+      "segments": 1276,
+      "pixels": 934,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 68.4722077760044,
+      "client_ms": 78.99999999972351,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 0.1238309996551834,
+      "total_ms": 4.895649000900448,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 6,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.02693000169529114,
+      "upload_ms": 0.0022399999579647556,
+      "segments": 0,
+      "pixels": 0,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 0.0,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 3.0494109996652696,
+      "total_ms": 15.96681999944849,
+      "roundtrip_ms": 61.99999999989814,
+      "candidate_triangles": 5,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.033039999834727496,
+      "upload_ms": 0.002249998942716047,
+      "segments": 5,
+      "pixels": 0,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 100.0,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 3.5434150013315957,
+      "total_ms": 30.211932000383968,
+      "roundtrip_ms": 61.99999999989814,
+      "candidate_triangles": 540,
+      "original_triangles": 459588,
+      "broadphase_ms": 12.230211999849416,
+      "upload_ms": 0.15113199879124295,
+      "segments": 540,
+      "pixels": 950,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 8.439251194579741,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 3.9083589999791,
+      "total_ms": 30.005410000740085,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 796,
+      "original_triangles": 459588,
+      "broadphase_ms": 12.653376999878674,
+      "upload_ms": 0.20634199972846545,
+      "segments": 796,
+      "pixels": 13125,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 8.86782262315117,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.915219002010417,
+      "total_ms": 30.60712600017723,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 802,
+      "original_triangles": 459588,
+      "broadphase_ms": 13.0965809985355,
+      "upload_ms": 0.21452200053317938,
+      "segments": 802,
+      "pixels": 5428,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 9.296394051722599,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.286391998903127,
+      "total_ms": 29.160222000427893,
+      "roundtrip_ms": 78.00000000133878,
+      "candidate_triangles": 1211,
+      "original_triangles": 459588,
+      "broadphase_ms": 12.338473999989219,
+      "upload_ms": 0.36225299845682457,
+      "segments": 1209,
+      "pixels": 1542,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 9.724965480294028,
+      "client_ms": 78.00000000133878,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.77958800001943,
+      "total_ms": 33.24327200061816,
+      "roundtrip_ms": 46.999999998661224,
+      "candidate_triangles": 1608,
+      "original_triangles": 459588,
+      "broadphase_ms": 13.981919999423553,
+      "upload_ms": 0.41896400034602266,
+      "segments": 1605,
+      "pixels": 1307,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 10.153536908865455,
+      "client_ms": 46.999999998661224,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 5.577246000029845,
+      "total_ms": 32.55697600070562,
+      "roundtrip_ms": 46.999999998661224,
+      "candidate_triangles": 2424,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.120521000222652,
+      "upload_ms": 0.5645460005325731,
+      "segments": 2424,
+      "pixels": 2715,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 10.582108337436884,
+      "client_ms": 63.00000000010186,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 5.998109998472501,
+      "total_ms": 33.98783000011463,
+      "roundtrip_ms": 78.00000000133878,
+      "candidate_triangles": 2875,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.720746999955736,
+      "upload_ms": 0.6743069989170181,
+      "segments": 2870,
+      "pixels": 2944,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 11.010679766008312,
+      "client_ms": 78.00000000133878,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 6.120582000221475,
+      "total_ms": 33.30552299848932,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 2977,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.429564998863498,
+      "upload_ms": 0.7915679998404812,
+      "segments": 2972,
+      "pixels": 2742,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 11.439251194579741,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 5.893638999623363,
+      "total_ms": 32.465894999404554,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 2620,
+      "original_triangles": 459588,
+      "broadphase_ms": 13.719127999138436,
+      "upload_ms": 0.5929649996687658,
+      "segments": 2613,
+      "pixels": 2321,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 11.86782262315117,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 5.251192000287119,
+      "total_ms": 31.2933229997725,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 2077,
+      "original_triangles": 459588,
+      "broadphase_ms": 12.485495000873925,
+      "upload_ms": 0.4841350000788225,
+      "segments": 2067,
+      "pixels": 1453,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 12.296394051722597,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 5.36600399937015,
+      "total_ms": 30.173122000633157,
+      "roundtrip_ms": 63.00000000010186,
+      "candidate_triangles": 2190,
+      "original_triangles": 459588,
+      "broadphase_ms": 12.329244000284234,
+      "upload_ms": 0.49300499995297287,
+      "segments": 2188,
+      "pixels": 1546,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 12.724965480294028,
+      "client_ms": 78.00000000133878,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 5.635026998788817,
+      "total_ms": 31.099070998607203,
+      "roundtrip_ms": 46.999999998661224,
+      "candidate_triangles": 2502,
+      "original_triangles": 459588,
+      "broadphase_ms": 12.484105000112322,
+      "upload_ms": 0.5649360009556403,
+      "segments": 2495,
+      "pixels": 1660,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 13.153536908865455,
+      "client_ms": 46.999999998661224,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 5.685356998583302,
+      "total_ms": 30.667766999613377,
+      "roundtrip_ms": 78.00000000133878,
+      "candidate_triangles": 2524,
+      "original_triangles": 459588,
+      "broadphase_ms": 11.903628999789362,
+      "upload_ms": 0.5575560007855529,
+      "segments": 2518,
+      "pixels": 1646,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 13.582108337436884,
+      "client_ms": 78.00000000133878,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 6.109580999691389,
+      "total_ms": 31.3736339994648,
+      "roundtrip_ms": 63.00000000010186,
+      "candidate_triangles": 2886,
+      "original_triangles": 459588,
+      "broadphase_ms": 11.353723999491194,
+      "upload_ms": 0.6143360005808063,
+      "segments": 2886,
+      "pixels": 1928,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 14.010679766008312,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 5.969440000626491,
+      "total_ms": 30.017319999387837,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 2869,
+      "original_triangles": 459588,
+      "broadphase_ms": 11.024569999790401,
+      "upload_ms": 0.6405059993994655,
+      "segments": 2852,
+      "pixels": 2281,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 14.439251194579741,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 0.12802200035366695,
+      "total_ms": 4.097940998690319,
+      "roundtrip_ms": 31.000000000858563,
+      "candidate_triangles": 1,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.001869999323389493,
+      "upload_ms": 0.0010499989002710208,
+      "segments": 0,
+      "pixels": 0,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 0.0,
+      "client_ms": 31.000000000858563,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 0.11940100011997856,
+      "total_ms": 4.122631000427646,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 1,
+      "original_triangles": 459588,
+      "broadphase_ms": 0.003970000761910342,
+      "upload_ms": 0.000910000380827114,
+      "segments": 0,
+      "pixels": 0,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 100.0,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 7.058099999994738,
+      "total_ms": 37.67989699917962,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 3916,
+      "original_triangles": 459588,
+      "broadphase_ms": 17.688726999040227,
+      "upload_ms": 0.8563379997212905,
+      "segments": 1966,
+      "pixels": 1571,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 15.476974741953061,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 7.363754000834888,
+      "total_ms": 41.43231499983813,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 4069,
+      "original_triangles": 459588,
+      "broadphase_ms": 18.437623999489006,
+      "upload_ms": 0.9373400007461896,
+      "segments": 2122,
+      "pixels": 1615,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 15.90554617052449,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 6.429204997402849,
+      "total_ms": 41.29525300049863,
+      "roundtrip_ms": 93.99999999914144,
+      "candidate_triangles": 3291,
+      "original_triangles": 459588,
+      "broadphase_ms": 20.140652000918635,
+      "upload_ms": 0.74234700150555,
+      "segments": 1887,
+      "pixels": 1409,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 16.33411759909592,
+      "client_ms": 93.99999999914144,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 5.55676499971014,
+      "total_ms": 40.29623300084495,
+      "roundtrip_ms": 78.00000000133878,
+      "candidate_triangles": 2401,
+      "original_triangles": 459588,
+      "broadphase_ms": 21.176052001464996,
+      "upload_ms": 0.5947059999016346,
+      "segments": 1601,
+      "pixels": 1188,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 16.762689027667346,
+      "client_ms": 78.00000000133878,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 5.137062002177117,
+      "total_ms": 38.85029800039774,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 1712,
+      "original_triangles": 459588,
+      "broadphase_ms": 19.442454000454745,
+      "upload_ms": 0.4862450005020946,
+      "segments": 1073,
+      "pixels": 1065,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 17.191260456238776,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.5266839988471474,
+      "total_ms": 35.058989999015466,
+      "roundtrip_ms": 63.00000000010186,
+      "candidate_triangles": 1432,
+      "original_triangles": 459588,
+      "broadphase_ms": 18.00759000070684,
+      "upload_ms": 0.3819539997493848,
+      "segments": 832,
+      "pixels": 979,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 17.619831884810203,
+      "client_ms": 63.00000000010186,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.401583999424474,
+      "total_ms": 34.454804999768385,
+      "roundtrip_ms": 61.99999999989814,
+      "candidate_triangles": 1272,
+      "original_triangles": 459588,
+      "broadphase_ms": 17.57057599934342,
+      "upload_ms": 0.29512300170608796,
+      "segments": 761,
+      "pixels": 839,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 18.048403313381634,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 4.079021000507055,
+      "total_ms": 33.16980099953071,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 996,
+      "original_triangles": 459588,
+      "broadphase_ms": 16.52541499970539,
+      "upload_ms": 0.22638199880020693,
+      "segments": 571,
+      "pixels": 889,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 18.47697474195306,
+      "client_ms": 63.00000000010186,
+      "full_mesh_reference_checked": true
+    },
+    {
+      "device_ms": 3.9851899982750183,
+      "total_ms": 32.315394000761444,
+      "roundtrip_ms": 46.000000000276486,
+      "candidate_triangles": 846,
+      "original_triangles": 459588,
+      "broadphase_ms": 15.674586000386626,
+      "upload_ms": 0.19347199850017205,
+      "segments": 405,
+      "pixels": 924,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 18.905546170524488,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.7608980001095915,
+      "total_ms": 31.72050700050022,
+      "roundtrip_ms": 47.00000000048021,
+      "candidate_triangles": 763,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.978130000599776,
+      "upload_ms": 0.16853099987201858,
+      "segments": 372,
+      "pixels": 3429,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 19.33411759909592,
+      "client_ms": 47.00000000048021,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.886407999743824,
+      "total_ms": 32.06519000013941,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 752,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.506964998872718,
+      "upload_ms": 0.16757199955463875,
+      "segments": 377,
+      "pixels": 3091,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 19.762689027667346,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.8007580005796626,
+      "total_ms": 30.450494999968214,
+      "roundtrip_ms": 77.99999999951979,
+      "candidate_triangles": 755,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.244472000427777,
+      "upload_ms": 0.16851200052769855,
+      "segments": 390,
+      "pixels": 3180,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 20.191260456238776,
+      "client_ms": 77.99999999951979,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.7722180004493566,
+      "total_ms": 29.96308999900066,
+      "roundtrip_ms": 78.00000000133878,
+      "candidate_triangles": 693,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.026450999153894,
+      "upload_ms": 0.16333100029441994,
+      "segments": 393,
+      "pixels": 2859,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 20.619831884810203,
+      "client_ms": 78.00000000133878,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.752428001462249,
+      "total_ms": 29.938129000584013,
+      "roundtrip_ms": 63.00000000010186,
+      "candidate_triangles": 714,
+      "original_triangles": 459588,
+      "broadphase_ms": 14.009300000907388,
+      "upload_ms": 0.16685199989296962,
+      "segments": 400,
+      "pixels": 2733,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 21.048403313381634,
+      "client_ms": 63.00000000010186,
+      "full_mesh_reference_checked": false
+    },
+    {
+      "device_ms": 3.8626880013907794,
+      "total_ms": 30.022490000192192,
+      "roundtrip_ms": 61.99999999989814,
+      "candidate_triangles": 804,
+      "original_triangles": 459588,
+      "broadphase_ms": 13.954590000139433,
+      "upload_ms": 0.18635200103744864,
+      "segments": 421,
+      "pixels": 2331,
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 21.47697474195306,
+      "client_ms": 61.99999999989814,
+      "full_mesh_reference_checked": true
+    }
+  ]
+}

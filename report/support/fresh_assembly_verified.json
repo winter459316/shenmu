@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "files": 497,
+  "assembled_from_final_asset_archive": true,
+  "asset_sha256": "a16b159b01e54faa2bc2c1c52ffccdaa5c3a0f271c459836c6df5303b1a0a551",
+  "local_binding_and_cold_payload_checks_passed": true,
+  "physical_new_computer_tested": false,
+  "board_changed": false,
+  "mapped_sources": 346,
+  "latest_startup_assembly_verified": true
+}

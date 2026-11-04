@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "scope": "Saved shell metadata and plane interface only; no SEC1 execution",
+  "captures": [
+    {
+      "geometry_sha256": "84035505f7a46b16b434a9bf3e85370bd04725efd4f08a3e5cc38f2c42b234ca",
+      "shell_triangles": 460572,
+      "plane_cases": 20,
+      "packet_byte_exact": true,
+      "browser_geometry_exact": true,
+      "shell_byte_exact": true
+    },
+    {
+      "geometry_sha256": "f9b4dc880a9bcb886b603f7a46c9bab90a000a9051524b661bda8bdfd918eb18",
+      "shell_triangles": 457980,
+      "plane_cases": 20,
+      "packet_byte_exact": true,
+      "browser_geometry_exact": true,
+      "shell_byte_exact": true
+    },
+    {
+      "geometry_sha256": "72d587137630fbee2b57336e4e42f2acfdf61cd8ba5ac7f8bdcd405f028c60bd",
+      "shell_triangles": 459204,
+      "plane_cases": 20,
+      "packet_byte_exact": true,
+      "browser_geometry_exact": true,
+      "shell_byte_exact": true
+    }
+  ],
+  "baseline_sha256": "de75767e2447c25a110300746a831404957c9f744c36574411ce119b0def94ed"
+}

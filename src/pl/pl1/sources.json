@@ -1,0 +1,39 @@
+{
+  "part": "xczu4ev-sfvc784-2-i",
+  "top": "system_wrapper",
+  "files": [
+    {
+      "path": "rtl/key_debounce.v",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/usb_pl_keys.v",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/video_clock_tree.v",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "constraints/pins.xdc",
+      "fileset": "constrs_1",
+      "synthesis": true
+    },
+    {
+      "path": "constraints/clock_distribution.xdc",
+      "fileset": "constrs_1",
+      "synthesis": false
+    }
+  ],
+  "custom_ips": [
+    "codex.local:stereo:fast_geometry:1.0",
+    "codex.local:stereo:preview_extra:1.2",
+    "codex.local:stereo:preview_filters:1.3",
+    "codex.local:stereo:section_accel:1.1",
+    "codex.local:stereo:usb_image_features:2.0",
+    "openedv.com:user:DVI_Transmitter:1.0"
+  ]
+}

@@ -1,0 +1,1146 @@
+{
+  "scope": "Current v5 Fast, input 320x360 padded to 320x384, 2 iterations; nominal mathematical MAC counts, including conventional padded convolution positions; not measured instruction count or runtime share",
+  "unit": "1 multiply-accumulate = 1 MAC; INT16 and FP32 MACs counted equally",
+  "excluded": "bias, activation, normalization, reduction outside the listed contractions, sampling/interpolation, data layout and movement, configuration switching, preview, XYZ and rendering",
+  "source_shape_trace_date": "2026-10-28, historical shape inventory; inference model and partition unchanged by 2026-10-30 hardware optimization",
+  "source_sha256": {
+    "candidates\\usb_fast_infer2\\fast_pl.onnx": "c3bfedd128ad1d2aecf15b53a02ae3c25b411a8f2f648643552b40c6638f099c",
+    "experiments\\pl_pipeline_20261025\\fusion\\ort_trace.json.gz": "af7d7083f66dc178ceb252f2f3eb785b7b4b381e4ef12721f5aa8f9e3b36d4d8",
+    "experiments\\pl_pipeline_20261025\\graph\\conv_lowering\\conv_ir.json": "7e2a6f082d28b35702ae6fbb69a3d25c089e65d9cfa963adaabf6059c26b3c5a",
+    "experiments\\pl_pipeline_20261025\\usable_v5_quad\\pl3_usable_v5_quad_manifest_20261028.json": "df0ccea78845300b4435ba34120fa13ee72f4c3110016e55200b3cb902238f6b"
+  },
+  "main_mac_total": 95097245376,
+  "main_mac_by_owner": {
+    "PS": 41526480576,
+    "PL2": 47067955200,
+    "PL3": 6502809600
+  },
+  "main_mac_percent": {
+    "PS": 43.66738532941793,
+    "PL2": 49.49455161808366,
+    "PL3": 6.838063052498401
+  },
+  "conv_deconv_mac_total": 90050241216,
+  "conv_deconv_mac_by_owner": {
+    "PS": 36479476416,
+    "PL2": 47067955200,
+    "PL3": 6502809600
+  },
+  "conv_deconv_mac_percent": {
+    "PS": 40.51013736709278,
+    "PL2": 52.26854982775663,
+    "PL3": 7.221312805150587
+  },
+  "rows": [
+    {
+      "name": "/feature/stem/stem.0/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 35389440
+    },
+    {
+      "name": "/feature/stages.0/blocks/blocks.0/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 6635520
+    },
+    {
+      "name": "/feature/stages.0/blocks/blocks.0/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.0/blocks/blocks.0/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.0/blocks/blocks.1/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 6635520
+    },
+    {
+      "name": "/feature/stages.0/blocks/blocks.1/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.0/blocks/blocks.1/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.0/blocks/blocks.2/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 6635520
+    },
+    {
+      "name": "/feature/stages.0/blocks/blocks.2/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.0/blocks/blocks.2/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.1/downsample/downsample.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 70778880
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.0/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 9216000
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.0/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.0/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.1/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 9216000
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.1/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.1/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.2/convs.0/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 1658880
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.2/xca/qkv/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 106168320
+    },
+    {
+      "name": "MatMul_With_Transpose",
+      "op": "FusedMatMul",
+      "owner": "PS",
+      "macs": 4423680
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.2/xca/MatMul_1",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 4423680
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.2/xca/proj/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 35389440
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.2/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.1/blocks/blocks.2/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 141557760
+    },
+    {
+      "name": "/feature/stages.2/downsample/downsample.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 58982400
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.0/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 7526400
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.0/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.0/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.1/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 7526400
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.1/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.1/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.2/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 7526400
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.2/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.2/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.3/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 7526400
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.3/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.3/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.4/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 7526400
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.4/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.4/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.5/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 7526400
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.5/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.5/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.6/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 7526400
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.6/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.6/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.7/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 7526400
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.7/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.7/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.8/convs.0/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 466560
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.8/convs.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 466560
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.8/xca/qkv/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 73728000
+    },
+    {
+      "name": "MatMul_With_Transpose_token_53",
+      "op": "FusedMatMul",
+      "owner": "PS",
+      "macs": 3072000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.8/xca/MatMul_1",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 3072000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.8/xca/proj/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 24576000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.8/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.2/blocks/blocks.8/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 98304000
+    },
+    {
+      "name": "/feature/stages.3/downsample/downsample.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 46694400
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.0/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 5909760
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.0/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 88719360
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.0/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 88719360
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.1/conv_dw/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 5909760
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.1/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 88719360
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.1/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 88719360
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.2/convs.0/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 164160
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.2/convs.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 164160
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.2/convs.2/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 164160
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.2/xca/qkv/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 66539520
+    },
+    {
+      "name": "MatMul_With_Transpose_token_54",
+      "op": "FusedMatMul",
+      "owner": "PS",
+      "macs": 2772480
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.2/xca/MatMul_1",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 2772480
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.2/xca/proj/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 22179840
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.2/mlp/fc1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 88719360
+    },
+    {
+      "name": "/feature/stages.3/blocks/blocks.2/mlp/fc2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 88719360
+    },
+    {
+      "name": "/feature/deconv32_16/conv1/conv/ConvTranspose",
+      "op": "ConvTranspose",
+      "owner": "PS",
+      "macs": 186777600
+    },
+    {
+      "name": "/feature/deconv32_16/conv2/conv1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 884736000
+    },
+    {
+      "name": "/feature/deconv32_16/conv2/conv2/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 884736000
+    },
+    {
+      "name": "/feature/deconv16_8/conv1/conv/ConvTranspose",
+      "op": "ConvTranspose",
+      "owner": "PS",
+      "macs": 471859200
+    },
+    {
+      "name": "/feature/deconv16_8/conv2/conv1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 1274019840
+    },
+    {
+      "name": "/feature/deconv16_8/conv2/conv2/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 1274019840
+    },
+    {
+      "name": "/feature/deconv8_4/conv1/conv/ConvTranspose",
+      "op": "ConvTranspose",
+      "owner": "PS",
+      "macs": 566231040
+    },
+    {
+      "name": "/feature/deconv8_4/conv2/conv1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 1274019840
+    },
+    {
+      "name": "/feature/deconv8_4/conv2/conv2/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 1274019840
+    },
+    {
+      "name": "/feature/conv4/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 330301440
+    },
+    {
+      "name": "/cnet/conv04.1/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 743178240
+    },
+    {
+      "name": "/cam/fc/fc.0_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 384
+    },
+    {
+      "name": "/cam/fc/fc.2_1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 384
+    },
+    {
+      "name": "/cam/fc/fc.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 384
+    },
+    {
+      "name": "/cam/fc/fc.2/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 384
+    },
+    {
+      "name": "/sam/samconv/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 752640
+    },
+    {
+      "name": "/cost_agg/post16_to_8/out.1/feat_att/feat_att.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 35389440
+    },
+    {
+      "name": "/cost_agg/post16_to_8/out.1/feat_att/feat_att.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 10321920
+    },
+    {
+      "name": "/cost_agg/post32_to_16/out.0/feat_att/feat_att.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 24576000
+    },
+    {
+      "name": "/cost_agg/post32_to_16/out.0/feat_att/feat_att.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 8601600
+    },
+    {
+      "name": "/corr_feature_att/layers.2/feat_att/feat_att.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 192675840
+    },
+    {
+      "name": "/corr_feature_att/layers.2/feat_att/feat_att.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 24084480
+    },
+    {
+      "name": "/proj_cmb_1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 20643840
+    },
+    {
+      "name": "/proj_cmb/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 20643840
+    },
+    {
+      "name": "/corr_feature_att/layers.0/conv/Conv",
+      "op": "MixedChain",
+      "owner": "PL2",
+      "macs": 16721510400
+    },
+    {
+      "name": "/cost_agg/feature_att_8/layers.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 975421440
+    },
+    {
+      "name": "/cost_agg/feature_att_8/layers.1/conv1/conv1.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 650280960
+    },
+    {
+      "name": "/cost_agg/feature_att_8/layers.1/conv2/conv2.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 2456616960
+    },
+    {
+      "name": "/cost_agg/feature_att_8/layers.2/feat_att/feat_att.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 35389440
+    },
+    {
+      "name": "/cost_agg/feature_att_8/layers.2/feat_att/feat_att.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 10321920
+    },
+    {
+      "name": "/cost_agg/feature_att_16/layers.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 975421440
+    },
+    {
+      "name": "/cost_agg/feature_att_16/layers.1/conv1/conv1.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 325140480
+    },
+    {
+      "name": "/cost_agg/feature_att_16/layers.1/conv2/conv2.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 234823680
+    },
+    {
+      "name": "/cost_agg/feature_att_16/layers.2/conv1/conv1.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 325140480
+    },
+    {
+      "name": "/cost_agg/feature_att_16/layers.2/conv2/conv2.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 216760320
+    },
+    {
+      "name": "/cost_agg/conv3/conv3.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 365783040
+    },
+    {
+      "name": "/cost_agg/conv3/conv3.1/conv1/conv1.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 182891520
+    },
+    {
+      "name": "/cost_agg/conv3/conv3.1/conv2/conv2.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 345461760
+    },
+    {
+      "name": "/cost_agg/feature_att_32/feat_att/feat_att.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 5544960
+    },
+    {
+      "name": "/cost_agg/feature_att_32/feat_att/feat_att.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 3064320
+    },
+    {
+      "name": "/cost_agg/post32_to_16/upsample/upsample.0/conv/ConvTranspose",
+      "op": "ConvTranspose",
+      "owner": "PS",
+      "macs": 365783040
+    },
+    {
+      "name": "/cost_agg/post32_to_16/out.1/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 1950842880
+    },
+    {
+      "name": "/cost_agg/post32_to_16/out.2/conv1/conv1.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 650280960
+    },
+    {
+      "name": "/cost_agg/post32_to_16/out.2/conv2/conv2.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 650280960
+    },
+    {
+      "name": "/cost_agg/post32_to_16/out.3/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 1950842880
+    },
+    {
+      "name": "/cost_agg/post16_to_8/upsample/upsample.0/conv/ConvTranspose",
+      "op": "FastDeconv",
+      "owner": "PL2",
+      "macs": 2312110080
+    },
+    {
+      "name": "/cost_agg/post16_to_8/out.0/conv/Conv",
+      "op": "ScheduledConv3D",
+      "owner": "PL3",
+      "macs": 3901685760
+    },
+    {
+      "name": "/cost_agg/post16_to_8/out.2/conv1/conv1.0/Conv",
+      "op": "ScheduledConv3D",
+      "owner": "PL3",
+      "macs": 1300561920
+    },
+    {
+      "name": "/cost_agg/post16_to_8/out.2/conv2/conv2.0/Conv",
+      "op": "ScheduledConv3D",
+      "owner": "PL3",
+      "macs": 1300561920
+    },
+    {
+      "name": "/cost_agg/conv1_up/conv/ConvTranspose",
+      "op": "FastDeconv",
+      "owner": "PL2",
+      "macs": 4624220160
+    },
+    {
+      "name": "/cost_agg/post8_to_4/upsample/upsample.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 289013760
+    },
+    {
+      "name": "/cost_agg/post8_to_4/upsample/upsample.1/sa.0/self_attn/k_proj/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 4515840
+    },
+    {
+      "name": "/cost_agg/post8_to_4/upsample/upsample.1/sa.0/self_attn/q_proj/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 4515840
+    },
+    {
+      "name": "MatMul_With_Transpose_token_78",
+      "op": "FusedMatMul",
+      "owner": "PS",
+      "macs": 645120
+    },
+    {
+      "name": "/cost_agg/post8_to_4/upsample/upsample.1/sa.0/self_attn/v_proj/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 4515840
+    },
+    {
+      "name": "/cost_agg/post8_to_4/upsample/upsample.1/sa.0/self_attn/MatMul_1",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 645120
+    },
+    {
+      "name": "/cost_agg/post8_to_4/upsample/upsample.1/sa.0/self_attn/out_proj/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 4515840
+    },
+    {
+      "name": "/cost_agg/post8_to_4/upsample/upsample.1/sa.0/linear1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 18063360
+    },
+    {
+      "name": "/cost_agg/post8_to_4/upsample/upsample.1/sa.0/linear2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 18063360
+    },
+    {
+      "name": "/cost_agg/post8_to_4/out.0/conv/Conv",
+      "op": "MixedChain",
+      "owner": "PL2",
+      "macs": 23410114560
+    },
+    {
+      "name": "/classifier/layers.0/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 278691840
+    },
+    {
+      "name": "/Einsum",
+      "op": "Einsum",
+      "owner": "PS",
+      "macs": 137625600
+    },
+    {
+      "name": "/update_block/encoder/convc1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 224501760
+    },
+    {
+      "name": "/update_block/encoder/convc2/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 371589120
+    },
+    {
+      "name": "/update_block/encoder/convd1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 6021120
+    },
+    {
+      "name": "/update_block/encoder/convd2/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 13271040
+    },
+    {
+      "name": "/update_block/encoder/conv/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 358318080
+    },
+    {
+      "name": "/update_block/gru04/conv0/conv0.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 670464000
+    },
+    {
+      "name": "/cnet/conv04.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 928972800
+    },
+    {
+      "name": "/update_block/gru04/conv1/conv1.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 1857945600
+    },
+    {
+      "name": "/update_block/gru04/large_gru/convz/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 696729600
+    },
+    {
+      "name": "/update_block/gru04/large_gru/convr/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 696729600
+    },
+    {
+      "name": "/update_block/gru04/large_gru/convq/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 663552000
+    },
+    {
+      "name": "/update_block/gru04/small_gru/convz/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 77414400
+    },
+    {
+      "name": "/update_block/gru04/small_gru/convr/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 77414400
+    },
+    {
+      "name": "/update_block/gru04/small_gru/convq/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 73728000
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 149299200
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.2/dwconv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 13547520
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.2/pwconv1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 58613760
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.2/pwconv2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 58613760
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.3/dwconv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 13547520
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.3/pwconv1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 67461120
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.3/pwconv2/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 67461120
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.4/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 2488320
+    },
+    {
+      "name": "/update_block/encoder/convc1_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 224501760
+    },
+    {
+      "name": "/update_block/encoder/convc2_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 371589120
+    },
+    {
+      "name": "/update_block/encoder/convd1_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 6021120
+    },
+    {
+      "name": "/update_block/encoder/convd2_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 13271040
+    },
+    {
+      "name": "/update_block/encoder/conv_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 358318080
+    },
+    {
+      "name": "/update_block/gru04/conv0/conv0.0_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 670464000
+    },
+    {
+      "name": "/update_block/gru04/conv1/conv1.0_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 1857945600
+    },
+    {
+      "name": "/update_block/gru04/large_gru/convz_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 696729600
+    },
+    {
+      "name": "/update_block/gru04/large_gru/convr_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 696729600
+    },
+    {
+      "name": "/update_block/gru04/large_gru/convq_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 663552000
+    },
+    {
+      "name": "/update_block/gru04/small_gru/convz_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 77414400
+    },
+    {
+      "name": "/update_block/gru04/small_gru/convr_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 77414400
+    },
+    {
+      "name": "/update_block/gru04/small_gru/convq_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 73728000
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.0_1/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 149299200
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.2/dwconv_1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 13547520
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.2/pwconv1_1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 58613760
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.2/pwconv2_1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 58613760
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.3/dwconv_1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 13547520
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.3/pwconv1_1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 67461120
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.3/pwconv2_1/MatMul",
+      "op": "MatMul",
+      "owner": "PS",
+      "macs": 67461120
+    },
+    {
+      "name": "/update_block/disp_head/conv/conv.4_1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 2488320
+    },
+    {
+      "name": "/update_block/mask/mask.0/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 132710400
+    },
+    {
+      "name": "/update_block/mask/mask.2/Conv",
+      "op": "FusedConv",
+      "owner": "PS",
+      "macs": 35389440
+    },
+    {
+      "name": "/spx_2_gru/conv1/conv/ConvTranspose",
+      "op": "ConvTranspose",
+      "owner": "PS",
+      "macs": 23592960
+    },
+    {
+      "name": "/stem_2/stem_2.0/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 9953280
+    },
+    {
+      "name": "/stem_2/stem_2.1/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 53084160
+    },
+    {
+      "name": "/spx_2_gru/conv2/conv/Conv",
+      "op": "Conv",
+      "owner": "PS",
+      "macs": 185794560
+    },
+    {
+      "name": "/spx_gru/spx_gru.0/ConvTranspose",
+      "op": "ConvTranspose",
+      "owner": "PS",
+      "macs": 106168320
+    }
+  ]
+}

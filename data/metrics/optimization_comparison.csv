@@ -1,0 +1,10 @@
+metric,before,after,unit,scope,evidence
+lut,78045.0,75242.0,count,historical_same_toolchain_pl2_optimization,data/metrics/optimization/resource_comparison.json
+ff,110635.0,76360.0,count,historical_same_toolchain_pl2_optimization,data/metrics/optimization/resource_comparison.json
+bram,107.0,107.0,count,historical_same_toolchain_pl2_optimization,data/metrics/optimization/resource_comparison.json
+uram,24.0,32.0,count,historical_same_toolchain_pl2_optimization,data/metrics/optimization/resource_comparison.json
+dsp,668.0,686.0,count,historical_same_toolchain_pl2_optimization,data/metrics/optimization/resource_comparison.json
+total_seconds,26.578502686500087,25.707677136999337,s,historical_same_input_two_runs_per_group,data/metrics/optimization/performance_comparison.json
+forward_seconds,21.337200655499828,20.427443371001573,s,historical_same_input_two_runs_per_group,data/metrics/optimization/performance_comparison.json
+conv_device_seconds,3.762606977500127,2.9290061200044875,s,historical_same_input_two_runs_per_group,data/metrics/optimization/performance_comparison.json
+deconv_device_seconds,2.979096765999884,2.9003946784978325,s,historical_same_input_two_runs_per_group,data/metrics/optimization/performance_comparison.json

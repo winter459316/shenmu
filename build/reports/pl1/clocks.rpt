@@ -1,0 +1,28 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date              : Sat Oct 24 21:48:10 2026
+| Host              : LAPTOP-GLT7S1ON running 64-bit major release  (build 9200)
+| Command           : report_clock_interaction -file ${project_root}/experiments/geometry_fast_20261024/clocks.rpt
+| Design            : system_wrapper
+| Device            : xczu4ev-sfvc784
+| Speed File        : -2  PRODUCTION 1.20 05-21-2018
+| Temperature Grade : I
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                                                        WNS                            TNS Failing  TNS Total    WNS Path         Clock-Pair           Inter-Clock              
+From Clock                  To Clock                    Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints              
+--------------------------  --------------------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  -----------------------  
+clk_pl_0                    clk_pl_0                    rise - rise     1.71     0.00            0       146669            10.00  Clean                Partial False Path       
+clk_pl_0                    hdmi_clocks_pixel_clk       rise - rise     9.40     0.00            0           64            10.00  Ignored              Max Delay Datapath Only  
+hdmi_clocks_pixel_clk       clk_pl_0                    rise - rise    12.44     0.00            0           45            13.33  Ignored              Max Delay Datapath Only  
+hdmi_clocks_pixel_clk       hdmi_clocks_pixel_clk       rise - rise     8.61     0.00            0         5374            13.33  Clean                Timed                    
+hdmi_clocks_pixel_clk       hdmi_clocks_serial_div_clk  rise - rise     0.60     0.00            0           76             2.67  Clean                Timed                    
+hdmi_clocks_serial_div_clk  hdmi_clocks_serial_div_clk  rise - rise     3.58     0.00            0          108             5.33  Clean                Timed                    
+
+

@@ -1,0 +1,686 @@
+{
+  "passed": true,
+  "checks": {
+    "store20": {
+      "passed": true,
+      "arrays": {
+        "Q": {
+          "passed": true,
+          "dtype_reference": "float64",
+          "dtype_candidate": "float64",
+          "shape_reference": [
+            4,
+            4
+          ],
+          "shape_candidate": [
+            4,
+            4
+          ]
+        },
+        "P1": {
+          "passed": true,
+          "dtype_reference": "float64",
+          "dtype_candidate": "float64",
+          "shape_reference": [
+            3,
+            4
+          ],
+          "shape_candidate": [
+            3,
+            4
+          ]
+        },
+        "P2": {
+          "passed": true,
+          "dtype_reference": "float64",
+          "dtype_candidate": "float64",
+          "shape_reference": [
+            3,
+            4
+          ],
+          "shape_candidate": [
+            3,
+            4
+          ]
+        },
+        "native_bgr": {
+          "passed": true,
+          "dtype_reference": "uint8",
+          "dtype_candidate": "uint8",
+          "shape_reference": [
+            480,
+            1280,
+            3
+          ],
+          "shape_candidate": [
+            480,
+            1280,
+            3
+          ]
+        },
+        "domain": {
+          "passed": true,
+          "dtype_reference": "bool",
+          "dtype_candidate": "bool",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        },
+        "rectified_left": {
+          "passed": true,
+          "dtype_reference": "uint8",
+          "dtype_candidate": "uint8",
+          "shape_reference": [
+            360,
+            320,
+            3
+          ],
+          "shape_candidate": [
+            360,
+            320,
+            3
+          ]
+        },
+        "rectified_right": {
+          "passed": true,
+          "dtype_reference": "uint8",
+          "dtype_candidate": "uint8",
+          "shape_reference": [
+            360,
+            320,
+            3
+          ],
+          "shape_candidate": [
+            360,
+            320,
+            3
+          ]
+        },
+        "calibration_sha256": {
+          "passed": true,
+          "dtype_reference": "<U64",
+          "dtype_candidate": "<U64",
+          "shape_reference": [],
+          "shape_candidate": []
+        },
+        "maps_sha256": {
+          "passed": true,
+          "dtype_reference": "<U64",
+          "dtype_candidate": "<U64",
+          "shape_reference": [],
+          "shape_candidate": []
+        },
+        "disparity": {
+          "passed": true,
+          "dtype_reference": "float32",
+          "dtype_candidate": "float32",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        },
+        "xyz_mm": {
+          "passed": true,
+          "dtype_reference": "float32",
+          "dtype_candidate": "float32",
+          "shape_reference": [
+            360,
+            320,
+            3
+          ],
+          "shape_candidate": [
+            360,
+            320,
+            3
+          ]
+        },
+        "depth_mm": {
+          "passed": true,
+          "dtype_reference": "float32",
+          "dtype_candidate": "float32",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        },
+        "valid": {
+          "passed": true,
+          "dtype_reference": "bool",
+          "dtype_candidate": "bool",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        }
+      }
+    },
+    "store21": {
+      "passed": true,
+      "arrays": {
+        "Q": {
+          "passed": true,
+          "dtype_reference": "float64",
+          "dtype_candidate": "float64",
+          "shape_reference": [
+            4,
+            4
+          ],
+          "shape_candidate": [
+            4,
+            4
+          ]
+        },
+        "P1": {
+          "passed": true,
+          "dtype_reference": "float64",
+          "dtype_candidate": "float64",
+          "shape_reference": [
+            3,
+            4
+          ],
+          "shape_candidate": [
+            3,
+            4
+          ]
+        },
+        "P2": {
+          "passed": true,
+          "dtype_reference": "float64",
+          "dtype_candidate": "float64",
+          "shape_reference": [
+            3,
+            4
+          ],
+          "shape_candidate": [
+            3,
+            4
+          ]
+        },
+        "native_bgr": {
+          "passed": true,
+          "dtype_reference": "uint8",
+          "dtype_candidate": "uint8",
+          "shape_reference": [
+            480,
+            1280,
+            3
+          ],
+          "shape_candidate": [
+            480,
+            1280,
+            3
+          ]
+        },
+        "domain": {
+          "passed": true,
+          "dtype_reference": "bool",
+          "dtype_candidate": "bool",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        },
+        "rectified_left": {
+          "passed": true,
+          "dtype_reference": "uint8",
+          "dtype_candidate": "uint8",
+          "shape_reference": [
+            360,
+            320,
+            3
+          ],
+          "shape_candidate": [
+            360,
+            320,
+            3
+          ]
+        },
+        "rectified_right": {
+          "passed": true,
+          "dtype_reference": "uint8",
+          "dtype_candidate": "uint8",
+          "shape_reference": [
+            360,
+            320,
+            3
+          ],
+          "shape_candidate": [
+            360,
+            320,
+            3
+          ]
+        },
+        "calibration_sha256": {
+          "passed": true,
+          "dtype_reference": "<U64",
+          "dtype_candidate": "<U64",
+          "shape_reference": [],
+          "shape_candidate": []
+        },
+        "maps_sha256": {
+          "passed": true,
+          "dtype_reference": "<U64",
+          "dtype_candidate": "<U64",
+          "shape_reference": [],
+          "shape_candidate": []
+        },
+        "disparity": {
+          "passed": true,
+          "dtype_reference": "float32",
+          "dtype_candidate": "float32",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        },
+        "xyz_mm": {
+          "passed": true,
+          "dtype_reference": "float32",
+          "dtype_candidate": "float32",
+          "shape_reference": [
+            360,
+            320,
+            3
+          ],
+          "shape_candidate": [
+            360,
+            320,
+            3
+          ]
+        },
+        "depth_mm": {
+          "passed": true,
+          "dtype_reference": "float32",
+          "dtype_candidate": "float32",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        },
+        "valid": {
+          "passed": true,
+          "dtype_reference": "bool",
+          "dtype_candidate": "bool",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        }
+      }
+    },
+    "release0": {
+      "passed": true,
+      "arrays": {
+        "Q": {
+          "passed": true,
+          "dtype_reference": "float64",
+          "dtype_candidate": "float64",
+          "shape_reference": [
+            4,
+            4
+          ],
+          "shape_candidate": [
+            4,
+            4
+          ]
+        },
+        "P1": {
+          "passed": true,
+          "dtype_reference": "float64",
+          "dtype_candidate": "float64",
+          "shape_reference": [
+            3,
+            4
+          ],
+          "shape_candidate": [
+            3,
+            4
+          ]
+        },
+        "P2": {
+          "passed": true,
+          "dtype_reference": "float64",
+          "dtype_candidate": "float64",
+          "shape_reference": [
+            3,
+            4
+          ],
+          "shape_candidate": [
+            3,
+            4
+          ]
+        },
+        "native_bgr": {
+          "passed": true,
+          "dtype_reference": "uint8",
+          "dtype_candidate": "uint8",
+          "shape_reference": [
+            480,
+            1280,
+            3
+          ],
+          "shape_candidate": [
+            480,
+            1280,
+            3
+          ]
+        },
+        "domain": {
+          "passed": true,
+          "dtype_reference": "bool",
+          "dtype_candidate": "bool",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        },
+        "rectified_left": {
+          "passed": true,
+          "dtype_reference": "uint8",
+          "dtype_candidate": "uint8",
+          "shape_reference": [
+            360,
+            320,
+            3
+          ],
+          "shape_candidate": [
+            360,
+            320,
+            3
+          ]
+        },
+        "rectified_right": {
+          "passed": true,
+          "dtype_reference": "uint8",
+          "dtype_candidate": "uint8",
+          "shape_reference": [
+            360,
+            320,
+            3
+          ],
+          "shape_candidate": [
+            360,
+            320,
+            3
+          ]
+        },
+        "calibration_sha256": {
+          "passed": true,
+          "dtype_reference": "<U64",
+          "dtype_candidate": "<U64",
+          "shape_reference": [],
+          "shape_candidate": []
+        },
+        "maps_sha256": {
+          "passed": true,
+          "dtype_reference": "<U64",
+          "dtype_candidate": "<U64",
+          "shape_reference": [],
+          "shape_candidate": []
+        },
+        "disparity": {
+          "passed": true,
+          "dtype_reference": "float32",
+          "dtype_candidate": "float32",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        },
+        "xyz_mm": {
+          "passed": true,
+          "dtype_reference": "float32",
+          "dtype_candidate": "float32",
+          "shape_reference": [
+            360,
+            320,
+            3
+          ],
+          "shape_candidate": [
+            360,
+            320,
+            3
+          ]
+        },
+        "depth_mm": {
+          "passed": true,
+          "dtype_reference": "float32",
+          "dtype_candidate": "float32",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        },
+        "valid": {
+          "passed": true,
+          "dtype_reference": "bool",
+          "dtype_candidate": "bool",
+          "shape_reference": [
+            360,
+            320
+          ],
+          "shape_candidate": [
+            360,
+            320
+          ]
+        }
+      }
+    },
+    "identical_nan_payload_passes": true,
+    "signed_zero_bit_change_rejected": true,
+    "dtype_change_rejected": true,
+    "shape_change_rejected": true,
+    "missing_key_rejected": true,
+    "manifest": {
+      "passed": true,
+      "files": [
+        {
+          "path": "zu4ev_stereo/HANDOFF_NEXT_CHAT.txt",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/AGENTS.md",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/handoff/check_current.py",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/handoff/restore_fresh_ram.py",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_benchmark.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_hls_verified.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/ps_conv_screening.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/row_reuse_benchmark.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_implementation_verified.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_feature_verified.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/fast_compute_share.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/candidates/usb_320_hdmifps/vessel_enhance.py",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/vessel_strength_20261024/phantom_original.png",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/vessel_strength_20261024/phantom_enhanced.png",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/section_fast_20261024/RESULT.txt",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/geometry_fast_20261024/result_summary.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/candidates/usb_fast_infer2/geometry_config.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/usb_camera_20261016/calibration_results/20261016_144056/report.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/candidates/usb_fast_infer2/video_store.py",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/video_replay_20261029/feature_verified.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/hdmi_30fps_20261024/RESULT.txt",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/preview_fps_fix_20261031/change.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/measure_distance_20261031/change.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/handoff/fix_worker_as_cap_20261031.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/handoff/runtime_memory_recovery_20261031.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/candidates/usb_fast_infer2/hardware_verified.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/pl_pipeline_20261025/system/conv44_bcache_quad_board/implementation_attempts/20261028_190719/utilization.rpt",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/pl_pipeline_20261025/system/conv44_bcache_quad_board/physical_qualified.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/switch_latency_20261030/RESULT.txt",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/pl_pipeline_20261025/usable_v5_quad/pl3_usable_v5_quad_manifest_20261028.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/handoff/startup_verified_20261101.json",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/candidates/usb_320_hdmifps/usb320.bit.bin",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/candidates/usb_fast_infer2/fast_pl.bit.bin",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_source/mixed_conv.cpp",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_source/build.tcl",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_source/cosim_export.tcl",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_source/implement.tcl",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_source/finish_review.tcl",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/cnn_stereo_20261018/Fast-FoundationStereo/LICENSE.txt",
+          "passed": true
+        },
+        {
+          "path": "zu4ev_stereo/experiments/conv_speed_20261030/release0_status.json",
+          "passed": true
+        }
+      ]
+    }
+  },
+  "scope": "Offline comparisons and fixtures; no board operations"
+}

@@ -1,0 +1,60 @@
+{
+  "cases": 2,
+  "outputs": 350,
+  "panel_words": 1190,
+  "records": [
+    {
+      "name": "pointwise_batch2",
+      "batch": 0,
+      "group": 0,
+      "m_start": 0,
+      "m_count": 5,
+      "n_start": 0,
+      "n_count": 35,
+      "k": 17,
+      "kstride": 32,
+      "gemv": false,
+      "panel_words": 595,
+      "outputs": 175,
+      "a53_postprocessing_checked": true
+    },
+    {
+      "name": "pointwise_batch2",
+      "batch": 1,
+      "group": 0,
+      "m_start": 0,
+      "m_count": 5,
+      "n_start": 0,
+      "n_count": 35,
+      "k": 17,
+      "kstride": 32,
+      "gemv": false,
+      "panel_words": 595,
+      "outputs": 175,
+      "a53_postprocessing_checked": true
+    }
+  ],
+  "source_sha256": {
+    "C:\\Users\\wuyusen\\Documents\\ChatGPT\\final\\zu4ev_stereo\\experiments\\pl_pipeline_20261025\\transfer_rtl\\conv48_shared\\prepare_fixtures.py": "2a2b12d730d6535c4b314036e396b3884572a9e64d427c14f18ef92c7ed3deb3",
+    "C:\\Users\\wuyusen\\Documents\\ChatGPT\\final\\zu4ev_stereo\\experiments\\pl_pipeline_20261025\\graph\\conv_lowering\\compile_conv.py": "2c4174e346a80aefad609521403d5609f092a4df3087a1c7a351e3c7be8616b3",
+    "C:\\Users\\wuyusen\\Documents\\ChatGPT\\final\\zu4ev_stereo\\experiments\\pl_pipeline_20261025\\graph\\conv_lowering\\generate_fixtures.py": "8571d41fdd09e0b94872e64848bb684c3aeace2e37e712624077f9b9bed9e3fe",
+    "C:\\Users\\wuyusen\\Documents\\ChatGPT\\final\\zu4ev_stereo\\experiments\\pl_pipeline_20261025\\graph\\conv_lowering\\fixtures\\conv_manifest.json": "3ad63a99601d7638c0cb9594d392ba5c532f9474ef83006ba7306baa4876e17c",
+    "C:\\Users\\wuyusen\\Documents\\ChatGPT\\final\\zu4ev_stereo\\experiments\\pl_pipeline_20261025\\graph\\conv_lowering\\fixtures\\conv_a53.json": "a40e7337f798b83bb83cffb1ca86e4c804134a6e737507614d9819cc1113d5bc",
+    "C:\\Users\\wuyusen\\Documents\\ChatGPT\\final\\zu4ev_stereo\\experiments\\pl_pipeline_20261025\\engine\\fma_oracle.py": "7bd59d3497c5292e5b47664775369d4c5e77ebedb2080cfbd24fe5265480232b",
+    "C:\\Users\\wuyusen\\Documents\\ChatGPT\\final\\zu4ev_stereo\\experiments\\pl_pipeline_20261025\\nonconv\\nonlinear_contract\\contract.py": "6d29b1551c404770bc23e98f140443cef24ac5d69feeda8db493dd0e32286212",
+    "C:\\Users\\wuyusen\\Documents\\ChatGPT\\final\\zu4ev_stereo\\experiments\\pl_pipeline_20261025\\system\\conv48_prefetch_shell\\fixtures.json": "627b1fe2efb4e6420b9f820e8ccc1371a258c00e1bfb629234d15e85ae9d766d",
+    "C:\\Users\\wuyusen\\Documents\\ChatGPT\\final\\zu4ev_stereo\\experiments\\pl_pipeline_20261025\\system\\prepare_direct_shell.py": "dfc458def906443eb26e2457d300548ff8277ccf99f8c3a266a899c26062fc00"
+  },
+  "fixture_sha256": {
+    "expand.hex": "2f0449874f555270c1d90f6afd50f64f43132832502ecc479609cdf8769d9f5e",
+    "gemm.hex": "93807be2053749469249b144c29236f8696647208b7939caef059fa4d7381bfd",
+    "dest.hex": "e3e4e4ab6a1c1545b62a0b55caecb857e1558ad88efc0fa62563a9fcbb5e2ce9",
+    "strides.hex": "e74056d3bcf099da60c86fd16fceea5db735d6a102cd21557112fc3f833557a2",
+    "memory.hex": "68c9ea19eabe4880447df5c65b4e5f5bbc4f7594b1f62c951614018dfce62743",
+    "permissions.hex": "697b3eb8f36a2d7b01a37a83ed7aed4098132192d0c9157250db4244689e4854",
+    "golden_memory.hex": "88b3aa51db9741411b0cdddb2ef544f04dbfa2bfaa98b8d748ce318f14ac3399",
+    "expected.hex": "f99cb69aebe421f8a180e1c3401ca0bb0e331e9a31b0883efea04767dd4d2d09",
+    "counts.vh": "4d4a60cb29e6d29f392f37ebe52c9c53351a3f6813a9d62e6eb44d6731d343af"
+  },
+  "scope": "Raw Conv tile oracle; exact separate bias/activation checks against saved A53 on each chosen output; no PL epilogue claim"
+}

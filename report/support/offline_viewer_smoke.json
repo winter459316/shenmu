@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "board_connections_denied": true,
+  "real_workbench_html": true,
+  "real_saved_webgl_viewer": true,
+  "identity_toolchain": "2026.1",
+  "main_html_bytes": 12648,
+  "viewer_html_bytes": 7129397,
+  "production_ports_unchanged": true
+}

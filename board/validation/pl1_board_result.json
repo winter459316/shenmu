@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "board_programmed": true,
+  "stable_restored": true,
+  "brightness_is_not_a_criterion": true,
+  "cases": [
+    {
+      "case": "saved",
+      "exact": {
+        "xyz": true,
+        "valid": true,
+        "depth": true
+      },
+      "timing": [
+        0.0021817310007463675,
+        0.0057162179982697126,
+        0.004535064999799943
+      ]
+    },
+    {
+      "case": "mixed_edge",
+      "exact": {
+        "xyz": true,
+        "valid": true,
+        "depth": true
+      },
+      "timing": [
+        0.002139691001502797,
+        0.0057193380016542505,
+        0.00463025600038236
+      ]
+    },
+    {
+      "case": "empty_domain",
+      "exact": {
+        "xyz": true,
+        "valid": true,
+        "depth": true
+      },
+      "timing": [
+        0.0021693310009140987,
+        0.005696627002180321,
+        0.004674466999858851
+      ]
+    },
+    {
+      "case": "sparse_domain",
+      "exact": {
+        "xyz": true,
+        "valid": true,
+        "depth": true
+      },
+      "timing": [
+        0.0021383809980761725,
+        0.0056843370002752636,
+        0.004716477000329178
+      ]
+    },
+    {
+      "case": "zero_denominator",
+      "exact": {
+        "xyz": true,
+        "valid": true,
+        "depth": true
+      },
+      "timing": [
+        0.0021351010000216775,
+        0.005676616998243844,
+        0.00457757600088371
+      ]
+    }
+  ],
+  "bin_sha256": "96802d44051c4bac8ce75704894771543e5dca4e94a77c4f6b460a6beb327af4",
+  "identity_checks_passed": true
+}

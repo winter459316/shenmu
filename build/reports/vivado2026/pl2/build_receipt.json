@@ -1,0 +1,12 @@
+{
+  "vivado": "2026.1",
+  "physical_review_passed": true,
+  "bit_sha256": "86fa03f51014d35325b31945616148765f20dac9e2329a6809ee88321571e0fb",
+  "checkpoint_sha256": "817357b2265b4a321d689af1a5164340a3a97d6580270a5b5cd9aa9518efc978",
+  "board_tested": true,
+  "profile": "pl2",
+  "methodology_review_passed": true,
+  "board_validation_scope": "Saved-photo automatic switching, full network result 13 arrays byte-exact against original hardware",
+  "board_evidence": "reports/board_qualification_final.json",
+  "cold_boot_retested": false
+}

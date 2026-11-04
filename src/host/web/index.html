@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AMD 深目--内窥镜3D感知系统</title><link rel="stylesheet" href="/ui.css">
+</head><body>
+<header class="app-header"><div><h1>AMD 深目--内窥镜3D感知系统</h1><p>实时预览 · 深度图 · 三维点云与表面</p></div><div class="header-info"><span class="dot" id="header-dot"></span><span id="header-state">正在连接</span></div></header>
+<main class="workspace">
+  <section class="visual" aria-label="画面显示区域">
+    <div class="visual-caption"><div><span class="eyebrow" id="view-kicker">CAMERA</span><h2 id="view-title">左右相机预览</h2></div><span id="view-badge" hidden></span></div>
+    <div class="stage" id="stage">
+      <div id="video-playback" hidden><canvas id="video-canvas" width="1280" height="480" aria-label="录制视频回放"></canvas></div>
+      <img id="preview" class="stage-image" alt="左右相机实时预览">
+      <canvas id="preview-zoom" class="stage-image" width="1280" height="480" aria-label="放大的实时预览" hidden></canvas>
+      <button id="preview-zoom-reset" hidden title="恢复完整画面">恢复 1×</button>
+      <img id="result-image" class="stage-image" alt="拍摄结果画面" hidden>
+      <iframe id="viewer" title="可旋转的三维点云与表面" hidden></iframe>
+      <div id="stage-empty" class="stage-empty" hidden>拍摄完成后，可在这里查看结果</div>
+      <div id="crosshair" class="crosshair" hidden></div>
+      <div class="stage-notice" id="stage-notice" hidden>正在处理照片 · 当前显示本次拍摄的静态画面</div>
+      <div class="stage-guide" id="stage-guide">调整取景后，使用右侧按钮拍照</div>
+    </div>
+    <div id="map-legend" class="map-legend" hidden><div class="map-legend-heading"><span id="map-scale-title"></span><span>红黄较近 · 青蓝较远</span></div><div class="depth-gradient"></div><div class="scale-labels"><span id="map-near"></span><span id="map-mid"></span><span id="map-far"></span></div></div>
+    <footer class="visual-footer"><span id="photo-label">尚未载入照片</span><span id="visual-stat" hidden></span></footer>
+  </section>
+
+  <aside class="sidebar" aria-label="拍照与结果控制栏">
+    <section class="card" aria-labelledby="video-heading">
+      <div class="card-heading"><h2 id="video-heading">视频录制与回放</h2><span class="card-tag" id="video-tag">原始双目 · 每眼 640×480</span></div>
+      <div class="button-row"><button id="video-start">开始录制</button><button id="video-stop" disabled>结束录制</button><button id="video-replay" disabled>回放</button></div>
+      <div id="video-controls" hidden>
+        <div class="button-row"><button id="video-play">播放</button><button id="video-pause">暂停</button></div>
+        <label for="video-seek" id="video-time">00:00 / 00:00</label><input id="video-seek" type="range" min="0" max="0" value="0" step="1" aria-label="回放视频帧">
+        <button id="video-reconstruct" class="primary wide" disabled>暂停此帧并生成三维</button>
+      </div>
+      <p class="help" id="video-status" role="status">录制原始彩色双目画面；回放最近一次已结束的录制。</p>
+    </section>
+    <section class="card" aria-labelledby="capture-heading">
+      <div class="card-heading"><h2 id="capture-heading">拍照控制</h2><span class="card-tag" id="capture-tag">准备中</span></div>
+      <button class="primary" id="capture">拍照并生成三维</button><button class="secondary wide" id="return-preview">返回实时预览</button>
+      <div id="hdmi-note" class="help" role="status">HDMI 正在连接…</div><div id="status" class="status" role="status">正在连接板卡…</div>
+    </section>
+    <section class="card" aria-labelledby="view-heading">
+      <div class="card-heading"><h2 id="view-heading">画面选择</h2><span class="card-tag" id="selected-view">预览</span></div>
+      <div class="view-grid" role="group" aria-label="选择显示画面">
+        <button class="view-button selected" data-view="live" aria-pressed="true">实时预览</button>
+        <button class="view-button" data-view="disparity" aria-pressed="false" disabled>视差图</button>
+        <button class="view-button" data-view="depth" aria-pressed="false" disabled>深度图</button>
+        <button class="view-button" data-view="model" aria-pressed="false" disabled>三维模型</button>
+      </div>
+      <input type="hidden" id="map-scale" value="auto">
+      <label for="preview-mode">实时预览效果 · PL_KEY1 切换</label><select id="preview-mode"><option value="color">原始彩色</option><option value="auto_enhanced">自动曝光</option><option value="gray">灰度</option><option value="sobel">Sobel 边缘</option><option value="vessel">血管增强 · 微血管</option></select>
+      <label for="photo-mode">所拍照片效果 · PS_KEY2 切换</label><select id="photo-mode" disabled><option value="color">原始彩色</option><option value="auto_enhanced">自动曝光</option><option value="gray">灰度</option><option value="sobel">Sobel 边缘</option><option value="vessel">血管增强 · 微血管</option></select>
+      
+      
+    </section>
+    <section class="card" id="model-card" aria-labelledby="model-heading" hidden>
+      <div class="card-heading"><h2 id="model-heading">三维显示</h2><span class="card-tag">电脑渲染</span></div>
+      <label for="model-mode">显示形式</label><select id="model-mode" data-control="mode"><option value="mesh">彩色表面</option><option value="points">三维点云</option><option value="clay">纯色光照表面</option></select>
+      <input type="hidden" id="model-color" data-control="color" value="rgb"><input type="hidden" id="model-projection" data-control="projection" value="camera">
+      <input type="hidden" id="model-texture" data-control="texture-mode" value="photo">
+      <div class="control-row"><div><label for="model-shading">表面光照</label><select id="model-shading" data-control="shading"><option value="smooth">柔和光照</option><option value="flat">逐三角面光照</option></select></div><div><label for="model-size">点大小 <span id="point-size-value">2.5</span></label><input id="model-size" data-control="size" type="range" min="1" max="8" step=".5" value="2.5"></div></div>
+      <div class="button-row"><button data-action="front">正面</button><button data-action="oblique">斜侧面</button><button data-action="reset">复位</button></div>
+      <p class="help">左键拖动旋转，右键拖动平移，滚轮缩放。单击模型可在下方查看深度。</p>
+      <div class="section-panel">
+        <label for="cut-thickness">显示模型假设厚度 / mm</label><input id="cut-thickness" type="number" min="1" max="100" step="1" value="10">
+        <button id="cut-toggle" class="secondary wide">进入 PL 截面</button>
+        <div id="cut-controls" hidden>
+          <label for="cut-axis">切面方向</label><select id="cut-axis"><option value="x">左右切 · X</option><option value="y">上下切 · Y</option><option value="z">前后切 · Z</option><option value="oblique">斜切</option></select>
+          <label for="cut-position">切面位置 <span id="cut-position-value">50.0%</span></label><input id="cut-position" type="range" min="0" max="100" step="0.1" value="50">
+          <label for="cut-azimuth">法向方位角</label><input id="cut-azimuth" type="range" min="-180" max="180" step="1" value="0">
+          <label for="cut-elevation">法向仰角</label><input id="cut-elevation" type="range" min="-90" max="90" step="1" value="0">
+          <label><input id="cut-flip" type="checkbox"> 保留另一侧</label>
+          <label><input id="cut-ghost" type="checkbox" checked> 显示裁掉部分（灰色半透明）</label>
+          <label for="cut-opacity">裁掉部分不透明度 <span id="cut-opacity-value">18%</span></label><input id="cut-opacity" type="range" min="5" max="45" step="1" value="18">
+          <label><input id="cut-cap" type="checkbox" checked> 封闭切口（贴合物体边界）</label>
+          <label><input id="cut-plane-guide" type="checkbox"> 显示切面参考平面</label>
+          <p class="help">实色：保留部分 · 灰色：裁掉部分 · 橙色：封闭截面</p>
+          <label><input id="cut-drag-mode" type="checkbox"> 左键直接拖动切面</label>
+          <p class="help">Shift＋左键拖动切面；普通拖动旋转模型。青色为切面，橙色为实心封盖。</p>
+          <p class="help" id="cut-scale"></p>
+        </div>
+        <p class="help" id="cut-status" role="status"></p>
+        
+      </div>
+
+    </section>
+    <section class="card" aria-labelledby="depth-heading">
+      <div class="card-heading"><h2 id="depth-heading">深度查询</h2><span class="card-tag" id="depth-source">最近照片</span></div>
+      <div id="depth-empty" class="empty-note">拍摄完成后显示深度图</div>
+      <div id="depth-preview" hidden><img id="depth-thumb" alt="点击深度缩略图查询距离"><div class="depth-gradient"></div><div class="scale-labels"><span id="depth-near">近 — cm</span><span id="depth-far">远 — cm</span></div></div>
+      <div class="depth-value"><span>光轴深度 Z</span><strong id="picked-depth">—<small> cm</small></strong></div>
+      <div class="readout-grid"><div><span>图像像素</span><strong id="picked-pixel">—</strong></div><div><span>视差</span><strong id="picked-disparity">— px</strong></div></div>
+      <div class="xyz-row" id="picked-xyz" hidden></div>
+      <p class="help" id="picked-help">点击深度图、校正左图或三维模型查询。深度来自最近照片，不随实时预览更新。</p>
+    </section>
+    <section class="card" aria-labelledby="timing-heading">
+      <div class="card-heading"><h2 id="timing-heading">处理信息</h2><span class="card-tag" id="processing-tag">320 × 360</span></div>
+      <dl class="metrics"><div><dt>Fast 推理</dt><dd id="time-infer">—</dd></div><div><dt>模型加载</dt><dd id="time-load">—</dd></div><div><dt>PL 卷积核</dt><dd id="time-conv">—</dd></div><div><dt>PL 反卷积核</dt><dd id="time-deconv">—</dd></div><div><dt>板端全流程</dt><dd id="time-total">—</dd></div><div><dt>PS 神经网络与调度</dt><dd id="time-ps">—</dd></div><div><dt>PS↔PL 数据拷贝</dt><dd id="time-copy">—</dd></div><div><dt>PL 校正</dt><dd id="time-rectify">—</dd></div><div><dt id="geometry-label">三维坐标阶段</dt><dd id="time-geometry">—</dd></div><div><dt>千兆网接收</dt><dd id="time-receive">—</dd></div><div><dt>电脑连面与导出</dt><dd id="time-export">—</dd></div><div><dt>计算期间 HDMI</dt><dd id="time-live">—</dd></div><div><dt>有效点</dt><dd id="point-count">—</dd></div><div><dt>三角面</dt><dd id="face-count">—</dd></div></dl>
+      <p class="help">原始视差未经补洞。三维视角和颜色切换同步 HDMI，只影响显示，不修改深度。</p>
+    </section>
+    <section class="card" aria-labelledby="export-heading">
+      <div class="card-heading"><h2 id="export-heading">结果导出</h2><span class="card-tag">当前照片</span></div>
+      <div class="export-grid"><a id="points" class="button-link disabled" aria-disabled="true" download>点云 PLY</a><a id="surface" class="button-link disabled" aria-disabled="true" download>表面 PLY</a><a id="open3d" class="button-link disabled" aria-disabled="true" target="_blank" rel="noopener">独立三维窗口</a><a id="report" class="button-link disabled" aria-disabled="true" target="_blank" rel="noopener">耗时记录</a></div>
+      <button id="save-view" class="secondary wide" disabled>保存当前画面 PNG</button>
+      <a id="saved-render" class="saved-render" download hidden>下载刚保存的 PNG</a><div id="export-status" class="help" role="status"></div>
+    </section>
+    <p class="sidebar-footnote">PL_KEY2：拍照；PL_KEY1：返回实时预览，再按切换预览效果；PS_KEY2：原图 → 自动曝光 → 灰度 → 边缘 → 血管增强（同一张照片）；PS_KEY1：视差/深度 → 点云 → 彩色表面 → 灰色表面。网页需保持打开；三维拖动同步至 HDMI。</p>
+  </aside>
+</main>
+<script>window.FAST_UI_TOKEN='__TOKEN__';</script><script src="/latency.js"></script><script src="/ui.js"></script><script src="/hdmi_ui.js"></script><script src="/section_ui.js"></script><script src="/video_ui.js"></script>
+</body></html>
+

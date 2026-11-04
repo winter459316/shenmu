@@ -1,0 +1,32 @@
+{
+  "pl1": {
+    "bit_sha256": "46f3001cf3f8412d895ab54e93b9dd8148d14e71086da2364466407f2f78310a",
+    "bin_sha256": "96802d44051c4bac8ce75704894771543e5dca4e94a77c4f6b460a6beb327af4",
+    "bytes": 7797692,
+    "physical_review_passed": true,
+    "board_tested": true,
+    "board_qualified": true,
+    "status": "Physical and RAM board validation passed",
+    "board_validation_scope": "Five coordinate fixtures byte-exact; five preview modes and HDMI progress; 18 section masks pixel-exact; saved-photo automatic restore"
+  },
+  "pl2": {
+    "bit_sha256": "86fa03f51014d35325b31945616148765f20dac9e2329a6809ee88321571e0fb",
+    "bin_sha256": "ecf50ba7d84d08ba8544f555182cc9d2b6b656779ec9dd5e1baec92df40a6b42",
+    "bytes": 7797692,
+    "physical_review_passed": true,
+    "board_tested": true,
+    "board_qualified": true,
+    "status": "Physical and RAM board validation passed",
+    "board_validation_scope": "Saved-photo automatic switching, full network result 13 arrays byte-exact against original hardware"
+  },
+  "pl3": {
+    "bit_sha256": "2d0902539b70ae9d62e26b14c01a5c8af7406b54dba07bfc48ef07a4fe7e0e72",
+    "bin_sha256": "2b6875b1b28a1e98887b25f384cc01ff43ad502fa34b0b452e1bcdeb930e9b5b",
+    "bytes": 7797692,
+    "physical_review_passed": true,
+    "board_tested": true,
+    "board_qualified": true,
+    "status": "Physical and RAM board validation passed",
+    "board_validation_scope": "6480 FP32 convolution commands in saved-photo full network; full result 13 arrays byte-exact"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "captures": [
+    {
+      "capture_sha256": "e7386d62268cdb0b3e919787c221ab9145eed104e9b5442495295f14b03444e0",
+      "feed_shape": [
+        1,
+        3,
+        384,
+        320
+      ],
+      "byte_exact": true,
+      "geometry_contract_passed": true
+    },
+    {
+      "capture_sha256": "44b241ce477d6451cdcd6f5661661c3ff0a470a570438e6641dd91788e0dc82a",
+      "feed_shape": [
+        1,
+        3,
+        384,
+        320
+      ],
+      "byte_exact": true,
+      "geometry_contract_passed": true
+    },
+    {
+      "capture_sha256": "ec6ddff64920b658465f5bcfdf1b19f2fe3e13b4f2ee776545cb990716109846",
+      "feed_shape": [
+        1,
+        3,
+        384,
+        320
+      ],
+      "byte_exact": true,
+      "geometry_contract_passed": true
+    }
+  ],
+  "scope": "Input tensors and saved geometry contracts only; no new network/board execution",
+  "baseline_sha256": "5cb1f3453ac90af7748f57bec7dfbff05340fbff287b84ced19ed4445747460d"
+}

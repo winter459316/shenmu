@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "toolchain": "2026.1",
+  "scope": "PC viewer startup, service identity, diagnostics and desktop entry; no PL rebuild",
+  "unit_tests_passed": 15,
+  "offline_real_viewer_test": {
+    "passed": true,
+    "board_connections_denied": true,
+    "real_workbench_html": true,
+    "real_saved_webgl_viewer": true,
+    "identity_toolchain": "2026.1",
+    "main_html_bytes": 12648,
+    "viewer_html_bytes": 7129397,
+    "production_ports_unchanged": true
+  },
+  "process_reuse": {
+    "Passed": true,
+    "BeforePid": 19104,
+    "AfterPid": 19104
+  },
+  "fresh_assembly": {
+    "passed": true,
+    "sources": 346,
+    "files": 497,
+    "new_identity_module_assembled": true,
+    "profile_2026_1_check_passed": true,
+    "hardware_changed": false
+  },
+  "identity": {
+    "service": "shenmu_workbench",
+    "protocol": 1,
+    "toolchain": "2026.1",
+    "runtime_id": "c0e071d7eee8b817278fe146"
+  },
+  "existing_board_worker_pid": 25861,
+  "hardware_binary_sha_unchanged": true,
+  "board_files_changed": false,
+  "report_pages": 41,
+  "physical_second_pc_tested": false
+}

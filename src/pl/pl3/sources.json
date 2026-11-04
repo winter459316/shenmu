@@ -1,0 +1,149 @@
+{
+  "part": "xczu4ev-sfvc784-2-i",
+  "top": "system_wrapper",
+  "files": [
+    {
+      "path": "rtl/key_debounce.v",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/usb_pl_keys.v",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/video_clock_tree.v",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "ip/fp32_fma.xci",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_fma_exact.v",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_fma_exact_p_v.v",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_fma_exact_s_v.v",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_array_lane.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_axi_read128.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_axi_write128.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_c48_expand.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_c48_gemm.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_conv48_capture.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_conv48_shell.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_conv_axil.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_gemm_wide.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_gemm_wide_gather.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_mac_array.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_request_fifo.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_weight_gather.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_window_collect.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_window_front.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_window_validate.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_window_vector.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_conv48_board.v",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "rtl/fp3_fma_exact_stream.sv",
+      "fileset": "sources_1",
+      "synthesis": true
+    },
+    {
+      "path": "constraints/clock_distribution.xdc",
+      "fileset": "constrs_1",
+      "synthesis": false
+    },
+    {
+      "path": "constraints/pins_checked.xdc",
+      "fileset": "constrs_1",
+      "synthesis": true
+    }
+  ],
+  "custom_ips": [
+    "openedv.com:user:DVI_Transmitter:1.0"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "profile": "pl1",
+  "vivado": "2026.1",
+  "physical_review_passed": true,
+  "bit_sha256": "46f3001cf3f8412d895ab54e93b9dd8148d14e71086da2364466407f2f78310a",
+  "checkpoint_sha256": "f2b994de9b9c16bf7021e653f6db7d3e0ee7efd333707b79283efd923c5f48a1",
+  "board_tested": true,
+  "wns_ns": 1.038,
+  "whs_ns": 0.011,
+  "wpws_ns": 0.098,
+  "export_log": "D:/sm26/pl1_direct_export.log",
+  "review_log": "D:/sm26/pl1_checkpoint_review.log",
+  "scope": "Independent successful original routed-checkpoint export and review; failed rewritten-checkpoint export retained separately",
+  "board_validation_scope": "Five coordinate fixtures byte-exact; five preview modes and HDMI progress; 18 section masks pixel-exact; saved-photo automatic restore",
+  "board_evidence": "reports/board_qualification_final.json",
+  "cold_boot_retested": false
+}

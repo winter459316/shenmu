@@ -1,0 +1,86 @@
+{
+  "job_id": "ae011ba5bd0d4ae0960846c554bc27dc",
+  "exact": {
+    "Q": true,
+    "P1": true,
+    "P2": true,
+    "native_bgr": true,
+    "domain": true,
+    "rectified_left": true,
+    "rectified_right": true,
+    "calibration_sha256": true,
+    "maps_sha256": true,
+    "disparity": true,
+    "xyz_mm": true,
+    "depth_mm": true,
+    "valid": true
+  },
+  "all_arrays_exact": true,
+  "stable_restored": true,
+  "total_seconds": 25.70107655100219,
+  "hardware_sha256": "ecf50ba7d84d08ba8544f555182cc9d2b6b656779ec9dd5e1baec92df40a6b42",
+  "pl3": {
+    "enabled": true,
+    "candidate_sha256": "2b6875b1b28a1e98887b25f384cc01ff43ad502fa34b0b452e1bcdeb930e9b5b",
+    "clock_mhz": 160.0,
+    "nodes": [
+      {
+        "index": 827,
+        "input_sha256": null,
+        "output_sha256": null,
+        "tensor_digest_recording": false,
+        "exact_independent_photo_trace": false,
+        "commands": 2160,
+        "active_cycles": 227094519,
+        "seconds": {
+          "upload_and_descriptors": 0.04705714999727206,
+          "dispatch_and_compute": 1.4282604950021778,
+          "download": 0.11245101500026067,
+          "bias_and_exact_trace_check": 0.006232132000150159
+        }
+      },
+      {
+        "index": 830,
+        "input_sha256": null,
+        "output_sha256": null,
+        "tensor_digest_recording": false,
+        "exact_independent_photo_trace": false,
+        "commands": 2160,
+        "active_cycles": 83683963,
+        "seconds": {
+          "upload_and_descriptors": 0.05005738099862356,
+          "dispatch_and_compute": 0.5312033330010308,
+          "download": 0.10782562800159212,
+          "bias_and_exact_trace_check": 0.006670727001619525
+        }
+      },
+      {
+        "index": 831,
+        "input_sha256": null,
+        "output_sha256": null,
+        "tensor_digest_recording": false,
+        "exact_independent_photo_trace": false,
+        "commands": 2160,
+        "active_cycles": 98989635,
+        "seconds": {
+          "upload_and_descriptors": 0.03255279600125505,
+          "dispatch_and_compute": 0.6268580100004328,
+          "download": 0.11331824299850268,
+          "bias_and_exact_trace_check": 0.006243242998607457
+        }
+      }
+    ],
+    "interval": {
+      "load_pl3_seconds": 0.15353570600200328,
+      "backup_seconds": 0.0,
+      "dead_scratch_contents_not_preserved": true,
+      "restore_pl2_with_byte_verification_seconds": 0.1550822210010665,
+      "preserved_native_last_epoch": 2316556823454292304
+    },
+    "commands": 6480,
+    "backend": "PL3 exact FP32 Conv3D MAC; PS bias and existing activations",
+    "automatic_switch": true,
+    "speedup_qualified": false
+  },
+  "reference": "C:\\Users\\wuyusen\\Documents\\ChatGPT\\final\\output\\migration_2026_1\\board_replay\\baseline_original\\board_result.npz"
+}

@@ -1,0 +1,80 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>USB 双目 · 低延迟预览 · 320×360</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#0b1020;color:#e5edf8;font:15px/1.6 "Microsoft YaHei",sans-serif}header{padding:18px 24px;border-bottom:1px solid #2a3a52}h1{font-size:22px;margin:0}p{margin:6px 0;color:#afc0d3}.top{display:grid;grid-template-columns:minmax(320px,640px) 1fr;gap:24px;padding:20px 24px}img{width:100%;background:#111b2b;border-radius:8px;aspect-ratio:8/3;object-fit:contain}.actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}button,select,a{font:inherit;color:#e5edf8;background:#20334d;border:1px solid #3e5774;border-radius:7px;padding:9px 13px;text-decoration:none}button{cursor:pointer}button.primary{background:#126e66}button:disabled{opacity:.4;cursor:default}#status{padding:12px;border-radius:8px;background:#15243a;min-height:75px;white-space:pre-line}#error{color:#ffadad}small{color:#94aac1}iframe{width:100%;height:900px;border:0;display:block}.resultlinks{display:flex;gap:10px;flex-wrap:wrap;padding:0 24px 16px}[hidden]{display:none!important}@media(max-width:850px){.top{grid-template-columns:1fr}iframe{height:1200px}}</style>
+<style>@media(max-width:600px){#depthpanel>div{grid-template-columns:1fr!important}}</style>
+<header><h1>USB 双目 · 低延迟预览 · 320×360</h1><p>PL_KEY1：原始彩色 → 自动曝光增强 → 校正 → 灰度 → 中值 → 边缘</p></header>
+<section class="top"><div><img id="preview" alt="USB 双目实时视野"><small id="camera">正在连接板卡…</small></div><div>
+<label>预览模式 <select id="mode"><option value="color">彩色（原始）</option><option value="auto_enhanced">自动曝光增强（暗部提亮）</option><option value="rectified">校正左右画面（水平参考线）</option><option value="gray">灰度</option><option value="median">中值滤波</option><option value="sobel">边缘</option></select></label>
+<div class="actions"><button id="capture" class="primary">拍照并生成三维</button><button id="cancel" disabled>取消本次处理</button><button id="standby">待机</button><button id="resume">恢复</button></div>
+<p id="exposure" role="status">正在读取曝光状态…</p>
+<p id="tone_status" style="font-size:13px">原始彩色和增强模式都保留摄像头自动曝光；增强模式另加暗部提亮、高光压缩，仅作用于预览。</p>
+<div id="status" role="status">等待拍照</div><p id="error" role="alert"></p>
+<p>拍照处理完成后，HDMI 自动显示未补全的原始视差，黑色表示无有效匹配。PL_KEY1 返回预览；三维仍使用处理后的视差。</p><small>从图像校正开始，每眼按 320 × 360 计算。请在拍照时保持物体和相机静止。补全推测点可在三维页面中单独筛除。</small></div></section>
+<div id="links" class="resultlinks" hidden><a id="open" target="_blank">单独打开三维视图</a><a id="disparity" target="_blank">视差图</a><a id="depth" target="_blank">深度图</a><a id="report" target="_blank">接收记录</a><button id="rawhdmi">HDMI 显示原始视差</button><button id="hdmipreview">HDMI 返回预览</button></div>
+<section id="depthpanel" hidden style="padding:0 24px 24px;max-width:900px">
+<h2 style="font-size:18px">深度图 · 点击有效区域查看深度</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div><img id="depthimage" alt="320×360 深度图" style="aspect-ratio:8/9;cursor:crosshair;image-rendering:pixelated"><div style="height:12px;background:linear-gradient(to right,#800000,red,#ff0,#0ff,blue,#000080)"></div><p style="display:flex;justify-content:space-between"><span>近 0.2 m</span><span>远 3.0 m</span></p></div>
+<div><img id="disparityimage" alt="320×360 视差图" style="aspect-ratio:8/9;image-rendering:pixelated"><div style="height:12px;background:linear-gradient(to right,#000080,blue,#0ff,#ff0,red,#800000)"></div><p style="display:flex;justify-content:space-between"><span>视差 0 px</span><span>127 px</span></p></div></div>
+<p>固定色阶，仅改变显示颜色。超出色阶的有效值用端点颜色显示，原始数值保留；所有空洞均补值；原始匹配与推测区域单独记录。三维点云和渲染使用平面修正后的补全视差；截面仍使用原始坐标，旧版对照表面已停止计算，旧工程与照片另行保留。</p><p id="pixelvalue">点击左侧深度图读取板上计算的光轴深度和视差。</p></section>
+<iframe id="viewer" title="本次拍照三维结果" hidden></iframe>
+<script>
+const token='__LIVE_TOKEN__',$=id=>document.getElementById(id);let showing='',pending=false,standby=false;
+const names={idle:'等待拍照',starting:'正在冻结本次照片',queued:'等待板上处理',upload_left:'传输左目原图',upload_right:'传输右目原图',pl_rectify_left:'PL 左目校正',pl_rectify_right:'PL 右目校正',pl_features_left:'PL 左目特征',pl_features_right:'PL 右目特征',validity_and_fusion:'A53 一致性检查与融合',pl_raw_geometry:'PL 生成匹配点云',completion:'板上引导补全',pl_completed_geometry:'PL 生成补全点云',geometry_ready:'点云已生成',surface_original:'准备表面',surface_smoothing:'A53 平滑表面',surface_detail:'A53 保留深度细节',surface_holes:'A53 处理有支持的缺口',surface_ready:'表面已完成',plane_correction:"平面修正",packing_result:'板上整理结果',download:'接收板上结果',verify_primary:'独立验证匹配和点云',verify_surfaces:'验证表面坐标和来源',package_viewer:'准备三维显示',publishing:'发布本次结果',cancelled:'本次处理已取消',standby:'板卡待机',waiting_for_board:'等待板卡响应',error:'处理未完成'};
+async function post(path,args={}){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json','X-Viewer-Token':token},body:JSON.stringify(args)});const v=await r.json();if(!r.ok)throw Error(v.error||r.status);return v}
+names.receive_integrity='接收板端结果';names.dense_geometry='PL 生成全填充点云 / A53 连面';names.dense_fill='复用已有快速补全结果';names.verify_dense_fill='校验补全数值与来源';
+$('depthimage').onclick=async e=>{const box=e.currentTarget.getBoundingClientRect();const x=Math.min(319,Math.floor((e.clientX-box.left)/box.width*320)),y=Math.min(359,Math.floor((e.clientY-box.top)/box.height*360));try{const r=await fetch(`/api/point?job=${showing}&x=${x}&y=${y}`),v=await r.json();if(!r.ok)throw Error(v.error);$('pixelvalue').textContent=v.valid?`像素 (${x}, ${y})：光轴深度 ${v.depth_m.toFixed(3)} m，视差 ${v.disparity_px.toFixed(2)} px；${['原始匹配','邻近推测','远处/边界推测'][v.origin]}`:`像素 (${x}, ${y})：无有效匹配，未进行填充。`}catch(err){$('pixelvalue').textContent=err.message}};
+async function action(path,args){try{$('error').textContent='';return await post(path,args)}catch(e){$('error').textContent=e.message;throw e}}
+$('capture').onclick=async()=>{if(pending)return;pending=true;$('capture').disabled=true;try{await action('/api/capture');showing='';$('viewer').hidden=true;$('links').hidden=true}catch(e){}finally{pending=false}};
+$('rawhdmi').onclick=()=>action('/api/hdmi/raw',{job_id:showing}).catch(()=>{});
+$('hdmipreview').onclick=()=>action('/api/hdmi/preview',{}).catch(()=>{});
+$('cancel').onclick=()=>action('/api/cancel').catch(()=>{});
+$('standby').onclick=()=>action('/api/standby',{enabled:true}).then(()=>standby=true).catch(()=>{});
+$('resume').onclick=()=>action('/api/standby',{enabled:false}).then(()=>standby=false).catch(()=>{});
+$('mode').onchange=()=>action('/api/mode',{mode:$('mode').value}).catch(()=>{});
+async function poll(){try{const s=await(await fetch('/api/status')).json();$('capture').disabled=pending||s.busy||s.section_busy||standby;$('cancel').disabled=!s.busy;
+if(showing&&(!s.result||s.result.job_id!==showing)){showing='';$('viewer').hidden=true;$('links').hidden=true}
+let label=names[s.stage]||(/pl_sgm/.test(s.stage)?'PL 八方向立体匹配':/verify_/.test(s.stage)?'电脑逐值验证板上结果':'板上补全计算');
+if(s.stage==='restoring_photo')label='正在恢复板上已有照片';
+if(s.stage==='ready'&&s.result){const bt=Number.isFinite(s.result.board_seconds)?s.result.board_seconds.toFixed(1)+' 秒':'历史耗时未保存';label=`本次完成 · 有效匹配 ${s.result.valid_percent}%\n板上处理 ${bt} · 完整性检查 ${s.result.integrity_seconds.toFixed(2)} 秒（未重算校验） · ${s.result.restored||s.result.total_seconds<s.result.board_seconds?"恢复/接收等待":"总等待"} ${s.result.total_seconds.toFixed(1)} 秒`;
+ if(showing!==s.result.job_id){showing=s.result.job_id;$('viewer').src=s.result.viewer_url;$('viewer').hidden=false;$('links').hidden=false;$('open').href=s.result.viewer_url;for(const key of ['disparity','depth'])$(key).href='/captures/'+showing+'/'+key+'.png';$('report').href='/captures/'+showing+'/received.json'}}
+$('depthpanel').hidden=!showing||!s.result;if(showing&&s.result&&$('depthimage').dataset.job!==showing){$('depthimage').src='/captures/'+showing+'/depth.png';$('disparityimage').src='/captures/'+showing+'/disparity.png';$('depthimage').dataset.job=showing;$('pixelvalue').textContent='点击深度图读取本张照片的深度和视差。'}
+if(s.stage==='ready'&&s.result?.dense_fill){label+=`\n视差空洞 0 · 推测补值 ${s.result.dense_fill.inferred_pixels} 像素 · 复用整理 ${s.result.dense_fill.seconds.toFixed(2)} 秒`;}
+if(s.stage==='ready'&&s.result?.summary?.mesh_limits){const m=s.result.summary.mesh_limits;label+=`\n适度断边 ${m.seconds.toFixed(2)} 秒 · 保留 ${m.triangles.toLocaleString()} 面${s.result.summary.remesh?'（同照片重新连面，未重新拍摄）':''}`;}
+if(s.stage==='ready'&&s.result?.summary?.plane_correction){const p=s.result.summary.plane_correction;label+=`\n板端平面修正 ${p.seconds.toFixed(2)} 秒 · 修正 ${p.changed_pixels} 像素${p.changed_pixels===0?'（当前画面无充分支持的平面，保留原深度）':''}`;}
+$('status').textContent=label+(s.busy?' · '+s.elapsed_seconds+' 秒':'');$('error').textContent=s.error||s.observer_error||'';
+}catch(e){$('status').textContent='本机服务连接中断'}finally{setTimeout(poll,700)}}
+async function camera(){try{const s=await(await fetch('/api/camera')).json();standby=!!s.standby;$('camera').textContent=s.error||`计算每眼 320 × 360 · 预览 640 × 240 · 网页新帧 ${document.body.dataset.previewFps||'…'} FPS`;if(!s.error)$('mode').value=s.mode;
+const a=s.auto_exposure||{},m=a.metering;
+$('tone_status').textContent=s.mode==='auto_enhanced'?'当前：自动曝光增强。网页和 HDMI 同步提亮暗部、压缩高光。':'当前为原始预览处理。PL_KEY1 在原始彩色之后切换到自动曝光增强。';
+let text=a.mode==='camera_auto'?'自动曝光已开启 · 摄像头原生调节 · 50 Hz 防闪烁':a.mode==='inactive'?'曝光监测暂停':a.mode==='camera_auto_fallback'?'摄像头自动曝光已开启 · 板端监测异常':a.mode==='starting'?'曝光控制初始化中':'曝光控制异常';
+if(m)text+=`\n画面亮度 左 ${m.left.mean.toFixed(0)} / 右 ${m.right.mean.toFixed(0)}（0–255）`;
+if(a.warning==='dark')text+=' · 仍偏暗，建议适当补光';if(a.warning==='bright')text+=' · 高亮区域较多，注意强光';
+if(a.error)text+=' · '+a.error;$('exposure').textContent=text;$('exposure').style.whiteSpace='pre-line';
+}catch(e){$('camera').textContent='无法连接板卡';$('exposure').textContent='无法读取曝光状态'}finally{setTimeout(camera,2000)}}
+let previewFrames=0,previewWindow=performance.now(),previewWindowFrames=0;
+let previewCursor='',previewUrl='';
+async function preview(){
+ let delay=0;
+ if(standby||document.hidden){setTimeout(preview,250);return}
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),1800);
+ try{
+  const r=await fetch('/preview.jpg'+(previewCursor?'?after='+previewCursor:''),{cache:'no-store',signal:controller.signal});
+  if(!r.ok)throw Error('Preview unavailable');
+  const seq=r.headers.get('X-Frame-Sequence'),epoch=r.headers.get('X-Frame-Epoch'),cursor=seq+','+epoch;
+  const blob=await r.blob();
+  if(seq===null||epoch===null)throw Error('Frame identity missing');
+  if(cursor!==previewCursor){
+   const nextUrl=URL.createObjectURL(blob),img=new Image();img.src=nextUrl;
+   try{await img.decode()}catch(e){URL.revokeObjectURL(nextUrl);throw e}
+   const previous=previewUrl;previewUrl=nextUrl;previewCursor=cursor;$('preview').src=nextUrl;
+   if(previous)URL.revokeObjectURL(previous);
+   previewFrames++;document.body.dataset.previewFrames=String(previewFrames);
+   document.body.dataset.previewSequence=seq;document.body.dataset.previewEpoch=epoch;
+   document.body.dataset.boardFrameAgeMs=r.headers.get('X-Frame-Age-Ms');
+   const now=performance.now();if(now-previewWindow>=2000){document.body.dataset.previewFps=((previewFrames-previewWindowFrames)*1000/(now-previewWindow)).toFixed(1);previewWindow=now;previewWindowFrames=previewFrames;}
+  }else delay=5;
+ }catch(e){delay=300;previewCursor=''}finally{clearTimeout(timer);setTimeout(preview,delay)}
+}
+poll();camera();preview();
+</script></html>

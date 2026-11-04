@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "changes": [
+    {
+      "runtime": "candidates/usb_320_hdmifps/filters_verified.json",
+      "before": "382fbbc55648111dc6a8825b49338696c1f196d9b1a97e3e79751d8188f1ec27",
+      "after": "ef99c8574da6dffd583c5fac5b614bba89faae105c9ece89a9d68b9a06386843"
+    },
+    {
+      "runtime": "candidates/usb_320_hdmifps/hardware_320_verified.json",
+      "before": "cc5ce45ded7cf6fe3a1052de7d2f7ecc19c42f06a8560f50c105127f869bd12d",
+      "after": "0174d37982240dd1cdd93597d255d6977fc9f585109ca202d19a89643322e781"
+    },
+    {
+      "runtime": "candidates/usb_320_hdmifps/hardware_catalog.py",
+      "before": "c79635f32ab9df778ab846c66574a2e00b2891bbfc2da9aa5b93becff4d46200",
+      "after": "a244660e8a01c0578691a1fee8225f5c27ba95be1c52a710ccc6463bf085ecf7"
+    },
+    {
+      "runtime": "candidates/usb_320_hdmifps/preview_verified.json",
+      "before": "859fcefd54dcd4e91272201820b80a8ce725f3a0f11d43f1619b042a46f72b4e",
+      "after": "fea037d8964a1e644f4c2a5761b666e05fcb59824a7f86f5958f1f442446da5d"
+    },
+    {
+      "runtime": "candidates/usb_320_hdmifps/section_preview_compat.json",
+      "before": "76fd1980f9610e5f5b3646d42f68fbe3d882449e51387cc6278ee44e8137d82c",
+      "after": "8b74d2f464a4f1424f23a55d497084f6f8f2fe2e0aac29d29e1bae047f5d6d34"
+    },
+    {
+      "runtime": "candidates/usb_320_hdmifps/startup_payload_sha256.json",
+      "before": "2fe0e4f6aa35f207eaea86fa7d28b10cfd8198e335c3983fe5faca475c944d91",
+      "after": "e460f09f65d4e336cbfce37131eef137800d54b3f3e82843650876b598954c64"
+    },
+    {
+      "runtime": "candidates/usb_320_hdmifps/usb320.bit.bin",
+      "before": "3d166a23a3dd3d60a2cc3a34d43b3b5dc76878edd6522f4f3de620688ac758fe",
+      "after": "96802d44051c4bac8ce75704894771543e5dca4e94a77c4f6b460a6beb327af4"
+    },
+    {
+      "runtime": "candidates/usb_fast_infer2/fast_pl.bit.bin",
+      "before": "8b74614cbcea280f18a8c26f34771a8c6a2fa7be3f74cfed5cde6d8409452ff8",
+      "after": "ecf50ba7d84d08ba8544f555182cc9d2b6b656779ec9dd5e1baec92df40a6b42"
+    },
+    {
+      "runtime": "candidates/usb_fast_infer2/geometry_config.json",
+      "before": "10a1d84fe150c78c0e544cb724f08ec51ab418433d4fbfb4c7f93b3dedf4b582",
+      "after": "b19b019362fca3f50eef4b62a3fd68461ae663a2ec8940db622bf406e4044588"
+    },
+    {
+      "runtime": "candidates/usb_fast_infer2/hardware_verified.json",
+      "before": "98aae7dea1b7a9472ae60ddc54da864767e38e0e3fa530b7aa160b2dadd27207",
+      "after": "9d3d48046d5cce9ca34e9060f6a3f6f4b3c3cac407b1d8ecf38f01bcbc5aec52"
+    },
+    {
+      "runtime": "candidates/usb_fast_infer2/repair_keys_board.py",
+      "before": "d531cdf384892f101fee686313ab945070e159c715ad67a5bb4824bd24140037",
+      "after": "d0a92d91805f59b3b62c563daad1bd889f4fc201447256500847efc29333209e"
+    },
+    {
+      "runtime": "candidates/usb_fast_infer2/test_hardware_board.py",
+      "before": "72ac4ffb71e1c2fbd9d1e7db52ca56b359399b97a3c903defb46ac49eaa841ed",
+      "after": "7c4e6004912195f243a646729e8f5e95b7c411c4e5d72e99cbbbf8ef5bb81ed2"
+    },
+    {
+      "runtime": "candidates/usb_fast_infer2/section_payload/manifest.json",
+      "before": "42e5d5e08bf394e1eb2f589bf46a65a1f7c935af6229fa2f286ddaa2128c9bcc",
+      "after": "b7d39174d7e305997f37282844f0a7147cfdea6a324ef97d33bdb4801677448e"
+    },
+    {
+      "runtime": "candidates/usb_fast_infer2/section_payload/section_config.json",
+      "before": "76fd1980f9610e5f5b3646d42f68fbe3d882449e51387cc6278ee44e8137d82c",
+      "after": "8b74d2f464a4f1424f23a55d497084f6f8f2fe2e0aac29d29e1bae047f5d6d34"
+    },
+    {
+      "runtime": "candidates/usb_fast_infer2/section_payload/section_preview.bit.bin",
+      "before": "3d166a23a3dd3d60a2cc3a34d43b3b5dc76878edd6522f4f3de620688ac758fe",
+      "after": "96802d44051c4bac8ce75704894771543e5dca4e94a77c4f6b460a6beb327af4"
+    },
+    {
+      "runtime": "experiments/geometry_fast_20261024/promotion_verified.json",
+      "before": "fc35553c1d6a53c39be09e3db6ddd4e18fe9edc16b8a1fe6e4293754760f8c10",
+      "after": "7cd431c2fdb473a9ace18a9875535e0d3d827a47220556055cd3b5dc7ef6c20d"
+    },
+    {
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/pl3_usable_v5_quad_manifest_20261028.json",
+      "before": "b76662cd4ee08df1321a74c2c561697f8d48bbadf37d6f5610740b4b52b2d947",
+      "after": "a133f62822499b87c794f02dfd5c9aeb8600947ee08e431616b506743a3c89a1"
+    },
+    {
+      "runtime": "experiments/pl_pipeline_20261025/system/conv44_bcache_quad_board/package_attempts/20261028_193215/conv44_quad.bit.bin",
+      "before": "b02da0fbf2725ca63b8b0e1a05c64426db12dc5c7d317e6967f384baf4ccb5ba",
+      "after": "2b6875b1b28a1e98887b25f384cc01ff43ad502fa34b0b452e1bcdeb930e9b5b"
+    }
+  ],
+  "private_asset_sha256": "a16b159b01e54faa2bc2c1c52ffccdaa5c3a0f271c459836c6df5303b1a0a551",
+  "source_count": 345,
+  "asset_count": 151,
+  "original_source_untouched": true,
+  "final_geometry_source_binding_corrected": true
+}

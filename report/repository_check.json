@@ -1,0 +1,42 @@
+{
+  "public_structure": {
+    "passed": true
+  },
+  "archive_safety": {
+    "passed": true
+  },
+  "startup_safety": {
+    "passed": true
+  },
+  "assembled_runtime": {
+    "passed": true
+  },
+  "source_manifest": {
+    "passed": true
+  },
+  "exact_13_reference_arrays": {
+    "passed": true
+  },
+  "original_stable_bindings": {
+    "passed": true,
+    "modified": false
+  },
+  "public_secret_and_path_scan": {
+    "passed": true,
+    "files": 495
+  },
+  "source_directory": "src",
+  "runtime_source_files": 345,
+  "runtime_total_files": 496,
+  "private_assets_excluded_from_git": true,
+  "cold_boot_executed": false,
+  "fresh_host_install_verified": false,
+  "new_vivado_full_build_verified": false,
+  "github_upload_performed": false,
+  "build_limitations": "See build/README.md; original project/IP dependencies remain for complete hardware reconstruction.",
+  "hls_build_executed": false,
+  "hls_selected_headers_included": true,
+  "hls_golden_fixture_files": 32,
+  "public_filename_rule": "lowercase ASCII except README.md and conventional dotfiles",
+  "public_files": 499
+}

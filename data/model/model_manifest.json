@@ -1,0 +1,11 @@
+{
+  "repositories": {
+    "OpenStereo": "23d71c92e33ad1f80dfc42bf29f5c6a914d38769",
+    "Fast-FoundationStereo": "476f4249561f7c79ca707326954f9255643412a6"
+  },
+  "weights": {
+    "cfg.yaml": "d45afe99b176454d5aff416edf16c8da6a99579f8f374b927f37907442a7d6bc",
+    "LightStereo-S-SceneFlow.ckpt": "e34b6aaa646217d03abcaa4f438dd02404711fe2bcee10eb59a6aff71f2ca02f",
+    "model_best_bp2_serialize.pth": "af0658f289ec840b292645f8d5538978f06e8cabaa1fd31e84acc91af268e990"
+  }
+}

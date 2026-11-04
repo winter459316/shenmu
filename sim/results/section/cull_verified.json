@@ -1,0 +1,1029 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "scale": 0.0001,
+      "case": 0,
+      "actual": 306,
+      "candidates": 817,
+      "missing": 0,
+      "ms": 1.3448339996102732
+    },
+    {
+      "scale": 0.0001,
+      "case": 1,
+      "actual": 329,
+      "candidates": 873,
+      "missing": 0,
+      "ms": 1.5776259988342645
+    },
+    {
+      "scale": 0.0001,
+      "case": 2,
+      "actual": 75,
+      "candidates": 198,
+      "missing": 0,
+      "ms": 1.571516000694828
+    },
+    {
+      "scale": 0.0001,
+      "case": 3,
+      "actual": 260,
+      "candidates": 757,
+      "missing": 0,
+      "ms": 1.4031939990672981
+    },
+    {
+      "scale": 0.0001,
+      "case": 4,
+      "actual": 79,
+      "candidates": 212,
+      "missing": 0,
+      "ms": 1.4361949997692136
+    },
+    {
+      "scale": 0.0001,
+      "case": 5,
+      "actual": 58,
+      "candidates": 167,
+      "missing": 0,
+      "ms": 1.5329649995692307
+    },
+    {
+      "scale": 0.0001,
+      "case": 6,
+      "actual": 339,
+      "candidates": 854,
+      "missing": 0,
+      "ms": 1.365393000014592
+    },
+    {
+      "scale": 0.0001,
+      "case": 7,
+      "actual": 343,
+      "candidates": 920,
+      "missing": 0,
+      "ms": 1.399974000378279
+    },
+    {
+      "scale": 0.0001,
+      "case": 8,
+      "actual": 220,
+      "candidates": 603,
+      "missing": 0,
+      "ms": 1.302022999880137
+    },
+    {
+      "scale": 0.0001,
+      "case": 9,
+      "actual": 367,
+      "candidates": 976,
+      "missing": 0,
+      "ms": 1.6012860014598118
+    },
+    {
+      "scale": 0.0001,
+      "case": 10,
+      "actual": 303,
+      "candidates": 725,
+      "missing": 0,
+      "ms": 1.315743000304792
+    },
+    {
+      "scale": 0.0001,
+      "case": 11,
+      "actual": 327,
+      "candidates": 933,
+      "missing": 0,
+      "ms": 1.3788539999950444
+    },
+    {
+      "scale": 0.0001,
+      "case": 12,
+      "actual": 105,
+      "candidates": 290,
+      "missing": 0,
+      "ms": 1.2267920010344824
+    },
+    {
+      "scale": 0.0001,
+      "case": 13,
+      "actual": 76,
+      "candidates": 206,
+      "missing": 0,
+      "ms": 1.2479220004024683
+    },
+    {
+      "scale": 0.0001,
+      "case": 14,
+      "actual": 93,
+      "candidates": 234,
+      "missing": 0,
+      "ms": 1.2154020005255006
+    },
+    {
+      "scale": 0.0001,
+      "case": 15,
+      "actual": 284,
+      "candidates": 724,
+      "missing": 0,
+      "ms": 1.3994240016472759
+    },
+    {
+      "scale": 0.0001,
+      "case": 16,
+      "actual": 298,
+      "candidates": 802,
+      "missing": 0,
+      "ms": 1.4928250002412824
+    },
+    {
+      "scale": 0.0001,
+      "case": 17,
+      "actual": 59,
+      "candidates": 165,
+      "missing": 0,
+      "ms": 1.3971440002933377
+    },
+    {
+      "scale": 0.0001,
+      "case": 18,
+      "actual": 296,
+      "candidates": 711,
+      "missing": 0,
+      "ms": 1.4107349998084828
+    },
+    {
+      "scale": 0.0001,
+      "case": 19,
+      "actual": 351,
+      "candidates": 974,
+      "missing": 0,
+      "ms": 1.4327039989439072
+    },
+    {
+      "scale": 0.0001,
+      "case": 20,
+      "actual": 343,
+      "candidates": 919,
+      "missing": 0,
+      "ms": 1.5193549988907762
+    },
+    {
+      "scale": 0.0001,
+      "case": 21,
+      "actual": 279,
+      "candidates": 767,
+      "missing": 0,
+      "ms": 1.387394000630593
+    },
+    {
+      "scale": 0.0001,
+      "case": 22,
+      "actual": 126,
+      "candidates": 332,
+      "missing": 0,
+      "ms": 1.4123540004220558
+    },
+    {
+      "scale": 0.0001,
+      "case": 23,
+      "actual": 281,
+      "candidates": 615,
+      "missing": 0,
+      "ms": 1.3030330010224134
+    },
+    {
+      "scale": 0.0001,
+      "case": 24,
+      "actual": 320,
+      "candidates": 894,
+      "missing": 0,
+      "ms": 1.5633559996786062
+    },
+    {
+      "scale": 0.0001,
+      "case": 25,
+      "actual": 275,
+      "candidates": 699,
+      "missing": 0,
+      "ms": 1.380493999022292
+    },
+    {
+      "scale": 0.0001,
+      "case": 26,
+      "actual": 336,
+      "candidates": 881,
+      "missing": 0,
+      "ms": 1.3424529988697032
+    },
+    {
+      "scale": 0.0001,
+      "case": 27,
+      "actual": 350,
+      "candidates": 924,
+      "missing": 0,
+      "ms": 1.4211639991117408
+    },
+    {
+      "scale": 0.0001,
+      "case": 28,
+      "actual": 193,
+      "candidates": 535,
+      "missing": 0,
+      "ms": 1.5983860012056539
+    },
+    {
+      "scale": 0.0001,
+      "case": 29,
+      "actual": 379,
+      "candidates": 976,
+      "missing": 0,
+      "ms": 1.4097439998295158
+    },
+    {
+      "scale": 0.0001,
+      "case": 30,
+      "actual": 339,
+      "candidates": 876,
+      "missing": 0,
+      "ms": 1.323582999248174
+    },
+    {
+      "scale": 0.0001,
+      "case": 31,
+      "actual": 299,
+      "candidates": 707,
+      "missing": 0,
+      "ms": 1.351093000266701
+    },
+    {
+      "scale": 1.0,
+      "case": 0,
+      "actual": 303,
+      "candidates": 478,
+      "missing": 0,
+      "ms": 1.4160539994918508
+    },
+    {
+      "scale": 1.0,
+      "case": 1,
+      "actual": 282,
+      "candidates": 414,
+      "missing": 0,
+      "ms": 1.300453001022106
+    },
+    {
+      "scale": 1.0,
+      "case": 2,
+      "actual": 279,
+      "candidates": 429,
+      "missing": 0,
+      "ms": 1.5267660000972683
+    },
+    {
+      "scale": 1.0,
+      "case": 3,
+      "actual": 233,
+      "candidates": 296,
+      "missing": 0,
+      "ms": 1.2519830015662592
+    },
+    {
+      "scale": 1.0,
+      "case": 4,
+      "actual": 302,
+      "candidates": 427,
+      "missing": 0,
+      "ms": 1.3756230000581127
+    },
+    {
+      "scale": 1.0,
+      "case": 5,
+      "actual": 81,
+      "candidates": 104,
+      "missing": 0,
+      "ms": 1.4218340002116747
+    },
+    {
+      "scale": 1.0,
+      "case": 6,
+      "actual": 222,
+      "candidates": 306,
+      "missing": 0,
+      "ms": 1.289873000132502
+    },
+    {
+      "scale": 1.0,
+      "case": 7,
+      "actual": 378,
+      "candidates": 589,
+      "missing": 0,
+      "ms": 1.3748139990639174
+    },
+    {
+      "scale": 1.0,
+      "case": 8,
+      "actual": 73,
+      "candidates": 144,
+      "missing": 0,
+      "ms": 1.2232819990458665
+    },
+    {
+      "scale": 1.0,
+      "case": 9,
+      "actual": 45,
+      "candidates": 71,
+      "missing": 0,
+      "ms": 1.536064999527298
+    },
+    {
+      "scale": 1.0,
+      "case": 10,
+      "actual": 246,
+      "candidates": 354,
+      "missing": 0,
+      "ms": 1.396314000885468
+    },
+    {
+      "scale": 1.0,
+      "case": 11,
+      "actual": 287,
+      "candidates": 458,
+      "missing": 0,
+      "ms": 1.4091049997659866
+    },
+    {
+      "scale": 1.0,
+      "case": 12,
+      "actual": 289,
+      "candidates": 444,
+      "missing": 0,
+      "ms": 1.5399460007756716
+    },
+    {
+      "scale": 1.0,
+      "case": 13,
+      "actual": 313,
+      "candidates": 410,
+      "missing": 0,
+      "ms": 1.441035001334967
+    },
+    {
+      "scale": 1.0,
+      "case": 14,
+      "actual": 256,
+      "candidates": 295,
+      "missing": 0,
+      "ms": 1.4240350010368275
+    },
+    {
+      "scale": 1.0,
+      "case": 15,
+      "actual": 348,
+      "candidates": 535,
+      "missing": 0,
+      "ms": 1.3716429984924616
+    },
+    {
+      "scale": 1.0,
+      "case": 16,
+      "actual": 25,
+      "candidates": 29,
+      "missing": 0,
+      "ms": 1.5377859999716748
+    },
+    {
+      "scale": 1.0,
+      "case": 17,
+      "actual": 294,
+      "candidates": 428,
+      "missing": 0,
+      "ms": 1.3453030005621258
+    },
+    {
+      "scale": 1.0,
+      "case": 18,
+      "actual": 276,
+      "candidates": 455,
+      "missing": 0,
+      "ms": 1.3102329994580941
+    },
+    {
+      "scale": 1.0,
+      "case": 19,
+      "actual": 292,
+      "candidates": 399,
+      "missing": 0,
+      "ms": 1.4005740013089962
+    },
+    {
+      "scale": 1.0,
+      "case": 20,
+      "actual": 92,
+      "candidates": 111,
+      "missing": 0,
+      "ms": 1.6044160001911223
+    },
+    {
+      "scale": 1.0,
+      "case": 21,
+      "actual": 298,
+      "candidates": 435,
+      "missing": 0,
+      "ms": 1.366553000480053
+    },
+    {
+      "scale": 1.0,
+      "case": 22,
+      "actual": 325,
+      "candidates": 443,
+      "missing": 0,
+      "ms": 1.381594000122277
+    },
+    {
+      "scale": 1.0,
+      "case": 23,
+      "actual": 253,
+      "candidates": 383,
+      "missing": 0,
+      "ms": 1.3008129990339512
+    },
+    {
+      "scale": 1.0,
+      "case": 24,
+      "actual": 217,
+      "candidates": 359,
+      "missing": 0,
+      "ms": 1.4669550000689924
+    },
+    {
+      "scale": 1.0,
+      "case": 25,
+      "actual": 283,
+      "candidates": 488,
+      "missing": 0,
+      "ms": 1.4002740008436376
+    },
+    {
+      "scale": 1.0,
+      "case": 26,
+      "actual": 314,
+      "candidates": 512,
+      "missing": 0,
+      "ms": 1.4176940003380878
+    },
+    {
+      "scale": 1.0,
+      "case": 27,
+      "actual": 221,
+      "candidates": 305,
+      "missing": 0,
+      "ms": 1.5927450003800914
+    },
+    {
+      "scale": 1.0,
+      "case": 28,
+      "actual": 299,
+      "candidates": 402,
+      "missing": 0,
+      "ms": 1.407773999744677
+    },
+    {
+      "scale": 1.0,
+      "case": 29,
+      "actual": 157,
+      "candidates": 241,
+      "missing": 0,
+      "ms": 1.4195250005286653
+    },
+    {
+      "scale": 1.0,
+      "case": 30,
+      "actual": 373,
+      "candidates": 562,
+      "missing": 0,
+      "ms": 1.3766339998255717
+    },
+    {
+      "scale": 1.0,
+      "case": 31,
+      "actual": 160,
+      "candidates": 205,
+      "missing": 0,
+      "ms": 1.616835999811883
+    },
+    {
+      "scale": 10000.0,
+      "case": 0,
+      "actual": 248,
+      "candidates": 340,
+      "missing": 0,
+      "ms": 1.6099959993880475
+    },
+    {
+      "scale": 10000.0,
+      "case": 1,
+      "actual": 173,
+      "candidates": 212,
+      "missing": 0,
+      "ms": 1.3430029994196957
+    },
+    {
+      "scale": 10000.0,
+      "case": 2,
+      "actual": 283,
+      "candidates": 434,
+      "missing": 0,
+      "ms": 1.4183839994075242
+    },
+    {
+      "scale": 10000.0,
+      "case": 3,
+      "actual": 170,
+      "candidates": 239,
+      "missing": 0,
+      "ms": 1.5805450002517318
+    },
+    {
+      "scale": 10000.0,
+      "case": 4,
+      "actual": 347,
+      "candidates": 511,
+      "missing": 0,
+      "ms": 1.3993140000820858
+    },
+    {
+      "scale": 10000.0,
+      "case": 5,
+      "actual": 298,
+      "candidates": 360,
+      "missing": 0,
+      "ms": 1.3979439991089748
+    },
+    {
+      "scale": 10000.0,
+      "case": 6,
+      "actual": 310,
+      "candidates": 469,
+      "missing": 0,
+      "ms": 1.3878939989808714
+    },
+    {
+      "scale": 10000.0,
+      "case": 7,
+      "actual": 259,
+      "candidates": 313,
+      "missing": 0,
+      "ms": 1.6546170008950867
+    },
+    {
+      "scale": 10000.0,
+      "case": 8,
+      "actual": 319,
+      "candidates": 465,
+      "missing": 0,
+      "ms": 1.3947239986009663
+    },
+    {
+      "scale": 10000.0,
+      "case": 9,
+      "actual": 313,
+      "candidates": 410,
+      "missing": 0,
+      "ms": 1.2877729986939812
+    },
+    {
+      "scale": 10000.0,
+      "case": 10,
+      "actual": 321,
+      "candidates": 501,
+      "missing": 0,
+      "ms": 1.3300930004334077
+    },
+    {
+      "scale": 10000.0,
+      "case": 11,
+      "actual": 240,
+      "candidates": 306,
+      "missing": 0,
+      "ms": 1.7253980004170444
+    },
+    {
+      "scale": 10000.0,
+      "case": 12,
+      "actual": 219,
+      "candidates": 322,
+      "missing": 0,
+      "ms": 1.438254999811761
+    },
+    {
+      "scale": 10000.0,
+      "case": 13,
+      "actual": 306,
+      "candidates": 481,
+      "missing": 0,
+      "ms": 1.3412230000540148
+    },
+    {
+      "scale": 10000.0,
+      "case": 14,
+      "actual": 296,
+      "candidates": 440,
+      "missing": 0,
+      "ms": 1.51783500041347
+    },
+    {
+      "scale": 10000.0,
+      "case": 15,
+      "actual": 313,
+      "candidates": 450,
+      "missing": 0,
+      "ms": 1.551995999761857
+    },
+    {
+      "scale": 10000.0,
+      "case": 16,
+      "actual": 236,
+      "candidates": 398,
+      "missing": 0,
+      "ms": 1.419423999323044
+    },
+    {
+      "scale": 10000.0,
+      "case": 17,
+      "actual": 259,
+      "candidates": 439,
+      "missing": 0,
+      "ms": 1.3195629999245284
+    },
+    {
+      "scale": 10000.0,
+      "case": 18,
+      "actual": 276,
+      "candidates": 369,
+      "missing": 0,
+      "ms": 1.2862229996244423
+    },
+    {
+      "scale": 10000.0,
+      "case": 19,
+      "actual": 293,
+      "candidates": 373,
+      "missing": 0,
+      "ms": 1.4155240005493397
+    },
+    {
+      "scale": 10000.0,
+      "case": 20,
+      "actual": 349,
+      "candidates": 569,
+      "missing": 0,
+      "ms": 1.3895939991925843
+    },
+    {
+      "scale": 10000.0,
+      "case": 21,
+      "actual": 112,
+      "candidates": 160,
+      "missing": 0,
+      "ms": 1.4032439994480228
+    },
+    {
+      "scale": 10000.0,
+      "case": 22,
+      "actual": 317,
+      "candidates": 514,
+      "missing": 0,
+      "ms": 1.5731250005046604
+    },
+    {
+      "scale": 10000.0,
+      "case": 23,
+      "actual": 255,
+      "candidates": 311,
+      "missing": 0,
+      "ms": 1.2466529988159891
+    },
+    {
+      "scale": 10000.0,
+      "case": 24,
+      "actual": 311,
+      "candidates": 511,
+      "missing": 0,
+      "ms": 1.3264239987620385
+    },
+    {
+      "scale": 10000.0,
+      "case": 25,
+      "actual": 278,
+      "candidates": 442,
+      "missing": 0,
+      "ms": 1.408004000040819
+    },
+    {
+      "scale": 10000.0,
+      "case": 26,
+      "actual": 288,
+      "candidates": 402,
+      "missing": 0,
+      "ms": 1.529564999145805
+    },
+    {
+      "scale": 10000.0,
+      "case": 27,
+      "actual": 227,
+      "candidates": 380,
+      "missing": 0,
+      "ms": 1.3066629999229917
+    },
+    {
+      "scale": 10000.0,
+      "case": 28,
+      "actual": 291,
+      "candidates": 405,
+      "missing": 0,
+      "ms": 1.376293999783229
+    },
+    {
+      "scale": 10000.0,
+      "case": 29,
+      "actual": 255,
+      "candidates": 338,
+      "missing": 0,
+      "ms": 1.570395999806351
+    },
+    {
+      "scale": 10000.0,
+      "case": 30,
+      "actual": 269,
+      "candidates": 427,
+      "missing": 0,
+      "ms": 1.4442039991990896
+    },
+    {
+      "scale": 10000.0,
+      "case": 31,
+      "actual": 92,
+      "candidates": 121,
+      "missing": 0,
+      "ms": 1.228982999236905
+    },
+    {
+      "scale": 1000000.0,
+      "case": 0,
+      "actual": 269,
+      "candidates": 393,
+      "missing": 0,
+      "ms": 1.4158640005916823
+    },
+    {
+      "scale": 1000000.0,
+      "case": 1,
+      "actual": 205,
+      "candidates": 349,
+      "missing": 0,
+      "ms": 1.4069139997445745
+    },
+    {
+      "scale": 1000000.0,
+      "case": 2,
+      "actual": 317,
+      "candidates": 440,
+      "missing": 0,
+      "ms": 1.4015840006322833
+    },
+    {
+      "scale": 1000000.0,
+      "case": 3,
+      "actual": 271,
+      "candidates": 421,
+      "missing": 0,
+      "ms": 1.6963170000963146
+    },
+    {
+      "scale": 1000000.0,
+      "case": 4,
+      "actual": 278,
+      "candidates": 380,
+      "missing": 0,
+      "ms": 1.3411330000963062
+    },
+    {
+      "scale": 1000000.0,
+      "case": 5,
+      "actual": 312,
+      "candidates": 466,
+      "missing": 0,
+      "ms": 1.352254001176334
+    },
+    {
+      "scale": 1000000.0,
+      "case": 6,
+      "actual": 306,
+      "candidates": 483,
+      "missing": 0,
+      "ms": 1.6435769994131988
+    },
+    {
+      "scale": 1000000.0,
+      "case": 7,
+      "actual": 275,
+      "candidates": 296,
+      "missing": 0,
+      "ms": 1.407904001098359
+    },
+    {
+      "scale": 1000000.0,
+      "case": 8,
+      "actual": 279,
+      "candidates": 320,
+      "missing": 0,
+      "ms": 1.4045549996808404
+    },
+    {
+      "scale": 1000000.0,
+      "case": 9,
+      "actual": 285,
+      "candidates": 436,
+      "missing": 0,
+      "ms": 1.3456430006044684
+    },
+    {
+      "scale": 1000000.0,
+      "case": 10,
+      "actual": 255,
+      "candidates": 373,
+      "missing": 0,
+      "ms": 1.586375999977463
+    },
+    {
+      "scale": 1000000.0,
+      "case": 11,
+      "actual": 279,
+      "candidates": 447,
+      "missing": 0,
+      "ms": 1.3322640006663278
+    },
+    {
+      "scale": 1000000.0,
+      "case": 12,
+      "actual": 319,
+      "candidates": 512,
+      "missing": 0,
+      "ms": 1.3389629984885687
+    },
+    {
+      "scale": 1000000.0,
+      "case": 13,
+      "actual": 195,
+      "candidates": 286,
+      "missing": 0,
+      "ms": 1.250162000360433
+    },
+    {
+      "scale": 1000000.0,
+      "case": 14,
+      "actual": 222,
+      "candidates": 378,
+      "missing": 0,
+      "ms": 1.6971569984889356
+    },
+    {
+      "scale": 1000000.0,
+      "case": 15,
+      "actual": 204,
+      "candidates": 261,
+      "missing": 0,
+      "ms": 1.4072840003791498
+    },
+    {
+      "scale": 1000000.0,
+      "case": 16,
+      "actual": 256,
+      "candidates": 326,
+      "missing": 0,
+      "ms": 1.3950140000815736
+    },
+    {
+      "scale": 1000000.0,
+      "case": 17,
+      "actual": 265,
+      "candidates": 494,
+      "missing": 0,
+      "ms": 1.404193999405834
+    },
+    {
+      "scale": 1000000.0,
+      "case": 18,
+      "actual": 327,
+      "candidates": 485,
+      "missing": 0,
+      "ms": 1.4730250004504342
+    },
+    {
+      "scale": 1000000.0,
+      "case": 19,
+      "actual": 118,
+      "candidates": 169,
+      "missing": 0,
+      "ms": 1.4486439995380351
+    },
+    {
+      "scale": 1000000.0,
+      "case": 20,
+      "actual": 317,
+      "candidates": 479,
+      "missing": 0,
+      "ms": 1.3611739996122196
+    },
+    {
+      "scale": 1000000.0,
+      "case": 21,
+      "actual": 345,
+      "candidates": 599,
+      "missing": 0,
+      "ms": 1.3695640009245835
+    },
+    {
+      "scale": 1000000.0,
+      "case": 22,
+      "actual": 361,
+      "candidates": 537,
+      "missing": 0,
+      "ms": 1.6379759999836097
+    },
+    {
+      "scale": 1000000.0,
+      "case": 23,
+      "actual": 285,
+      "candidates": 398,
+      "missing": 0,
+      "ms": 1.4125050001894124
+    },
+    {
+      "scale": 1000000.0,
+      "case": 24,
+      "actual": 307,
+      "candidates": 466,
+      "missing": 0,
+      "ms": 1.3942740006314125
+    },
+    {
+      "scale": 1000000.0,
+      "case": 25,
+      "actual": 235,
+      "candidates": 343,
+      "missing": 0,
+      "ms": 1.2947430004714988
+    },
+    {
+      "scale": 1000000.0,
+      "case": 26,
+      "actual": 267,
+      "candidates": 453,
+      "missing": 0,
+      "ms": 1.7264469988731435
+    },
+    {
+      "scale": 1000000.0,
+      "case": 27,
+      "actual": 296,
+      "candidates": 364,
+      "missing": 0,
+      "ms": 1.4224739989003865
+    },
+    {
+      "scale": 1000000.0,
+      "case": 28,
+      "actual": 334,
+      "candidates": 543,
+      "missing": 0,
+      "ms": 1.3398240007518325
+    },
+    {
+      "scale": 1000000.0,
+      "case": 29,
+      "actual": 32,
+      "candidates": 55,
+      "missing": 0,
+      "ms": 1.4038039989827666
+    },
+    {
+      "scale": 1000000.0,
+      "case": 30,
+      "actual": 350,
+      "candidates": 498,
+      "missing": 0,
+      "ms": 1.4162440002110088
+    },
+    {
+      "scale": 1000000.0,
+      "case": 31,
+      "actual": 241,
+      "candidates": 331,
+      "missing": 0,
+      "ms": 1.2870230002590688
+    }
+  ]
+}

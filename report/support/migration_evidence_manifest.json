@@ -1,0 +1,71 @@
+{
+  "root_kind": "submission_project_root",
+  "purpose": "2026.1 migration evidence; read-only integrity check",
+  "files": [
+    {
+      "path": "board/validation/board_qualification_final.json",
+      "sha256": "a0eaba180c591d63e6dac2f37a613cb3e4b4b664708e2822552e660af5e201f6",
+      "bytes": 383
+    },
+    {
+      "path": "board/validation/saved_photo_board_replay.json",
+      "sha256": "50198b76b3597a3d5079b7f79b2376dd9a7e35065be3afb3a49b116d94dc476f",
+      "bytes": 2872
+    },
+    {
+      "path": "board/validation/section_board_verified.json",
+      "sha256": "93bf7431837a16e4c75f77c01c5adfe3cfc69e5a47b738394833f120503cbb2d",
+      "bytes": 5427
+    },
+    {
+      "path": "board/validation/preview_modes_verified.json",
+      "sha256": "185b25f4ccef4236c8ae54a6564ab7323a15266d24a74a90ae3328d73de39c21",
+      "bytes": 1156
+    },
+    {
+      "path": "board/validation/fresh_assembly_verified.json",
+      "sha256": "62403c5be17719b26ed32bcad59d3445660e0f3294dca067b9ac0b3ffc815d6b",
+      "bytes": 370
+    },
+    {
+      "path": "board/validation/runtime_binding_migration.json",
+      "sha256": "e4d2a910a1f802b265fd34141179c0f46a55a4afbc66710fd39d8fad560a4e04",
+      "bytes": 4991
+    },
+    {
+      "path": "build/reports/vivado2026/pl1/review_utilization.rpt",
+      "sha256": "d2e535c22352ec152fe06a9509eed3789583bb632199488dd74f0e30f1e896c9",
+      "bytes": 15258
+    },
+    {
+      "path": "build/reports/vivado2026/pl1/review_timing.rpt",
+      "sha256": "507378508f136927bb3a58615d2d22976cbf786a4369de1e6d9932ecaa52b67c",
+      "bytes": 179351
+    },
+    {
+      "path": "build/reports/vivado2026/pl2/review_utilization.rpt",
+      "sha256": "f324075964a1957677cb29b9d2d9bbe0c6bff58828db9cd82411eb1e06fbd9bb",
+      "bytes": 15174
+    },
+    {
+      "path": "build/reports/vivado2026/pl2/review_timing.rpt",
+      "sha256": "9493bfd29277d4100a17e4ccafe899f6f482d989a002b61a1e051d565040f86e",
+      "bytes": 217679
+    },
+    {
+      "path": "build/reports/vivado2026/pl3/review_utilization.rpt",
+      "sha256": "1f5dc34f210ee78f6ba27c946f23a5ddc1a0b31d1367c58b9032e3b7ba0a96c0",
+      "bytes": 14564
+    },
+    {
+      "path": "build/reports/vivado2026/pl3/review_timing.rpt",
+      "sha256": "943490bbc3a4aa1ea182c9db1dc051fb3164f466db8213d0c1615062004a00ca",
+      "bytes": 224186
+    },
+    {
+      "path": "board/validation/software_startup_qualification.json",
+      "sha256": "38fe15849ddecd7ed08e19dfb617d5c583c9432db5bd8f01cc8b4a00c8f9e131",
+      "bytes": 1120
+    }
+  ]
+}

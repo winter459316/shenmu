@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "bindings": {
+    "usb320_hdmifps/usb320.bit.bin": true,
+    "usb320_hdmifps/hardware_catalog.py": true,
+    "usb320_hdmifps/cold_start_board.py": true,
+    "usb320_hdmifps/hardware_320_verified.json": true,
+    "usb320_hdmifps/filters_verified.json": true,
+    "usb320_hdmifps/preview_verified.json": true,
+    "fast_infer2/test_hardware_board.py": true,
+    "fast_infer2/repair_keys_board.py": true,
+    "fast_infer2/hardware_verified.json": true,
+    "section_pl_20261024/section_server.py": true,
+    "section_pl_20261024/section_dma.so": true,
+    "section_pl_20261024/section_preview.bit.bin": true
+  },
+  "pids": {
+    "full_camera.py": 17744,
+    "physical_keys.py": 21593
+  },
+  "loaded": {
+    "version": "usb_full_v2",
+    "state": "operating",
+    "sha256": "bde2a3408a6a2db0ea396ffc7642ddf6c90b31d0faea6e111e2aee6e38b1db0b",
+    "load_seconds": 0.15149699599999167,
+    "clock_hz": 99999999,
+    "width_registers": {
+      "hpm0": 2560,
+      "hp2_read": 944,
+      "hp2_write": 944
+    },
+    "volatile": true,
+    "dma_reservation": {
+      "base": "0x60000000",
+      "size": 134217728,
+      "no_map": true,
+      "excluded_from_system_ram": true
+    },
+    "cold_start_verified": true,
+    "legacy_compute": false
+  },
+  "section": {
+    "active": true,
+    "switching": false,
+    "error": "",
+    "owner": "f23162b2d79647f895b43d1d7c226d61",
+    "mesh_sha256": "ab3b1addb73965d5199da698d233eac07edef5e2ca13a344e24fbe33ba331755",
+    "calls": 91,
+    "latest_seq": 5,
+    "last": {
+      "original_triangles": 459588,
+      "candidate_triangles": 837,
+      "broadphase_ms": 18.77263799906359,
+      "upload_ms": 0.19065199921897147,
+      "device_ms": 4.9268900002061855,
+      "bounds_ms": 0.6520770002680365,
+      "readback_ms": 17.440503999750945,
+      "total_ms": 46.76651799854881,
+      "segments": 404,
+      "pixels": 2799,
+      "open_rows": 0,
+      "seq": 5
+    },
+    "backend": "PL SEC1",
+    "sha256": "bde2a3408a6a2db0ea396ffc7642ddf6c90b31d0faea6e111e2aee6e38b1db0b"
+  },
+  "hdmi": {
+    "job_id": "55ed2f8f5a864a9485bd4500696b3d1d",
+    "generation": "f09a3b4fff1643ec84733104ca023519",
+    "view": "surface",
+    "frames": [
+      "pair",
+      "points",
+      "surface",
+      "clay"
+    ],
+    "display_epoch": 24,
+    "stream_frames": 15,
+    "busy": false,
+    "waiting_for_render": false,
+    "error": "",
+    "pc_online": true,
+    "pending": null,
+    "events": 0,
+    "photo_ready": true,
+    "preview_mode": "vessel",
+    "photo_modes": [
+      "color",
+      "auto_enhanced",
+      "gray",
+      "sobel"
+    ],
+    "mapping": {
+      "pl_key2": "Fast capture",
+      "ps_key1": "pair -> points -> surface -> clay",
+      "pl_key1": "return preview; cycle filters in preview",
+      "ps_key2": "frozen photo filters"
+    }
+  }
+}

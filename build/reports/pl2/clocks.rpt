@@ -1,0 +1,29 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date              : Fri Oct 30 19:58:48 2026
+| Host              : LAPTOP-GLT7S1ON running 64-bit major release  (build 9200)
+| Command           : report_clock_interaction -file D:/convstore1030/clocks.rpt
+| Design            : system_wrapper
+| Device            : xczu4ev-sfvc784
+| Speed File        : -2  PRODUCTION 1.20 05-21-2018
+| Temperature Grade : I
+-----------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                                                                          WNS                            TNS Failing  TNS Total    WNS Path         Clock-Pair           Inter-Clock              
+From Clock                           To Clock                             Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints              
+-----------------------------------  -----------------------------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  -----------------------  
+clk_out1_system_compute_clock_0      clk_out1_system_compute_clock_0      rise - rise     1.52     0.00            0       207853             8.70  Clean                Partial False Path       
+clk_out1_system_compute_clock_0      hdmi_clocks_pixel_clk                rise - rise     7.57     0.00            0           64             8.70  Ignored              Max Delay Datapath Only  
+clk_pl_0                             clk_pl_0                             rise - rise     7.71     0.00            0          189            10.00  Clean                Timed                    
+hdmi_clocks_pixel_clk                clk_out1_system_compute_clock_0      rise - rise    11.92     0.00            0           45            13.33  Ignored              Max Delay Datapath Only  
+hdmi_clocks_pixel_clk                hdmi_clocks_pixel_clk                rise - rise     8.65     0.00            0         5374            13.33  Clean                Timed                    
+hdmi_clocks_pixel_clk                hdmi_clocks_serial_div_clk           rise - rise     0.93     0.00            0           76             2.67  Clean                Timed                    
+hdmi_clocks_serial_div_clk           hdmi_clocks_serial_div_clk           rise - rise     3.03     0.00            0          108             5.33  Clean                Timed                    
+
+

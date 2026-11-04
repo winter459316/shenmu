@@ -1,0 +1,258 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "dataset": "saved_model",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 20.364457879101682,
+      "device_ms": 3.969019999203738,
+      "total_ms": 37.39031399891246,
+      "pixels": 826,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "saved_model",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 47.66591214643425,
+      "device_ms": 4.547765998722753,
+      "total_ms": 18.480054997780826,
+      "pixels": 399,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "saved_model",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 18.101080938731585,
+      "device_ms": 5.997991000185721,
+      "total_ms": 36.48858499946073,
+      "pixels": 2720,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "saved_model",
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 40,
+      "device_ms": 6.330323001748184,
+      "total_ms": 37.04814099910436,
+      "pixels": 823,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "saved_model",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 0,
+      "device_ms": 0.11797099796240218,
+      "total_ms": 4.60970600033761,
+      "pixels": 0,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "saved_model",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 100,
+      "device_ms": 4.45167499492527,
+      "total_ms": 18.791067999700317,
+      "pixels": 0,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "cube",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 50.0,
+      "device_ms": 3.1134019991441164,
+      "total_ms": 15.321162998588989,
+      "pixels": 230400,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "cube",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 50.0,
+      "device_ms": 3.071710998483468,
+      "total_ms": 16.417824997915886,
+      "pixels": 230400,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "cube",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 50.0,
+      "device_ms": 3.1129710005188826,
+      "total_ms": 16.42279400039115,
+      "pixels": 230400,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "cube",
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 40,
+      "device_ms": 3.0800419990555383,
+      "total_ms": 15.944489001412876,
+      "pixels": 161777,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "cube",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 0,
+      "device_ms": 0.11397200069040991,
+      "total_ms": 4.6023659997445066,
+      "pixels": 0,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "cube",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 100,
+      "device_ms": 3.114570998150157,
+      "total_ms": 16.12639100130764,
+      "pixels": 230400,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "nested_hole",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 50.0,
+      "device_ms": 3.1017709989100695,
+      "total_ms": 22.40693400017335,
+      "pixels": 172800,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "nested_hole",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": 50.0,
+      "device_ms": 3.16226200084202,
+      "total_ms": 16.00124999822583,
+      "pixels": 172800,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "nested_hole",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": 50.0,
+      "device_ms": 3.1838229951972608,
+      "total_ms": 15.6506069979514,
+      "pixels": 172800,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "nested_hole",
+      "normal": [
+        0.7,
+        0.4,
+        0.3
+      ],
+      "position": 40,
+      "device_ms": 3.120661003777059,
+      "total_ms": 15.56207600151538,
+      "pixels": 132119,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "nested_hole",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 0,
+      "device_ms": 0.11497100058477372,
+      "total_ms": 4.5727459983027074,
+      "pixels": 0,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    },
+    {
+      "dataset": "nested_hole",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": 100,
+      "device_ms": 3.135601000394672,
+      "total_ms": 16.683416997693712,
+      "pixels": 230400,
+      "float32_mismatch": 0,
+      "float64_mismatch": 0
+    }
+  ],
+  "repeated_sequence_rejected": true
+}

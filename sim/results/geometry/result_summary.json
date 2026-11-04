@@ -1,0 +1,278 @@
+{
+  "passed": true,
+  "source_job_id": "4351026ebd52483aa6067e4088945fd1",
+  "preview_geometry_sha256": "3d166a23a3dd3d60a2cc3a34d43b3b5dc76878edd6522f4f3de620688ac758fe",
+  "fast_sha256": "8c00ff9e1cc6dc60d15bb14c5c7b539f095410a8925392ea00cd53fe1f254955",
+  "fast_compute_clock_mhz": 110,
+  "fast_axi_clock_mhz": 110,
+  "preview_axi_clock_mhz": 100,
+  "forward_before_seconds": 19.846266238499993,
+  "forward_after_seconds": 19.02299002949985,
+  "forward_reduction_percent": 4.1482674831957,
+  "geometry_before_seconds": 0.05464242699963506,
+  "geometry_after_seconds": 0.025574840499757556,
+  "geometry_device_seconds": 0.005667256499691575,
+  "same_photo_arrays_exact": 13,
+  "unchanged_model_initializers": 390,
+  "input_wh": [
+    320,
+    360
+  ],
+  "iterations": 2,
+  "preview_resources": {
+    "CLB LUTs": {
+      "used": 61324.0,
+      "total": 87840,
+      "percent": 69.81329690346084
+    },
+    "CLB Registers": {
+      "used": 62358.0,
+      "total": 175680,
+      "percent": 35.49521857923497
+    },
+    "Block RAM Tile": {
+      "used": 84.0,
+      "total": 128,
+      "percent": 65.625
+    },
+    "URAM": {
+      "used": 10.0,
+      "total": 48,
+      "percent": 20.833333333333332
+    },
+    "DSPs": {
+      "used": 153.0,
+      "total": 728,
+      "percent": 21.016483516483518
+    }
+  },
+  "fast_resources": {
+    "CLB LUTs": {
+      "used": 78045.0,
+      "total": 87840,
+      "percent": 88.84904371584699,
+      "free_remaining": 9795.0
+    },
+    "CLB Registers": {
+      "used": 110635.0,
+      "total": 175680,
+      "percent": 62.975295992714024,
+      "free_remaining": 65045.0
+    },
+    "Block RAM Tile": {
+      "used": 107.0,
+      "total": 128,
+      "percent": 83.59375,
+      "free_remaining": 21.0
+    },
+    "URAM": {
+      "used": 24.0,
+      "total": 48,
+      "percent": 50.0,
+      "free_remaining": 24.0
+    },
+    "DSPs": {
+      "used": 668.0,
+      "total": 728,
+      "percent": 91.75824175824175,
+      "free_remaining": 60.0
+    }
+  },
+  "preview_modes": [
+    {
+      "mode": "color",
+      "fps": 30.20993343577545,
+      "size": [
+        1280,
+        480
+      ],
+      "backend": {
+        "backend": "PL PFL1",
+        "suspended": false,
+        "calls": 0,
+        "by_mode": {},
+        "last": {}
+      },
+      "preview": {
+        "backend": "PL PXP1",
+        "calls": {},
+        "last": {},
+        "maps_uploads": 0,
+        "suspended": false
+      }
+    },
+    {
+      "mode": "auto_enhanced",
+      "fps": 30.459473412523753,
+      "size": [
+        1280,
+        480
+      ],
+      "backend": {
+        "backend": "PL PFL1",
+        "suspended": false,
+        "calls": 0,
+        "by_mode": {},
+        "last": {}
+      },
+      "preview": {
+        "backend": "PL PXP1",
+        "calls": {
+          "tone": 65
+        },
+        "last": {
+          "mode": "tone",
+          "copyin_ms": 1.5189949999694363,
+          "device_ms": 1.803648000532121,
+          "copyout_ms": 7.231511999634677,
+          "total_ms": 11.339362999933655
+        },
+        "maps_uploads": 1,
+        "suspended": false
+      }
+    },
+    {
+      "mode": "gray",
+      "fps": 29.96444895884775,
+      "size": [
+        1280,
+        480
+      ],
+      "backend": {
+        "backend": "PL PFL1",
+        "suspended": false,
+        "calls": 66,
+        "by_mode": {
+          "gray": 66
+        },
+        "last": {
+          "mode": "gray",
+          "width": 1280,
+          "height": 480,
+          "copyin_ms": 1.3821939992340049,
+          "device_ms": 1.8204380003226106,
+          "copyout_ms": 1.4809149997745408,
+          "total_ms": 5.388084000514937
+        }
+      },
+      "preview": {
+        "backend": "PL PXP1",
+        "calls": {
+          "tone": 66
+        },
+        "last": {
+          "mode": "tone",
+          "copyin_ms": 1.3633430007757852,
+          "device_ms": 1.9097689992122469,
+          "copyout_ms": 11.403114000131609,
+          "total_ms": 15.365342999757559
+        },
+        "maps_uploads": 1,
+        "suspended": false
+      }
+    },
+    {
+      "mode": "sobel",
+      "fps": 30.20993343571918,
+      "size": [
+        1280,
+        480
+      ],
+      "backend": {
+        "backend": "PL PFL1",
+        "suspended": false,
+        "calls": 131,
+        "by_mode": {
+          "gray": 66,
+          "sobel": 65
+        },
+        "last": {
+          "mode": "sobel",
+          "width": 1280,
+          "height": 480,
+          "copyin_ms": 1.3930439999967348,
+          "device_ms": 6.335452999337576,
+          "copyout_ms": 2.292303000103857,
+          "total_ms": 10.775707999528095
+        }
+      },
+      "preview": {
+        "backend": "PL PXP1",
+        "calls": {
+          "tone": 66
+        },
+        "last": {
+          "mode": "tone",
+          "copyin_ms": 1.3633430007757852,
+          "device_ms": 1.9097689992122469,
+          "copyout_ms": 11.403114000131609,
+          "total_ms": 15.365342999757559
+        },
+        "maps_uploads": 1,
+        "suspended": false
+      }
+    },
+    {
+      "mode": "vessel",
+      "fps": 30.20993343577545,
+      "size": [
+        1280,
+        480
+      ],
+      "backend": {
+        "backend": "PL PFL1",
+        "suspended": false,
+        "calls": 132,
+        "by_mode": {
+          "gray": 66,
+          "sobel": 66
+        },
+        "last": {
+          "mode": "sobel",
+          "width": 1280,
+          "height": 480,
+          "copyin_ms": 1.404193999405834,
+          "device_ms": 6.278353000197967,
+          "copyout_ms": 2.3034430005282047,
+          "total_ms": 10.694717000660603
+        }
+      },
+      "preview": {
+        "backend": "PL PXP1",
+        "calls": {
+          "tone": 66,
+          "vessel": 66
+        },
+        "last": {
+          "mode": "vessel",
+          "copyin_ms": 1.3798339996355935,
+          "device_ms": 6.574516000000585,
+          "copyout_ms": 11.47525400028826,
+          "total_ms": 20.120121999752882
+        },
+        "maps_uploads": 1,
+        "suspended": false
+      }
+    }
+  ],
+  "section_cases": 18,
+  "board": {
+    "passed": true,
+    "preview_sha256": "3d166a23a3dd3d60a2cc3a34d43b3b5dc76878edd6522f4f3de620688ac758fe",
+    "fast_sha256": "8c00ff9e1cc6dc60d15bb14c5c7b539f095410a8925392ea00cd53fe1f254955",
+    "compute_clock_mhz": 110,
+    "worker_pid": 5385,
+    "camera_pid": 5165,
+    "keys_pid": 5846,
+    "preview_mode": "color",
+    "preview_size": [
+      1280,
+      480
+    ],
+    "hdmi_source": "fast_surface",
+    "fast_bound_files": 26,
+    "preview_bound_files": 59,
+    "dma_faults": false
+  },
+  "display_job_id": "9ff3bdc809f74320b651d83a0c1230b8"
+}

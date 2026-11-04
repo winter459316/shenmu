@@ -1,0 +1,761 @@
+{
+  "distribution": "private",
+  "reason": "Includes session credentials and original qualification/provenance metadata; do not publish this archive.",
+  "files": {
+    "AGENTS.md": {
+      "sha256": "f0da7c51ce9294cd74c9f88b303ba4d26e2d8f3ec6e0461e318d1a98feaee3ca",
+      "bytes": 875,
+      "sensitive": true
+    },
+    "candidates/usb_320_hdmifps/board_hdmifps_evidence.json": {
+      "sha256": "effe740aaee66453ae8ad39ca6a3b218dead26bc0fd6c0db2863ac711e0f97c7",
+      "bytes": 6622,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/CURRENT_STATE.txt": {
+      "sha256": "506cbb62dd2d788e63c9f4357f5047ec9e2c216798a2d28f57cb182d34210cc1",
+      "bytes": 586,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/dma_barrier.so": {
+      "sha256": "769973468ad79af20149ff0c3ce7943dc63fa5c2433e7ebfd7381bae6b6712ed",
+      "bytes": 8248,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/filter_dma.so": {
+      "sha256": "32052c2e254002d54668c0f7a10417c3f8f5fa81ca68f7c9160a758a783cace3",
+      "bytes": 13488,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/filters_config.json": {
+      "sha256": "d31e41ab7a034e2124860978b6e38a3c4449578e14bae1fdf2e29ef84a604687",
+      "bytes": 17,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/filters_verified.json": {
+      "sha256": "ef99c8574da6dffd583c5fac5b614bba89faae105c9ece89a9d68b9a06386843",
+      "bytes": 28483,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/hardware_320_verified.json": {
+      "sha256": "0174d37982240dd1cdd93597d255d6977fc9f585109ca202d19a89643322e781",
+      "bytes": 29623,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/hdmi_mmio.so": {
+      "sha256": "228c11602e7ebc293f693104d1e665a7de124e331922752bbf021bdf1579ae70",
+      "bytes": 8288,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/hdmifps_tests.json": {
+      "sha256": "9dcce6d0365b3842b193ef329d4afd6b5a0bcf8b8445f2870edcb2abcb9b3bcf",
+      "bytes": 221,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/held_restore.json": {
+      "sha256": "70173f3c11c181c3f5bd988482c6023495e32339763c52f1a993a4f7d0c34e86",
+      "bytes": 194,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/held_restore.npz": {
+      "sha256": "6ad88ab5371cedc69e79ea1db32284c8e21ed2590d45b3bbe9d587f5d631e14d",
+      "bytes": 18010426,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/LATEST_CHECKPOINT.json": {
+      "sha256": "21e4ff2539473f1e713fb3487357749b05beeeab1fa595aa747634eff55fb977",
+      "bytes": 24138,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/libsurface_mesh.so": {
+      "sha256": "49546470363e01e6a84aad4a33654637252483b01d4fdba1dfd40437eefade0b",
+      "bytes": 8456,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/libsurface_native.so": {
+      "sha256": "6e8645058c9671c9910860ba50a082b640ed2d79d5ad9ec26135d70e7b3bcb36",
+      "bytes": 12616,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/PRESERVED_LOWLATENCY_SHA256.json": {
+      "sha256": "36056e8e621a817617d8ec6611bf9e34fe4bf081f943c842c00871250bf45633",
+      "bytes": 19362,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/preview_config.json": {
+      "sha256": "e4203e5fc6d915cbd189fce583c18ed835dc2cf605fabfbe0ace6bd50a5cadc7",
+      "bytes": 98,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/preview_dma.so": {
+      "sha256": "f06f1b5fe4492fee1ea3afa39b758bafc7a5873a2c5718bb65b8fd7956c91083",
+      "bytes": 17752,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/preview_native.so": {
+      "sha256": "8abf784bea4c28dd50d621fe043e548463513e64d9636b127e52da2ea60ed565",
+      "bytes": 12696,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/preview_verified.json": {
+      "sha256": "fea037d8964a1e644f4c2a5761b666e05fcb59824a7f86f5958f1f442446da5d",
+      "bytes": 30389,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/rawhdmi_tests.json": {
+      "sha256": "57c952cf864055cde4b60af2036d6872d41662a0a7a7ace9c84bee96a1161063",
+      "bytes": 657,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/rectification_maps.npz": {
+      "sha256": "2095bbc64f7f2c58a5cdb6cf7797d544824fe56ff7aa5aaff8c22e346f5ea25c",
+      "bytes": 655237,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/reference_sgm.dll": {
+      "sha256": "66841c7b0f7ff73cb2ad1cbbba82f5420e653ccbdd0001b30764f1544096639a",
+      "bytes": 269635,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/runtime_resources_20261018.json": {
+      "sha256": "703146f72fa4ffe37897e9ab1280cb0bbdf053ed513963b4a39f159f07457474",
+      "bytes": 17142,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/section_preview_compat.json": {
+      "sha256": "8b74d2f464a4f1424f23a55d497084f6f8f2fe2e0aac29d29e1bae047f5d6d34",
+      "bytes": 4179,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/startup_payload_sha256.json": {
+      "sha256": "e460f09f65d4e336cbfce37131eef137800d54b3f3e82843650876b598954c64",
+      "bytes": 4041,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/stereo_parameters.json": {
+      "sha256": "6dbbd7ca2aa6f013e4f4f0861a18f7cd2d00f2434dc2e5d53185caae2d81128d",
+      "bytes": 4072,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/usb320.bit.bin": {
+      "sha256": "96802d44051c4bac8ce75704894771543e5dca4e94a77c4f6b460a6beb327af4",
+      "bytes": 7797692,
+      "sensitive": false
+    },
+    "candidates/usb_320_hdmifps/usb_completion.so": {
+      "sha256": "afa454931609396767da8ece0759c217fc00fc63eb0b608441f9aa61b4cd8d7f",
+      "bytes": 26464,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/archive_verified.json": {
+      "sha256": "c29ebd05ea2664452c8598b2e5fe29bcdc8e965ae0a3e9dee01896dfa515c7f3",
+      "bytes": 237,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/comparison_data.json": {
+      "sha256": "dac20c938de417a6e563cda184164f1804a4554f07c53a401bb79c7ae771fd9e",
+      "bytes": 456,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/CURRENT_STATE.txt": {
+      "sha256": "aa5a87f4d5ec9af299f60006f476801af7cd8ed28d5fad4222cf78778d8b3401",
+      "bytes": 869,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/display_release_verified.json": {
+      "sha256": "75b7d1e4d2e1ab627af28b2a7fd43819113b7021d1801a9228339a8a6baec49b",
+      "bytes": 243,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/fast_layout.onnx": {
+      "sha256": "4f32dc6afaf725c6b04d31046651e6cdcb52afc3a095577c6e0a261c2b93e1f0",
+      "bytes": 61464240,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/fast_pl.bit.bin": {
+      "sha256": "ecf50ba7d84d08ba8544f555182cc9d2b6b656779ec9dd5e1baec92df40a6b42",
+      "bytes": 7797692,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/fast_pl.onnx": {
+      "sha256": "c3bfedd128ad1d2aecf15b53a02ae3c25b411a8f2f648643552b40c6638f099c",
+      "bytes": 61463943,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/fast_sample.onnx": {
+      "sha256": "60351f8b0e0168c95a2bd9ce679a3eefd71e1d5a9acadd992f8439d3d216fa26",
+      "bytes": 61464001,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/fast_speed.onnx": {
+      "sha256": "7b8f1a800dcdfdb6c8a77e780b540d7e81bd18be5323ea90069bcd3da727a952",
+      "bytes": 61464016,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/geometry_config.json": {
+      "sha256": "b19b019362fca3f50eef4b62a3fd68461ae663a2ec8940db622bf406e4044588",
+      "bytes": 3689,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/geometry_dma.so": {
+      "sha256": "0706cd9d8db9aeb6d0626a4a9313a5dec5dd8f2cc850751d3f0fdc6193bbcaec",
+      "bytes": 13536,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/hardware_verified.json": {
+      "sha256": "5f879e6961fe75dd730a188fd88d89af1b6c1d988c5bdb11bc0c302d3358fdca",
+      "bytes": 76472,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/hls_verified.json": {
+      "sha256": "191af8d49e031df7a85a5dfa5099b1f0205e4aef24a69c1764117bac0ce481b0",
+      "bytes": 7216,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/inference_config.json": {
+      "sha256": "26b3426b2593763c96d0890b4a77a0bbf66d13fc512b0c6b138a23c290f30a2a",
+      "bytes": 16,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/key_exit_verified.json": {
+      "sha256": "e36cc61307251fb2d90a5f849f8b5f09352d200e37de08d04380593a5d21600e",
+      "bytes": 491,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/LATEST_CHECKPOINT.json": {
+      "sha256": "9f68ae01ba335882c3cb0be2f290df51ab5c7d12e5288b530dd99b8ac293a4b5",
+      "bytes": 33625,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/layout_config.json": {
+      "sha256": "26b3426b2593763c96d0890b4a77a0bbf66d13fc512b0c6b138a23c290f30a2a",
+      "bytes": 16,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/libfast_layout.so": {
+      "sha256": "0055704577b1d979ff7e931574375fa3e8f7c604809a5b5c58e907409ef32f36",
+      "bytes": 33192,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/libfast_pl.so": {
+      "sha256": "442c8138734ae06bd76ac02443bdfc90ddd4fbe1c53f62d4c40c834f28e14f0b",
+      "bytes": 75112,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/libfast_sample.so": {
+      "sha256": "9e84b32d10274f3eb823fa4772283546186204953ac1cf81eb2253ab8a018f04",
+      "bytes": 33744,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/micro/0_cpu.onnx": {
+      "sha256": "d882e3c3bc78f771f5a06f0fe0b6cabe853cf372680387a3761761721190c400",
+      "bytes": 254895,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/micro/1_cpu.onnx": {
+      "sha256": "6afbada0f092c7c7537e7d09644808b65ec88d96aaea9692873474d7c40c16c0",
+      "bytes": 182067,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/model_verified.json": {
+      "sha256": "2dc229af25101a73b4801d10593cc6e296aebbb56b7b30dd4a935f1466af0431",
+      "bytes": 311,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/native_build.json": {
+      "sha256": "a3606210391d4d2d85ca85e183f3fcfbebf360d8af8a90b62079e1d4a4f570e1",
+      "bytes": 220,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/native_verified.json": {
+      "sha256": "5dedc865492c3af6cafe1f204bfa27031dba6ce1f65ad38f8e6dd2adf6ace707",
+      "bytes": 2933,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/preservation_verified.json": {
+      "sha256": "625b57ed6512c57544e2f9104d2c21c74d9cf0a36ba61d3d5c4ba1e16af1b674",
+      "bytes": 57,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/release_sources_sha256.json": {
+      "sha256": "9cffd94246ab731af0a92c58b54edbf3b02bad8b3007c30b21101e25efbba651",
+      "bytes": 15049,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/replay_assets_sha256.json": {
+      "sha256": "e34e5ec5167e87a15074f7e3760bc6864a4363e82fe988583fbc96de830da15b",
+      "bytes": 1831,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/replays_verified.json": {
+      "sha256": "e78afa940fee88db0862c20340a76f9b20ce4d6eb15a7087cc678cadaaff7970",
+      "bytes": 1837,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/rollback_from_iter1_verified.json": {
+      "sha256": "5bffd20ce3f36e555594b1240b58d697c2dc494d1a5da581ebf2e211baeb7811",
+      "bytes": 436,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/sampling_verified.json": {
+      "sha256": "0f1a89c8021ac0871198b408118338c87f68b4d4ada1dfff3e0a3ff02f3907c3",
+      "bytes": 5045,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/section_payload/manifest.json": {
+      "sha256": "b7d39174d7e305997f37282844f0a7147cfdea6a324ef97d33bdb4801677448e",
+      "bytes": 552,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/section_payload/section_config.json": {
+      "sha256": "8b74d2f464a4f1424f23a55d497084f6f8f2fe2e0aac29d29e1bae047f5d6d34",
+      "bytes": 4179,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/section_payload/section_dma.so": {
+      "sha256": "7313d02a2784a27f6459028d10d404b6c82c7e3e3a7c4057bbd9810e004ee6ee",
+      "bytes": 14008,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/section_payload/section_preview.bit.bin": {
+      "sha256": "96802d44051c4bac8ce75704894771543e5dca4e94a77c4f6b460a6beb327af4",
+      "bytes": 7797692,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/section_payload/token.txt": {
+      "sha256": "c2f8a2c62826e9255eee8a78ef2ddb5ca0e3d113e4452fd0d34f4a831b8dbd18",
+      "bytes": 64,
+      "sensitive": true
+    },
+    "candidates/usb_fast_infer2/section_token.txt": {
+      "sha256": "c2f8a2c62826e9255eee8a78ef2ddb5ca0e3d113e4452fd0d34f4a831b8dbd18",
+      "bytes": 64,
+      "sensitive": true
+    },
+    "candidates/usb_fast_infer2/speed_config.json": {
+      "sha256": "2ffb72cafdb1513d5947e802d6ec39b89d578ac400d57a03f3f0c943d9134067",
+      "bytes": 120,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/transport_config.json": {
+      "sha256": "26b3426b2593763c96d0890b4a77a0bbf66d13fc512b0c6b138a23c290f30a2a",
+      "bytes": 16,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/ui_smoke_verified.json": {
+      "sha256": "0271ea0ca0bf6690da38cf8b60a5ed8b69436235b7c7cf44cea792b32854c49d",
+      "bytes": 6410,
+      "sensitive": false
+    },
+    "candidates/usb_fast_infer2/使用说明.txt": {
+      "sha256": "d593c3689d43b34e17edbeffb645ab97e586df092b0fc4c36c1282aee2f59ff4",
+      "bytes": 1512,
+      "sensitive": false
+    },
+    "experiments/cnn_stereo_20261018/.gitignore": {
+      "sha256": "f337c946b1801ee6ef4818d853595afc6a55494e6e27ec12952fbb8d6308a459",
+      "bytes": 117,
+      "sensitive": false
+    },
+    "experiments/cnn_stereo_20261018/comparison_server.json": {
+      "sha256": "3552b4d51532f5691c6d2f2242b4201dae1496df09d32c5938f571cfe4db7f9d",
+      "bytes": 103,
+      "sensitive": false
+    },
+    "experiments/cnn_stereo_20261018/CURRENT_STATE.txt": {
+      "sha256": "1c7c892c6fb4047c2d3687b0700c43dc8da46fa82a077c480ea4729cbf868906",
+      "bytes": 3717,
+      "sensitive": false
+    },
+    "experiments/cnn_stereo_20261018/environment-lock.txt": {
+      "sha256": "b3528841ea0e4aef4c6252a8e15faee6236bda0c2bff4369228c6b15c176b65a",
+      "bytes": 785,
+      "sensitive": false
+    },
+    "experiments/cnn_stereo_20261018/model_manifest.json": {
+      "sha256": "ae55d518a21b159beec72918872b3db3074d1a407e94d00cf5bced18210b36ec",
+      "bytes": 482,
+      "sensitive": false
+    },
+    "experiments/cnn_stereo_20261018/preserved_sha256.json": {
+      "sha256": "6b81824e705c6ba532a86e08d6747ec738b01f165c1f34b9c4caf2ab4afae35b",
+      "bytes": 76101,
+      "sensitive": false
+    },
+    "experiments/cnn_stereo_20261018/verification.json": {
+      "sha256": "0804bc55aeec7e35b41816d1f014d195feffeabde658c9b818db52f8d73d0fb6",
+      "bytes": 464,
+      "sensitive": false
+    },
+    "experiments/fast_board_20261018/numpy-1.21.6-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl": {
+      "sha256": "7c4068a8c44014b2d55f3c3f574c376b2494ca9cc73d2f1bd692382b6dffe3db",
+      "bytes": 12974170,
+      "sensitive": false
+    },
+    "experiments/fast_board_20261018/onnxruntime-1.14.1-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl": {
+      "sha256": "bc70e44d9e123d126648da24ffb39e56464272a1660a3eb91f4f5b74263be3ba",
+      "bytes": 5146883,
+      "sensitive": false
+    },
+    "experiments/geometry_fast_20261024/promotion_verified.json": {
+      "sha256": "f09af516d28ee2cb91ba029560128fc2b5328f0421a81919d2a7fc44422ba61e",
+      "bytes": 33493,
+      "sensitive": false
+    },
+    "experiments/hdmi_video_hold_20261029/hdmi_addon_manifest_v2.json": {
+      "sha256": "6a7fd1fca36a39439fb0f618180b12d77fe1abb7187ef42667ca77c607227d3c",
+      "bytes": 570,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/board44/production_827_44_bounded_20261027.bin": {
+      "sha256": "24c80e5a33afbd2cfe0ca20275b50d0b4694d423af81e3dc62cf0e717a0c44d7",
+      "bytes": 319680,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/board44/production_830_44_bounded_20261027.bin": {
+      "sha256": "143dff362fc90193c538ba899a8b59e8d14b7ecd796a04531bda685183b955e2",
+      "bytes": 319680,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/board44/production_831_44_bounded_20261027.bin": {
+      "sha256": "291d6c1b4524cd46565a1e94e61963c3e0f86e87fa57cde2ea19b9667bd166ff",
+      "bytes": 319680,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/control/copyout4/fpc1_copyout4_20261028.so": {
+      "sha256": "6ce6b3c789b565288943689d398ee8d17d060e33d5262c51436d6fd70051970c",
+      "bytes": 8440,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/control/device_transport/fpc1_device_20261027.so": {
+      "sha256": "b06059dc805a10b35b7b415e3c66ca64b93f95a64f24cfe7a2cf622ec9c5beea",
+      "bytes": 13024,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/control/direct_io4/fpc1_direct_io4_20261028.so": {
+      "sha256": "92da3733197b12cfe141a92022c392ab1c1e65268515c57504ca3bc111775fef",
+      "bytes": 8448,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/control/poll_spin/fpc1_spin_20261028.so": {
+      "sha256": "c38c59fc8d90002f3fd3903fd0c3f47336e74d9f31acf7859be2f02842aab845",
+      "bytes": 8288,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/control/production_reference/production_827_bias.bin": {
+      "sha256": "ec702e9efc8c0e6db4652a08a38806d6c6646d3af6ba162e0ba8559d55ec6037",
+      "bytes": 224,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/control/production_reference/production_827_weight.bin": {
+      "sha256": "ef43d57cd4d8aa2c5d048f1013a3cc97308012cc9ac698af2adb3267c9ca4706",
+      "bytes": 338688,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/control/production_reference/production_830_bias.bin": {
+      "sha256": "ed50fa1a6474f5e444baa46b98e6c04d49b082638b23c85b5bee56edfc9773b5",
+      "bytes": 224,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/control/production_reference/production_830_weight.bin": {
+      "sha256": "b09d523a035c9cd7bc039ea50941126e7b169fc8ed000fe2ce9b6a6eae042b13",
+      "bytes": 112896,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/control/production_reference/production_831_bias.bin": {
+      "sha256": "79ec3284bd3dcc3bbb8dec23bcc71345dea0a5ecdbe40b4f00d8abb946de7282",
+      "bytes": 224,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/control/production_reference/production_831_weight.bin": {
+      "sha256": "bbfea821fb87d6f1e9c1158e47f6eb6f7abf21b53a789c092295bff205cf84ec",
+      "bytes": 112896,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/graph/pl3_hook/attempts/20261028_095505/fast_pl3_hook.onnx": {
+      "sha256": "f563d58f06cc8bdc735fe14984e32d517a0c55dd8572e1acc83ba0f8d5f840e5",
+      "bytes": 61463837,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/graph/pl3_hook/attempts/20261028_095505/libfastpl3_hook.so": {
+      "sha256": "f20ddb55be7ce3a78ef7fb5df7b970433dc6de77952f90cacaeef0a5630bba80",
+      "bytes": 32056,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/system/conv44_bcache_quad_board/package_attempts/20261028_193215/conv44_quad.bit.bin": {
+      "sha256": "2b6875b1b28a1e98887b25f384cc01ff43ad502fa34b0b452e1bcdeb930e9b5b",
+      "bytes": 7797692,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/benchmark_v2_launch.json": {
+      "sha256": "e670c0456c11d538707b60050603e0bc8a13b23c699b899d34b573fc79f26637",
+      "bytes": 1327,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/benchmark_v2_verified.json": {
+      "sha256": "35f759facf507b9392c0bedb895685d3adea0de852cd12fbef0b2322b96a4115",
+      "bytes": 21158,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/desktop_entry_before.lnk": {
+      "sha256": "5ee366c5619abdae93fa2128bbc159c73e302d23ac213f5e0f8d5487e87d82ed",
+      "bytes": 1872,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/desktop_entry_verified.json": {
+      "sha256": "2a016b4942f77acbdc6be3e1443da979f3026c223c0b59207a21bb6b0b24dcba",
+      "bytes": 510,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/final_live_verified.json": {
+      "sha256": "4724f9ae316f7c981174ccb3d7f7a30574b50d2bbbf041ff0af61fa124023bf8",
+      "bytes": 323,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/optimization_verified.json": {
+      "sha256": "69f059c617aca4089a6945ee60e68b48367f099084f141b38088e858e40da3da",
+      "bytes": 3243,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/payload_local.json": {
+      "sha256": "8afe39e47e53a4a599252b54c0ebb73a05f8fd95ad88334d5c4422516778661f",
+      "bytes": 3760,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/pl3_usable_v5_quad_manifest_20261028.json": {
+      "sha256": "4b5824f6c57f79546f80bc492ce352dd44863ee72454a0b4e7af8a0a94f852ac",
+      "bytes": 11768,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/preview_verified.json": {
+      "sha256": "991caacd8392d0788f58245f19126b6ca4436cda8fe998d29dde166548ea2f04",
+      "bytes": 126,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/selection_evidence.json": {
+      "sha256": "e4f548e420eda13833c447ee91ce9bddb7fee2475ba9a5b029b8ab85b85cc2cd",
+      "bytes": 734,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/staged.json": {
+      "sha256": "00ea91fba8b48b60202c81ef9bdc5682506ec08ad83613b18e80fb413f7090b2",
+      "bytes": 435,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/web_final_launch.json": {
+      "sha256": "0c00ae892441bc9550dbe00ec2311e74c747d3c0866b192ceed9b8867f0f10fa",
+      "bytes": 131,
+      "sensitive": false
+    },
+    "experiments/pl_pipeline_20261025/usable_v5_quad/web_final_verified.json": {
+      "sha256": "3ad9c1fa0d91df70823ba244a9d6eba0526d0f4aeb85b49d9cc37e4554ea9760",
+      "bytes": 2802,
+      "sensitive": false
+    },
+    "experiments/switch_latency_20261030/hdmi_addon_manifest_v4.json": {
+      "sha256": "ef4c852ca3ff591d783a77b8416e2fbefcafd2b4acdaf6f94012970fca0743f3",
+      "bytes": 881,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/__init__.py": {
+      "sha256": "5dec897fdef45a0eaf63eacda1e01d62e1e75490302584ae0238f75376592344",
+      "bytes": 3212,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/__main__.py": {
+      "sha256": "a12a559270d2d98aa7d89757943b39164d04f1c71d88b209697bcf5948b3423d",
+      "bytes": 45,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/rfc2217.py": {
+      "sha256": "9dc1bfe53b38d8cfd39bfed737743b884db8cbe946730bb68c2dcc15212fe817",
+      "bytes": 59700,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/rs485.py": {
+      "sha256": "f6deb2b8672d7b7ea093c1b553a3606e82951ad25416ab5ba403978fbbd8c4cd",
+      "bytes": 3305,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/serialcli.py": {
+      "sha256": "bb94271bdd14c6db6ab061bd9d88248f4194c9bd3020ec739548312788027338",
+      "bytes": 9190,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/serialjava.py": {
+      "sha256": "01c1cba760ffb008a1bbb2ffc02720f26b64edeb5feb30320782ffb6eb61568f",
+      "bytes": 8480,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/serialposix.py": {
+      "sha256": "5d56f98513391e1766a1847a04e2e1202ced4172a152803ba1c823a149a9b6f9",
+      "bytes": 35127,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/serialutil.py": {
+      "sha256": "3c84f8c7c319f161a85d6f8db5bedc4f65255714589bdcbeee6f2daf65a17c0a",
+      "bytes": 21797,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/serialwin32.py": {
+      "sha256": "17681ea9a650120c71db1aae9b8881301a40d38c47b34bb0da050e3f5bfbbe00",
+      "bytes": 20284,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/threaded/__init__.py": {
+      "sha256": "8a45e52987a3465cf30b37bd930c51fee00129ad587ee4f2a9c3e3c375515752",
+      "bytes": 9319,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/tools/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/tools/hexlify_codec.py": {
+      "sha256": "1512523bca5f8cce8047dfd206a2f7e1ee742d592f9737c529d98249c1a7e34f",
+      "bytes": 3677,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/tools/list_ports.py": {
+      "sha256": "7830e8c888684b77fd0f7095a6d86a95052a891da5f97d154c618e063b8ce1ec",
+      "bytes": 3389,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/tools/list_ports_common.py": {
+      "sha256": "c791c88211b8348cfe5dfe625fa1a4ef165f75e69db36b6a0ac7f226187721fb",
+      "bytes": 3736,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/tools/list_ports_linux.py": {
+      "sha256": "5275355583f534923b27c667ee063e03699b8b596e81b159495ced7d7f0fd695",
+      "bytes": 4503,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/tools/list_ports_osx.py": {
+      "sha256": "7a879f3068ae26a0be382bbd6805aaa895fbe701a5073a2a67a91d98c03cd8b3",
+      "bytes": 11178,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/tools/list_ports_posix.py": {
+      "sha256": "118a83e6445b9347f66b9b1c6914b8b605860729e4a551fbee36bf1ba4b75211",
+      "bytes": 4535,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/tools/list_ports_windows.py": {
+      "sha256": "53813370e02253ae8b5a83dd317236a0e3382c2779bcac0edc381e4d3e8cdea7",
+      "bytes": 16021,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/tools/miniterm.py": {
+      "sha256": "7d7be4114f4513253b1cf48d13c6dd5f638282219880279ed3aeb2179f27a2db",
+      "bytes": 37840,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/urlhandler/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/urlhandler/protocol_alt.py": {
+      "sha256": "fa46280a0cbd1b231637ac02f0e7b0f052f4e0b8cbe0db71dc71d5a924ca19c4",
+      "bytes": 2033,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/urlhandler/protocol_cp2110.py": {
+      "sha256": "8942ce4f855dc36d0fff0da37d259db74ae8518d4abbcc495471d873a7772266",
+      "bytes": 8540,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/urlhandler/protocol_hwgrep.py": {
+      "sha256": "19d29d43db44c4a447273b223dc43d13199a2daebe03bd6ae768b88d0c66a019",
+      "bytes": 3159,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/urlhandler/protocol_loop.py": {
+      "sha256": "e5b6abaeefe17f03646b28e3073e30dec9c1267d06ec2f9f1bbf9098769e4d6a",
+      "bytes": 10623,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/urlhandler/protocol_rfc2217.py": {
+      "sha256": "20f3bcaf7a4537ac840e5d59bf68e05277c86b4b50d2263466c0fcff184051e4",
+      "bytes": 317,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/urlhandler/protocol_socket.py": {
+      "sha256": "428b5a1c23ddeadf74dd6ffd7dad8bbffe6e125ab49e88abd828b5d1af7ced73",
+      "bytes": 14299,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/urlhandler/protocol_spy.py": {
+      "sha256": "15d51a538dfe6e5d4a5d3cbf4b81e1cf2195e61a54b28a66f08a93ad7d955fee",
+      "bytes": 9130,
+      "sensitive": false
+    },
+    "experiments/usb_camera_20261016/deps/serial/win32.py": {
+      "sha256": "964eaba1df661e4ab381c8666aa077ca08939260164cd434d0827df39663bd32",
+      "bytes": 11138,
+      "sensitive": false
+    },
+    "experiments/vessel_key_points_20261029/hdmi_addon_manifest_v3.json": {
+      "sha256": "56e09f797c9a6d902b808d45c401d75c4bd40657393429dcbe2acc36b5f9e41b",
+      "bytes": 660,
+      "sensitive": false
+    },
+    "experiments/video_replay_20261029/video_companion_manifest_v1.json": {
+      "sha256": "24ab3a76bc00890715fce6c4132f7ee6f7c13fb50d2b2b8e4ae68cdb2a351aa1",
+      "bytes": 194,
+      "sensitive": false
+    },
+    "experiments/video_replay_20261029/video_companion_manifest_v2.json": {
+      "sha256": "3075e4591e84d5e12cd62b999f1e909028ca2cb3964cb03059964c116ec97b7d",
+      "bytes": 194,
+      "sensitive": false
+    },
+    "HANDOFF_NEXT_CHAT.txt": {
+      "sha256": "9ade8f98d56b4564652af0dc36c97a5eacca5936026ba0974d1ffd847febf987",
+      "bytes": 1009,
+      "sensitive": true
+    },
+    "launcher/config.json": {
+      "sha256": "8b9ed75484b4cd90069f2cb23aa1831f52b90f5872ba76c40d3c5438f3f6b248",
+      "bytes": 86,
+      "sensitive": false
+    },
+    "launcher/README.md": {
+      "sha256": "1093203113e5fa777ead50dafc7f9b460996ac231286672863beb01552159ba6",
+      "bytes": 958,
+      "sensitive": false
+    },
+    "launcher/requirements_host.txt": {
+      "sha256": "6664b1803f0fb7e2aa1c2a82f8cdd0170848a108fbbe43c4fcd5bcfb7c0737ef",
+      "bytes": 820,
+      "sensitive": false
+    },
+    "停止电脑端.cmd": {
+      "sha256": "3690357cdc59faa3233d2261229b5b85af37d93a7c540d95299f4289bd34509e",
+      "bytes": 117,
+      "sensitive": false
+    },
+    "冷启动恢复.cmd": {
+      "sha256": "1abf78f37adb42013cea062fb104a4d1b430cc0fa44a43c35fc051ad80bcba2b",
+      "bytes": 117,
+      "sensitive": false
+    },
+    "启动深目.cmd": {
+      "sha256": "b92905c8953066bb7593c4a51f4975b8cad24698da9465e3f85811c4b36041f3",
+      "bytes": 118,
+      "sensitive": false
+    },
+    "检查复现文件.cmd": {
+      "sha256": "465217513aabaad7098b8667bc606fcfe79205def73014cb0ec42755c2e44633",
+      "bytes": 118,
+      "sensitive": false
+    },
+    "检查状态.cmd": {
+      "sha256": "2b431bab7f37f5abb0505dde58500c82728fb71fca97b06c9d5cf0fb05726fd5",
+      "bytes": 119,
+      "sensitive": false
+    }
+  }
+}

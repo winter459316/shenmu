@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "worker_pid": 24804,
+  "all_three_board_validated": true,
+  "preview_sha256": "96802d44051c4bac8ce75704894771543e5dca4e94a77c4f6b460a6beb327af4",
+  "pl2_sha256": "ecf50ba7d84d08ba8544f555182cc9d2b6b656779ec9dd5e1baec92df40a6b42",
+  "pl3_sha256": "2b6875b1b28a1e98887b25f384cc01ff43ad502fa34b0b452e1bcdeb930e9b5b",
+  "faults": [],
+  "cold_boot_retested": false
+}

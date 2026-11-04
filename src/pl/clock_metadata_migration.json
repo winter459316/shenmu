@@ -1,0 +1,38 @@
+[
+  {
+    "file": "pl1/rtl/usb_pl_keys.v",
+    "before_sha256": "ff81cf4b3d9863922b5789ba19d931eee0c3b7fa8428627511e3083f49a80679",
+    "after_sha256": "5922c7a7667c57a1ffe43f6e4db28d7056107fac2fd0f1c850268a07b2c19648",
+    "scope": "Clock interface metadata only; primitive/divider/logic unchanged"
+  },
+  {
+    "file": "pl1/rtl/video_clock_tree.v",
+    "before_sha256": "1f7dccb32e9128c87c622a4840d84862131d095abd82b0bd860f66e046d31e2a",
+    "after_sha256": "4a5b0c8173bb2db0c57525734530db9abc4588aba696a58113bc8b717a7ab5bc",
+    "scope": "Clock interface metadata only; primitive/divider/logic unchanged"
+  },
+  {
+    "file": "pl2/rtl/usb_pl_keys.v",
+    "before_sha256": "ff81cf4b3d9863922b5789ba19d931eee0c3b7fa8428627511e3083f49a80679",
+    "after_sha256": "5922c7a7667c57a1ffe43f6e4db28d7056107fac2fd0f1c850268a07b2c19648",
+    "scope": "Clock interface metadata only; primitive/divider/logic unchanged"
+  },
+  {
+    "file": "pl2/rtl/video_clock_tree.v",
+    "before_sha256": "1f7dccb32e9128c87c622a4840d84862131d095abd82b0bd860f66e046d31e2a",
+    "after_sha256": "4a5b0c8173bb2db0c57525734530db9abc4588aba696a58113bc8b717a7ab5bc",
+    "scope": "Clock interface metadata only; primitive/divider/logic unchanged"
+  },
+  {
+    "file": "pl3/rtl/usb_pl_keys.v",
+    "before_sha256": "ff81cf4b3d9863922b5789ba19d931eee0c3b7fa8428627511e3083f49a80679",
+    "after_sha256": "5922c7a7667c57a1ffe43f6e4db28d7056107fac2fd0f1c850268a07b2c19648",
+    "scope": "Clock interface metadata only; primitive/divider/logic unchanged"
+  },
+  {
+    "file": "pl3/rtl/video_clock_tree.v",
+    "before_sha256": "1f7dccb32e9128c87c622a4840d84862131d095abd82b0bd860f66e046d31e2a",
+    "after_sha256": "4a5b0c8173bb2db0c57525734530db9abc4588aba696a58113bc8b717a7ab5bc",
+    "scope": "Clock interface metadata only; primitive/divider/logic unchanged"
+  }
+]

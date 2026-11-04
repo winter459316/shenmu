@@ -1,0 +1,21 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date              : Fri Oct 30 19:58:10 2026
+| Host              : LAPTOP-GLT7S1ON running 64-bit major release  (build 9200)
+| Command           : report_cdc -file D:/convstore1030/cdc.rpt
+| Design            : system_wrapper
+| Device            : xczu4ev-sfvc784
+| Speed File        : -2  PRODUCTION 1.20 05-21-2018
+| Temperature Grade : I
+-----------------------------------------------------------------------------------------
+
+CDC Report
+
+Severity  Source Clock                     Destination Clock                CDC Type                 Exceptions               Endpoints  Safe  Unsafe  Unknown  No ASYNC_REG  
+--------  -------------------------------  -------------------------------  -----------------------  -----------------------  ---------  ----  ------  -------  ------------  
+Warning   hdmi_clocks_pixel_clk            clk_out1_system_compute_clock_0  No Common Primary Clock  Max Delay Datapath Only         45    45       0        0             0  
+Warning   clk_out1_system_compute_clock_0  hdmi_clocks_pixel_clk            No Common Primary Clock  Max Delay Datapath Only         64    64       0        0             0  
+Info      input port clock                 clk_pl_0                         No Common Primary Clock  False Path                       2     2       0        0             0  
+Info      hdmi_clocks_pixel_clk            hdmi_clocks_serial_div_clk       Safely Timed             None                            76    76       0        0             0  
+

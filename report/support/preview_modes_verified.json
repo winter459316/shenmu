@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "mode": "color",
+      "sequence": 4702,
+      "jpeg_size": [
+        1280,
+        480
+      ],
+      "capture_progress": 17,
+      "hdmi_progress": 17,
+      "errors": false
+    },
+    {
+      "mode": "auto_enhanced",
+      "sequence": 4730,
+      "jpeg_size": [
+        1280,
+        480
+      ],
+      "capture_progress": 17,
+      "hdmi_progress": 18,
+      "errors": false
+    },
+    {
+      "mode": "gray",
+      "sequence": 4757,
+      "jpeg_size": [
+        1280,
+        480
+      ],
+      "capture_progress": 17,
+      "hdmi_progress": 17,
+      "errors": false
+    },
+    {
+      "mode": "sobel",
+      "sequence": 4783,
+      "jpeg_size": [
+        1280,
+        480
+      ],
+      "capture_progress": 17,
+      "hdmi_progress": 17,
+      "errors": false
+    },
+    {
+      "mode": "vessel",
+      "sequence": 4810,
+      "jpeg_size": [
+        1280,
+        480
+      ],
+      "capture_progress": 17,
+      "hdmi_progress": 18,
+      "errors": false
+    }
+  ],
+  "original_mode_restored": true,
+  "brightness_used_as_criterion": false
+}

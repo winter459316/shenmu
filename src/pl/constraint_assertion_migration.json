@@ -1,0 +1,8 @@
+{
+  "files": [
+    "pl1\\constraints\\pins.xdc",
+    "pl2\\constraints\\pins.xdc"
+  ],
+  "physical_constraints_changed": false,
+  "replacement_guard": "tools/review_implementation.tcl verifies four key synchronizer registers and ASYNC_REG"
+}

@@ -1,0 +1,4 @@
+metric,baseline_seconds,optimized_seconds,reduction_percent,conditions,evidence
+convolution_core,3.762606977500127,2.9290061200044875,22.15487459839569,ZU4EV; identical saved stereo input; 320x360; 2 iterations; 110 MHz versus 115 MHz; two runs per group,sim/results/benchmark/store2_benchmark.json
+network_forward,21.337200655499828,20.427443371001573,4.263714341851859,ZU4EV; identical saved stereo input; 320x360; 2 iterations; 110 MHz versus 115 MHz; two runs per group,sim/results/benchmark/store2_benchmark.json
+board_total,26.578502686500087,25.707677136999337,3.2764281711891377,ZU4EV; identical saved stereo input; 320x360; 2 iterations; 110 MHz versus 115 MHz; two runs per group,sim/results/benchmark/store2_benchmark.json

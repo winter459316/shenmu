@@ -1,0 +1,3 @@
+# Selected live host needs array/image packaging, not GPU model inference.
+numpy==2.2.6
+opencv-python-headless==5.0.0.93

@@ -1,0 +1,15 @@
+[
+  "Q",
+  "P1",
+  "P2",
+  "native_bgr",
+  "domain",
+  "rectified_left",
+  "rectified_right",
+  "calibration_sha256",
+  "maps_sha256",
+  "disparity",
+  "xyz_mm",
+  "depth_mm",
+  "valid"
+]

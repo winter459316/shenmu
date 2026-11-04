@@ -1,0 +1,2465 @@
+{
+  "scope": "Module roles and this-revision changes, not a claim of independent authorship of all existing code",
+  "model_sources": {
+    "repositories": {
+      "OpenStereo": "23d71c92e33ad1f80dfc42bf29f5c6a914d38769",
+      "Fast-FoundationStereo": "476f4249561f7c79ca707326954f9255643412a6"
+    },
+    "weights": {
+      "cfg.yaml": "d45afe99b176454d5aff416edf16c8da6a99579f8f374b927f37907442a7d6bc",
+      "LightStereo-S-SceneFlow.ckpt": "e34b6aaa646217d03abcaa4f438dd02404711fe2bcee10eb59a6aff71f2ca02f",
+      "model_best_bp2_serialize.pth": "af0658f289ec840b292645f8d5538978f06e8cabaa1fd31e84acc91af268e990"
+    }
+  },
+  "existing_mapped_sources": [
+    {
+      "source": "src/ps/camera/accept_hardware_320.py",
+      "runtime": "candidates/usb_320_hdmifps/accept_hardware_320.py",
+      "sha256": "6ef37a0878018c6c29fd325ea5c52b45a0cdb0a4899bb10a42cdfab7aa33c3b7",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/adapt_runtime_320.py",
+      "runtime": "candidates/usb_320_hdmifps/adapt_runtime_320.py",
+      "sha256": "35aba48781d712ff84ae89d817f99197653c9aab0a515da8f2e1a59639cf938c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/auto_exposure.py",
+      "runtime": "candidates/usb_320_hdmifps/auto_exposure.py",
+      "sha256": "2d86d2ef1b7153f38b100b4be9ff2279026828358449f7e7032b01d154002144",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/board_completion.py",
+      "runtime": "candidates/usb_320_hdmifps/board_completion.py",
+      "sha256": "8fca26ecde7de5290293a74ad74cd9ceeda30816b8af4658222dc80535ac5c68",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/board_dma.py",
+      "runtime": "candidates/usb_320_hdmifps/board_dma.py",
+      "sha256": "f13ecd9c8c630cd80eadd7fb83244f814ea955898e98fa43c17f57c1451f4cc9",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/board_geometry.py",
+      "runtime": "candidates/usb_320_hdmifps/board_geometry.py",
+      "sha256": "c014a08a7d18363f286e0d203029e7bb8ec2424b8ce0772c3ba4b9f251302e0d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/board_plane.py",
+      "runtime": "candidates/usb_320_hdmifps/board_plane.py",
+      "sha256": "b6b77fe362f9ddbaa0a8a383b7ec32d491ec3884648b429d1412a4ee50f53489",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/board_surface.py",
+      "runtime": "candidates/usb_320_hdmifps/board_surface.py",
+      "sha256": "0fd2bb37e1c93e1facb0003ad6bdd75d59c9aeae591442f33ce63dbe5b448639",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/boot_reserved.py",
+      "runtime": "candidates/usb_320_hdmifps/boot_reserved.py",
+      "sha256": "e1632d531fe81c48f4a86d9e3ee10efc641e744ddfd6a04bce393ee205705d5a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "build/native/build_completion.py",
+      "runtime": "candidates/usb_320_hdmifps/build_completion.py",
+      "sha256": "8b98c607b4d6e6b797f997e592c0ae1fbd136ac4c3a815dcbc901831164be556",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "build/native/build_hdmi_mmio.py",
+      "runtime": "candidates/usb_320_hdmifps/build_hdmi_mmio.py",
+      "sha256": "371d645086fcca50ebb484d0f48e024c81e2d5a469423b8e23b75a60a2a03968",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "build/native/build_preview_native.py",
+      "runtime": "candidates/usb_320_hdmifps/build_preview_native.py",
+      "sha256": "3617858fc79527690ae416ddb68f81b4213c4ccbd6154a569585237b19c03208",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "build/native/build_surface_mesh.py",
+      "runtime": "candidates/usb_320_hdmifps/build_surface_mesh.py",
+      "sha256": "c88f268b92758dab627faad9987800753c6b27282464fd092c45be052d7d34e2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "build/native/build_surface_native.py",
+      "runtime": "candidates/usb_320_hdmifps/build_surface_native.py",
+      "sha256": "48448c9a513b0d02af96f79f36498f441ee4529d600063d0f97f8630ee584f12",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/camera_recovery_candidate.py",
+      "runtime": "candidates/usb_320_hdmifps/camera_recovery_candidate.py",
+      "sha256": "02c192aabf8b080a459596f4a162084d3acbebc9f4e62e4f2f99f790abe7941a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/check_exposure_live.py",
+      "runtime": "candidates/usb_320_hdmifps/check_exposure_live.py",
+      "sha256": "ad3d73a3951a7c768729587c7f2b1e9d4de2e42a0513db298f9be65011884250",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/check_preview_live.py",
+      "runtime": "candidates/usb_320_hdmifps/check_preview_live.py",
+      "sha256": "5ba9f798d89ec9d5bc1dcce4ee9882b89d54e9417940fe868f9f2a66411c9777",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/check_rawhdmi_live.py",
+      "runtime": "candidates/usb_320_hdmifps/check_rawhdmi_live.py",
+      "sha256": "2ac0db2d28fe4bc52a2b97110a4076e9322e7f035c8ff959f845fd1772c41d43",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/check_shared_live.py",
+      "runtime": "candidates/usb_320_hdmifps/check_shared_live.py",
+      "sha256": "2d2724c9867199696cbf4be7218934aac7a975442d146306c3ee39e4861d3fc7",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/check_tone_live.py",
+      "runtime": "candidates/usb_320_hdmifps/check_tone_live.py",
+      "sha256": "0fccfb55468f46a1e2f9b3f1c13bfa0c6507c1d8ae6d1cd4fb744716058ddc12",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/check_transport.py",
+      "runtime": "candidates/usb_320_hdmifps/check_transport.py",
+      "sha256": "3d82ce682fe702798e50ada1c81ab78ed7b95d1a37f0b75cbaec8234883b4903",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/cold_start_board.py",
+      "runtime": "candidates/usb_320_hdmifps/cold_start_board.py",
+      "sha256": "3d36317cc525fedc0ce9f4b0e633f063742f9e57204234e51b417a9d1a5b08cc",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/dense_fill.py",
+      "runtime": "candidates/usb_320_hdmifps/dense_fill.py",
+      "sha256": "3e638d4fa66c8f208258a5ad46acb7eac9ef8045c93873544188000cf812332b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/dense_geometry.py",
+      "runtime": "candidates/usb_320_hdmifps/dense_geometry.py",
+      "sha256": "a3116a3df96d2c19200e6acb021a477d51a5551c91b33a5530ec714d83c51674",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/deploy.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy.py",
+      "sha256": "9ada11d83f26a3179de4c90121ab0f2d6adaa9f56512ef1ff7f09f4c15993b16",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_exposure_runtime.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_exposure_runtime.py",
+      "sha256": "caf8fcdcc6db8bd865cc1cdbac8a064b5442198858780c8fa32b031f059c6681",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_hdmifps_runtime.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_hdmifps_runtime.py",
+      "sha256": "07b36970bbf9f3cfc82602a38c71f6fe6fdfb5eb98a5df7481039c6fcac7a3da",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_hdmifps_update.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_hdmifps_update.py",
+      "sha256": "a7476efc1ccd89f9dc9ac32b5079959b0687283834044eb47af6f85d034a883e",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_lowlatency_runtime.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_lowlatency_runtime.py",
+      "sha256": "ff2843504a2d48c2600f2450af929ceeef2f7f6e2147b454b9ee58599522dc63",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_lowlatency_update.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_lowlatency_update.py",
+      "sha256": "5f7e3e37e565e8baa0a2c93e1b5effbaffd4bd511c7d66063d87874817b3ec3e",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_rawhdmi_runtime.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_rawhdmi_runtime.py",
+      "sha256": "0b5a51e955553859db7249cc41f0246586aab439a15b3f44d0d3a0d24de3e229",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_rawhdmi_update.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_rawhdmi_update.py",
+      "sha256": "6452eeff1d7c68728aa6376e4e733e81bf801032fed764cba0142c0790e4f739",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_runtime_320.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_runtime_320.py",
+      "sha256": "6d66dc2d72720d3ff44dd6c1bc92867894b0bcf1479b6d1dfbf39e8311827975",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_tone_runtime.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_tone_runtime.py",
+      "sha256": "02d8f684a778281c88675018d46675e98598876b43d6388eeb100334f3248420",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_tone_update.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_tone_update.py",
+      "sha256": "63a0918eaefa99de6e970a93517455f59b9b523e7d2fb321ed0b6472ca178662",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_viewmodes_runtime.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_viewmodes_runtime.py",
+      "sha256": "68335f4e5f061e807c132d3246e6be4029252e2893ceabf077b5e2baeca813d6",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/deploy_viewmodes_update.py",
+      "runtime": "candidates/usb_320_hdmifps/deploy_viewmodes_update.py",
+      "sha256": "501f8f5d8c6107d99dcf59b546b7ea748d0e2cdefa52b28cd179a1f201b29e83",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/evaluate_reference.py",
+      "runtime": "candidates/usb_320_hdmifps/evaluate_reference.py",
+      "sha256": "b1f0897818753ef5d40b80939e092244b05b0d5af7859cd3acac1ae2586718b3",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/fast_console.py",
+      "runtime": "candidates/usb_320_hdmifps/fast_console.py",
+      "sha256": "56bea06dae578784786060b40a06e6a20c2e7d20ff40ca29aa7e9063b695d7e8",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_320.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_320.py",
+      "sha256": "a0a251b99980752d58ddfb0908571915799a70500591af0fba00c88ee1aefed8",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_dense3d.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_dense3d.py",
+      "sha256": "ae5352ff5d502d722414d1e7b7b91c37b6ab9424dae88eb9009cdb30642e435d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_direct3d.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_direct3d.py",
+      "sha256": "d376c14371d174e8a2d25f5e82d11fccdf7772fb7f4e508488c6671a3feed034",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_exposure.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_exposure.py",
+      "sha256": "9c6ce935bf1a93cea1ba873ecd019ab005ee42dea29505a564d4fad64e02b46e",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_fast3d.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_fast3d.py",
+      "sha256": "b5793dfd9b6bd7f27f054633dc4feaae5a10998ddf105328339021bf53b245fe",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_hdmi_keys.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_hdmi_keys.py",
+      "sha256": "2367cc8f2d82cf2e64c032c171b182eca692b145210a3bb8fd667919360554d6",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_hdmifps.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_hdmifps.py",
+      "sha256": "fadd2a162477e4db0faca111c61ad7e38c0a457513a4c7f77a53bed1171bf54a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_lowlatency.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_lowlatency.py",
+      "sha256": "30af3b32e97bd99b14f74d6e1a1c8d9f2e3cefc6022282f76db048aaed743942",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_mesh.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_mesh.py",
+      "sha256": "3e5e55d29b3a0bf82da8bae26e02c87e61b3f2d0f997a9da41bb1443101f92e9",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_photo_speed.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_photo_speed.py",
+      "sha256": "e0b878d04f60e9ded0713967af12def699723dfe089d604f5313f7c29e5c32a1",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_plane.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_plane.py",
+      "sha256": "7e4b54ebb241556cb2d494e2b7869095201a3db561920f051a8aa84339e28900",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_preview.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_preview.py",
+      "sha256": "12f70ae1f984cda45214d5afb3da7a7ba4e3569cf9d08bcb57f018bd0aa2c757",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_rawhdmi.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_rawhdmi.py",
+      "sha256": "e88ed8cf7f5ae9f1d9cbb7d918caf0f5cc1e851e615ebf2cac79e7057c852d30",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_release.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_release.py",
+      "sha256": "5dba1b8bc5e38ff6b2682c4de21982cef81706eab89f2aed6602fcc42db39b91",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_tone.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_tone.py",
+      "sha256": "736afda8944afd533ddfb7a17348bf8b9aa4d265e09cd69e9011b693c00774ca",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/finalize_viewmodes.py",
+      "runtime": "candidates/usb_320_hdmifps/finalize_viewmodes.py",
+      "sha256": "811387f579fbc8a6e435b8678e039a6ca6713fd656fba79568df13a5c02ac5c2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/full_camera.py",
+      "runtime": "candidates/usb_320_hdmifps/full_camera.py",
+      "sha256": "fec6dd124c45635cface05b2a9a76843a3ec0ad62f67cce2a794ca680a3e5fb2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/full_control.html",
+      "runtime": "candidates/usb_320_hdmifps/full_control.html",
+      "sha256": "96a45733c497e5501f93710e12007b1aa63b47644fd14bbb4073a57c2e633e72",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/full_control_before.html",
+      "runtime": "candidates/usb_320_hdmifps/full_control_before.html",
+      "sha256": "26fb2d326a91a32b7d1c525c8690b0c651abc7337726854cba033d44a84c06ce",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/full_host.py",
+      "runtime": "candidates/usb_320_hdmifps/full_host.py",
+      "sha256": "0b78e552c3a7854c33876ad1a4d5b95a9a526205bbc1209bcbbbb91a06c8a513",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/full_runtime.py",
+      "runtime": "candidates/usb_320_hdmifps/full_runtime.py",
+      "sha256": "e120015362e8b0b2bb6a72cf3902e7aeb6bf3c24d4cdbc9d05316a94c7a60bc6",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/generate_geometry.py",
+      "runtime": "candidates/usb_320_hdmifps/generate_geometry.py",
+      "sha256": "6b47fee60833e5c67e2066d94a0bc064a2aa16dea9ea1198c86de0a95cb53fc2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/generate_usb_maps.py",
+      "runtime": "candidates/usb_320_hdmifps/generate_usb_maps.py",
+      "sha256": "433cab31ef08d11f6e7089c81cc14ed6ec0d1fb6be33c00e735674c578e34cba",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/hardware_catalog.py",
+      "runtime": "candidates/usb_320_hdmifps/hardware_catalog.py",
+      "sha256": "c79635f32ab9df778ab846c66574a2e00b2891bbfc2da9aa5b93becff4d46200",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/hdmi_fps.py",
+      "runtime": "candidates/usb_320_hdmifps/hdmi_fps.py",
+      "sha256": "ef995a395cdca76ebb10ecb30e6e2711f876a02989943122fc9b9d8bd260f32c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/hdmi_output.py",
+      "runtime": "candidates/usb_320_hdmifps/hdmi_output.py",
+      "sha256": "a51cd9f317e95085512575fbf7b2d36be27fa9270d733c9319746fbcd00b8a80",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/hdmi_service_switch.py",
+      "runtime": "candidates/usb_320_hdmifps/hdmi_service_switch.py",
+      "sha256": "a093e189bfce7587a502df85de6d3a46348f3e331610407958abb125f5a62485",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/legacy_redirect.py",
+      "runtime": "candidates/usb_320_hdmifps/legacy_redirect.py",
+      "sha256": "9547ba609d2af527a05582b79272b5bc6663d6fff4b62310485d74c3b083d49f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/live_verify.py",
+      "runtime": "candidates/usb_320_hdmifps/live_verify.py",
+      "sha256": "4eb5293237d0bbb78135f19f47ac3cae26fcc331d0435dbcbf5effb31bd5f9a0",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/load_candidate.py",
+      "runtime": "candidates/usb_320_hdmifps/load_candidate.py",
+      "sha256": "0c864791db7cebc03dcc9277d22c88d71432be9278194c715e224e5505a386b0",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/load_verified_hdmi.py",
+      "runtime": "candidates/usb_320_hdmifps/load_verified_hdmi.py",
+      "sha256": "ed391d6a897236cb7203acfb41bf7b1dfe1347ff5c929c7e44c6c3ace0d7cba2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/measure_latency.py",
+      "runtime": "candidates/usb_320_hdmifps/measure_latency.py",
+      "sha256": "8f516a4dca9f472986ec2d3cac82b0bbb8a3b979b0c95f16f4345fc5354f0ef7",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/measure_preview.py",
+      "runtime": "candidates/usb_320_hdmifps/measure_preview.py",
+      "sha256": "13029085e64bc21eb02e2aa5f2952f7adf8557849adf6d86034b88d07c941e47",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/measure_preview_board.py",
+      "runtime": "candidates/usb_320_hdmifps/measure_preview_board.py",
+      "sha256": "d3ffbd2ca27d64f90407ce7049f50e71ee86ebfdfa621b18630e043c66432cbd",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/mesh_limits.py",
+      "runtime": "candidates/usb_320_hdmifps/mesh_limits.py",
+      "sha256": "47e513193c0dec81a7b2bde3448b0d26717b28b924ff95897742ee555dadaf17",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/photo_speed_service_switch.py",
+      "runtime": "candidates/usb_320_hdmifps/photo_speed_service_switch.py",
+      "sha256": "42c824ea89f90da0c1da092175657d494a8a084c42ff466b2ab000f4a771037e",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/photo_views.py",
+      "runtime": "candidates/usb_320_hdmifps/photo_views.py",
+      "sha256": "068c54890a30547fd0bfed450f8e936332d0b63b55d2bd7aa1f150e71ea9be95",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/physical_keys.py",
+      "runtime": "candidates/usb_320_hdmifps/physical_keys.py",
+      "sha256": "8ce20c90abbe6b17cb81d7e30346c2dc50a75637d05e0344aab8fbabebc7b4af",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/pl_filters.py",
+      "runtime": "candidates/usb_320_hdmifps/pl_filters.py",
+      "sha256": "437448b32ff75a62fdb2feda74219146f01bb78791054babb05e496149e8939d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/pl_preview.py",
+      "runtime": "candidates/usb_320_hdmifps/pl_preview.py",
+      "sha256": "7987be3fa03390b08349bfb5145dc729961afd366303027dbcaf9a236bf1f646",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/plane_guard.py",
+      "runtime": "candidates/usb_320_hdmifps/plane_guard.py",
+      "sha256": "3499630f687bad49fa5a89e5f110a807784a46d359a4573109d272e352a66a6b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/pointcloud_viewer.html",
+      "runtime": "candidates/usb_320_hdmifps/pointcloud_viewer.html",
+      "sha256": "7f9ec431ec8256407c3196fac9aa527851938f13447639a4304e8ca0bc9dd524",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_320.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_320.py",
+      "sha256": "f949374ff15364fbd5d5c1c63cbc07688822bbbf0b5ee546a9c9f439a60b45bf",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_candidate.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_candidate.py",
+      "sha256": "b5d5b7a365fd97fdc951d88989c4525e74b4c2ea2e31b047f59becdb278de641",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_case_320.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_case_320.py",
+      "sha256": "6e961c5a26ebf9e5a6aa3fe8b765799046676d9e309a20102f782e1ea3d07955",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_completion_320.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_completion_320.py",
+      "sha256": "ac345705d30d45d2e2abace7acd191ecbea4fe439b867fb468a2b71567ef8fe5",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_dense3d.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_dense3d.py",
+      "sha256": "07ebee0368a394be42c50d0b185b545b9f1d93c3fb5fd6097c6a98a51e46301b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_exposure.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_exposure.py",
+      "sha256": "e00ec91d5006f4aebf2b01d9f74adce4798c83f06551aca80e4d31f7832ee503",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_hardware_case.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_hardware_case.py",
+      "sha256": "d97001dbc281cc5b66c3e2af8b892b76a1782164d7604ab71cd455d2a4b342c9",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_linefill_candidate.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_linefill_candidate.py",
+      "sha256": "ce0fd3c0a50dddcd3e7d14d5909c86633aa61af6d1cbf73ce0cc70fab99839f2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_lowlatency.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_lowlatency.py",
+      "sha256": "61d0c70763db87908dddca74513939835bae63ccc7f611c992bedc90647bcd33",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_rawhdmi.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_rawhdmi.py",
+      "sha256": "feffc6d427bc69ca6058abe253774141c41c80dc0ded90d0edddd1f87574cdc6",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_tone.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_tone.py",
+      "sha256": "7cdab13a56955740f155e6c78f6aaa28a2854347aae96a999ef86ab1768aeac9",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/prepare_viewmodes.py",
+      "runtime": "candidates/usb_320_hdmifps/prepare_viewmodes.py",
+      "sha256": "1d5680ee155e4940892ba83dc91e74b988b96eb04428187250d60449187cd82f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/preview_compat.py",
+      "runtime": "candidates/usb_320_hdmifps/preview_compat.py",
+      "sha256": "014ad26e897f4817afbbfc5cc643578c9c87e99f3b89207632127523ede45550",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/preview_edges.py",
+      "runtime": "candidates/usb_320_hdmifps/preview_edges.py",
+      "sha256": "c357a44d89134c0b1ef06c57cf786d0e870670a40a1f826e1ae1e15c492a5087",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/preview_hardware.py",
+      "runtime": "candidates/usb_320_hdmifps/preview_hardware.py",
+      "sha256": "014d0055f6868e5ce3ca8951b3270586e92ce5c5308fa531fb0c739cd1188978",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/preview_modes.py",
+      "runtime": "candidates/usb_320_hdmifps/preview_modes.py",
+      "sha256": "13238838365d5eac7c4333800d76bd7850430a30932c7fa1ef8fb1f32ef09ce7",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/preview_rectify.py",
+      "runtime": "candidates/usb_320_hdmifps/preview_rectify.py",
+      "sha256": "d34f7c906b5a6e8c1f966e6b855f353f0377cee640ad71ff0f4cfbcf1f9024a2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/preview_service_switch.py",
+      "runtime": "candidates/usb_320_hdmifps/preview_service_switch.py",
+      "sha256": "e6061824bf15a86d18a4293b69d9a4574c57ec3f37a946b22ee918f2d155100c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/preview_zoom.py",
+      "runtime": "candidates/usb_320_hdmifps/preview_zoom.py",
+      "sha256": "4951fae3a5658450a95cc7d70b03c6e1d402e4860d9d7c4396b337efc1206c14",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/probe_cores.py",
+      "runtime": "candidates/usb_320_hdmifps/probe_cores.py",
+      "sha256": "6ae501f13af5b52916f465ce2dc96e1147738695868f81eafbbaba47f38e11b7",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/probe_exposure_board.py",
+      "runtime": "candidates/usb_320_hdmifps/probe_exposure_board.py",
+      "sha256": "0361d7a6fd554d4be1719c0ebf969e2cf8d06b372b1ea3592b8a79c4815bf3e9",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/probe_ion.py",
+      "runtime": "candidates/usb_320_hdmifps/probe_ion.py",
+      "sha256": "5f7b68ce4cb845826f0f1173c716c9187160de93526a1f7751d7c21f057f3fda",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/profile_scaling.py",
+      "runtime": "candidates/usb_320_hdmifps/profile_scaling.py",
+      "sha256": "209431c82ed8e36d72b1f7a26792e29b3b67bc661c5b8f9f73f5f6694912f125",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/profile_surface_holes_board.py",
+      "runtime": "candidates/usb_320_hdmifps/profile_surface_holes_board.py",
+      "sha256": "24d37d172752314e026e3569b91d8f18df7f8b68a6949d7ce9ab8f4d9b0e11bf",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/raw_disparity_hdmi.py",
+      "runtime": "candidates/usb_320_hdmifps/raw_disparity_hdmi.py",
+      "sha256": "3b63ee9491831526c95d205ad898dc1ad3bbb00f9f5ba06a08a1fe5f39e73386",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/receive_result.py",
+      "runtime": "candidates/usb_320_hdmifps/receive_result.py",
+      "sha256": "5807831bbbba21beb213658d29bebdaed4eaff2db10cec21fa544cfd7946e612",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/render_replay.py",
+      "runtime": "candidates/usb_320_hdmifps/render_replay.py",
+      "sha256": "2568d1f7ae90d183e5464636ec5d237ccc0d737722f1294f02e6a72090a45951",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/render_saved.py",
+      "runtime": "candidates/usb_320_hdmifps/render_saved.py",
+      "sha256": "a648a601c30ddcc4204fca2521958b90f6c018d75bf800ba43b8046695a2f71b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/render_small_holes.py",
+      "runtime": "candidates/usb_320_hdmifps/render_small_holes.py",
+      "sha256": "be139b04a9d449fc1a72a04a3e3ffd44226893ba83b9bd6a4cf2e0c5e4ea6cf1",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/restart_shared_preview.py",
+      "runtime": "candidates/usb_320_hdmifps/restart_shared_preview.py",
+      "sha256": "3bc15f349889cfc529393d94942cd2ac248b89811d5b8e9c8a6413aded1ae4b6",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/restore_held.py",
+      "runtime": "candidates/usb_320_hdmifps/restore_held.py",
+      "sha256": "a12a6cfdc4196368587fc24ef82f95de6f9fa65f760904616364476111663c56",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/result_archive.py",
+      "runtime": "candidates/usb_320_hdmifps/result_archive.py",
+      "sha256": "815bac0e7c8d5427be5fff219eccd403ecaa19db33e4e4c1364a333fc4900318",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/retrieve_results.py",
+      "runtime": "candidates/usb_320_hdmifps/retrieve_results.py",
+      "sha256": "92a0eabda52c897286be8f50625fbf6df8cd269d983943dc34d38aa9ff3f758c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/save_hdmi_checkpoint.py",
+      "runtime": "candidates/usb_320_hdmifps/save_hdmi_checkpoint.py",
+      "sha256": "d2bcc8174c899eb8a0184f4f174d3711ecac3e2842662736baa6b721570466bf",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/save_held_for_update.py",
+      "runtime": "candidates/usb_320_hdmifps/save_held_for_update.py",
+      "sha256": "1d22dd6eabf805b5a753debcac5a4e3a5b3f62b66c8e4c25857d19663697b483",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/saved_render_server.py",
+      "runtime": "candidates/usb_320_hdmifps/saved_render_server.py",
+      "sha256": "6ac3144baede8450138340dedd68d6a1566ed882e4310a34450b7b569bfb5dc2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/serve_mesh_evidence.py",
+      "runtime": "candidates/usb_320_hdmifps/serve_mesh_evidence.py",
+      "sha256": "e92b7ee43d6dbbc1f6537628170664a335e3c4b14867e8bcaa55d881c56ec986",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/serve_plane_evidence.py",
+      "runtime": "candidates/usb_320_hdmifps/serve_plane_evidence.py",
+      "sha256": "086a7b8d8b7499d3adcdeb782f0e70332a0b2704b4ce4c4c54ef772f9100abca",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/serve_results.py",
+      "runtime": "candidates/usb_320_hdmifps/serve_results.py",
+      "sha256": "2aa023dffa1f252d2c53192027fd02184ad8ca5aa9165c81e5ea6f028a17eb95",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/shared_preview.py",
+      "runtime": "candidates/usb_320_hdmifps/shared_preview.py",
+      "sha256": "70d02a63ab55565b12442bd71b93634e4b2dd7cc4c02a90ef65697cd6defdb3b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/start_full_camera.py",
+      "runtime": "candidates/usb_320_hdmifps/start_full_camera.py",
+      "sha256": "75b45cd7df3f75ab033ff8717b75c9e5302a4c93159f1263c34603c01407126a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/start_reserved_boot.py",
+      "runtime": "candidates/usb_320_hdmifps/start_reserved_boot.py",
+      "sha256": "079642cf3c00316928b20300c8d2d2c9db14853bfc507b1fe59cb486a930b58c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/surface_cleanup.py",
+      "runtime": "candidates/usb_320_hdmifps/surface_cleanup.py",
+      "sha256": "0f0a48f27037bf3eb14600da8ab8abb70f48d7fc1f8a3c44ba3cb1bd176ab87a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/surface_detail.py",
+      "runtime": "candidates/usb_320_hdmifps/surface_detail.py",
+      "sha256": "bebe654ae58c0e3c140d1cb0952749b2102ca0023e5f03b7f391c4e5dee91be6",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/surface_holes.py",
+      "runtime": "candidates/usb_320_hdmifps/surface_holes.py",
+      "sha256": "87526cad5bae68324e45b3c9df470a2877eba9aa63ac00ce9c93f343cfabe692",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/surface_holes_reference.py",
+      "runtime": "candidates/usb_320_hdmifps/surface_holes_reference.py",
+      "sha256": "590fedc3ed3867b89032cd54c8c706b9c1354c12f30dc4f007908120176450e2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/surface_mesh_native.py",
+      "runtime": "candidates/usb_320_hdmifps/surface_mesh_native.py",
+      "sha256": "d3b99a366a831060e12d8f169f00ed648cababee3ff1a8f64fe180b547b70026",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/surface_native.py",
+      "runtime": "candidates/usb_320_hdmifps/surface_native.py",
+      "sha256": "2ebd399fb4f2bf99a435d372b1b347f14e48b6bd80fc0e596275c499b301c49f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/surface_projection.py",
+      "runtime": "candidates/usb_320_hdmifps/surface_projection.py",
+      "sha256": "527a9c8bfac6a7ac3d47a1bc4750b47dacfd4351dcb6e2690580b399940dafeb",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/surface_small_holes.py",
+      "runtime": "candidates/usb_320_hdmifps/surface_small_holes.py",
+      "sha256": "699960a37ff1e93b3e2c403ea24fb69800b5836893f1c6d9b9524dbd638896d2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_320_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_320_board.py",
+      "sha256": "cfaa5b3b8a7071aed0b491d8096f7aa571b953e1509da949300b48eaaebccb6d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_autofill_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_autofill_board.py",
+      "sha256": "bca349ca0273cc9f79a320da6d18812755489446fd291a0b17649c8c01546a5f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_dense3d_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_dense3d_board.py",
+      "sha256": "26ca565019229a53a6b3b4c6e55effffb860a965cf2acdfab42de957f35d5f31",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_direct3d_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_direct3d_board.py",
+      "sha256": "5971ad0e22f867304dc294948838a3990da66172671c74c0aaec08333d990032",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_fast3d_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_fast3d_board.py",
+      "sha256": "b5192cf990c3d4d7c0f1fdfe1b2e7fd58234bbc6af3cad3630d0670bbe3e2ca1",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_hdmifps_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_hdmifps_board.py",
+      "sha256": "23d98d5172368055e8d0840cb823895a2b4db911cd18028a67a23e62351db6f3",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_lowlatency_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_lowlatency_board.py",
+      "sha256": "81b15d4052c6f54630958aa5fabb5858c947ee84d0bb11ce65740afe656e2123",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_mesh_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_mesh_board.py",
+      "sha256": "82b216860bd37e020ab3bd1a82d0c163e93ec62018c0103b7b4033b59cf1720e",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_plane_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_plane_board.py",
+      "sha256": "484783004efcf4822d2ebc8f4f63eb7f605bd65d6f0fcfd764d2437b6e45cb3d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_preview_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_preview_board.py",
+      "sha256": "0672e24cbe9643e5917aa16f11cc3ab36b1db60a2c03bdea9ef98b6dafc3aafd",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_rawhdmi_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_rawhdmi_board.py",
+      "sha256": "92f87ac2c10b712bb4e9cad60cf1e9c622761ec16f92e72a9df90f1d7be45f63",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_tone_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_tone_board.py",
+      "sha256": "4e358c64eb7c6a8d7d77204017b50132c27fc399beadf2bb1bf5235b46aa5de2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/camera/switch_viewmodes_board.py",
+      "runtime": "candidates/usb_320_hdmifps/switch_viewmodes_board.py",
+      "sha256": "7e00adf7b574364a957ee9e6a6b105622bb6c86a724fd44b48efb39376aa9ff7",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_camera_recovery.py",
+      "runtime": "candidates/usb_320_hdmifps/test_camera_recovery.py",
+      "sha256": "5fdd7200b4061adcad52ea31c6ecd8485b70c596c35cd83087f29774ecd90d50",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_completion_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_completion_board.py",
+      "sha256": "18a8c5e1a7d9d5beca41977e8903f40d01e64d844e52b8e74407b8ba6c0c4e96",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_completion_cancel.py",
+      "runtime": "candidates/usb_320_hdmifps/test_completion_cancel.py",
+      "sha256": "5359b9213e7936b300f7aa55e281e5951d313a984f990e3ca7056f46af5c6942",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_dense_runtime_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_dense_runtime_board.py",
+      "sha256": "27b74d123cee0a89379b35e1a98221339f739fb2c4d5a2fd6044247b0db792ee",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_exposure.py",
+      "runtime": "candidates/usb_320_hdmifps/test_exposure.py",
+      "sha256": "db5d1d73a86248534644eda874bbcaf53577944f8794e3f1420532cef30f75ca",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_full_pipeline_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_full_pipeline_board.py",
+      "sha256": "062c1ea41448e10ae831a305650cdd06fba37a11a69a4b61772dbf9aedf5c6f4",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_geometry_replay_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_geometry_replay_board.py",
+      "sha256": "f3e3e996c29ea13d2f1c3c51bfe63d118ec43daa20d0954aed6f755e7c71d230",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_hardware_catalog.py",
+      "runtime": "candidates/usb_320_hdmifps/test_hardware_catalog.py",
+      "sha256": "96ca41cbc4ac3cc92b3090ece6614f84ac38ef2f1831c641b4edb3b8ca9fa13d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_hdmi_host.py",
+      "runtime": "candidates/usb_320_hdmifps/test_hdmi_host.py",
+      "sha256": "a88d745ebbcb9c24bd7ce9dcbab35129e621b16e858bcc545da600c08c104771",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_hdmi_promotion.py",
+      "runtime": "candidates/usb_320_hdmifps/test_hdmi_promotion.py",
+      "sha256": "858510ab6bfbb5359145c3cd142aed4a75dc19f2630ea3ff60f9323675595d8d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_hdmi_software.py",
+      "runtime": "candidates/usb_320_hdmifps/test_hdmi_software.py",
+      "sha256": "c142b372f6ce580cca54d42c63f4764e3537e82807c9a754c346fd33c9dc0b55",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_hdmi_transaction.py",
+      "runtime": "candidates/usb_320_hdmifps/test_hdmi_transaction.py",
+      "sha256": "70bd85d25f57c07a4a13c3aa878ba648aed883261e8531b08a0ddb8085c57ba0",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_hdmifps.py",
+      "runtime": "candidates/usb_320_hdmifps/test_hdmifps.py",
+      "sha256": "4f33492540a9090252d4a21ad10f8257e0362db7a9ee4c1ed66ce234288f5e79",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_host_observer.py",
+      "runtime": "candidates/usb_320_hdmifps/test_host_observer.py",
+      "sha256": "60de13b305e886e444315ca95c8937adf130ec6178a3106533a14173dae6221a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_host_recovery_live.py",
+      "runtime": "candidates/usb_320_hdmifps/test_host_recovery_live.py",
+      "sha256": "2dddf4b5573f4f8293164e8885d06344ae66fa45c8bdd05000a7b03bce33cc4c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_live_cancel.py",
+      "runtime": "candidates/usb_320_hdmifps/test_live_cancel.py",
+      "sha256": "98a57777c83490f0fe3dca4adc53acc7b24e1a83340c35a8060c21274ec9f961",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_live_lifecycle.py",
+      "runtime": "candidates/usb_320_hdmifps/test_live_lifecycle.py",
+      "sha256": "c443f88d1f076b485f954b1a09de2f4849873b37ba7f2dc70c981313ce1bf23f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_lowlatency.py",
+      "runtime": "candidates/usb_320_hdmifps/test_lowlatency.py",
+      "sha256": "487aca8582be33197ccb4880d116a7d9ee43886eb3a4a3f7b3ff082f82d8a475",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_mesh_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_mesh_board.py",
+      "sha256": "83be5dcfc2e7703dd79907cc373df7b1ad15b0641a61dc732b5cde277eb110b7",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_on_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_on_board.py",
+      "sha256": "c8b1a1c813f81a60a272601a5c2b50dd3f9e1f9bf5cb44a2f9148db41ba978c5",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_photo_archive_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_photo_archive_board.py",
+      "sha256": "21e031a8332cd367bc30f6cf032e2dcc958c6345f9a50f83e5d4f827b2f1a77d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_photo_archive_pc.py",
+      "runtime": "candidates/usb_320_hdmifps/test_photo_archive_pc.py",
+      "sha256": "e8b9cc874fa1489f97f818cbeb743e3e3fd5d8680f625300b1ab685c457f47b0",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_photo_speed_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_photo_speed_board.py",
+      "sha256": "d558e334101621ce521d7cc4e256c3fcc0446c41ff9654a63aafc9395a67185b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_physical_keys_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_physical_keys_board.py",
+      "sha256": "88edda302cbef13f4f1604f46a56e11d4ed93016fc0374af066fbfd9794345ca",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_pipeline_320_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_pipeline_320_board.py",
+      "sha256": "64814235acb6420029e76248a3dd7ac41ead062b59c89bd1c614b6a02f1242b9",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_plane_guard.py",
+      "runtime": "candidates/usb_320_hdmifps/test_plane_guard.py",
+      "sha256": "f6527a77ab461935730c50d6b45c8565b51c6d30cf9fe556e0e492bb2e8d3d29",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_plane_runtime_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_plane_runtime_board.py",
+      "sha256": "46314b1ad2a910ac99449c15efbe8399a0c7e9088045b996e210901756b6d91d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_preview_live.py",
+      "runtime": "candidates/usb_320_hdmifps/test_preview_live.py",
+      "sha256": "4aada70128773f197a7aa9ac94c6391df80ef37524b347efaa5bbd6a148cff77",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_preview_native.py",
+      "runtime": "candidates/usb_320_hdmifps/test_preview_native.py",
+      "sha256": "5d38ba8bebc8d9a6df7ca75eb656e7d0a7509131bed8cdef81a8086b484705c6",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_rawhdmi.py",
+      "runtime": "candidates/usb_320_hdmifps/test_rawhdmi.py",
+      "sha256": "2da3729d392015b3fcc9d54f945bf26bfb3601962a7d5d7193e4b842ea0740e9",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_rectified_preview.py",
+      "runtime": "candidates/usb_320_hdmifps/test_rectified_preview.py",
+      "sha256": "3bd7ad3cc38906ca41ea6a06b6bb8e9c79a97b3ba4e34c69e3e70918e2d7771f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_restore_held.py",
+      "runtime": "candidates/usb_320_hdmifps/test_restore_held.py",
+      "sha256": "7faa9d5331a183dd112678ef5a18bfa3a8327899f959cdd19723c4fb0207e690",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_result_archive_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_result_archive_board.py",
+      "sha256": "62f0b466448860aba7b55c08503a1a89a50fbb2ab3479bbd53cabd8c8f2935ad",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_sgm_v4_transaction.py",
+      "runtime": "candidates/usb_320_hdmifps/test_sgm_v4_transaction.py",
+      "sha256": "f0fbcc4ba7c8c9d737553d68f221e34ff663eec7e6472ad3df45d14f322e9219",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_shared_preview.py",
+      "runtime": "candidates/usb_320_hdmifps/test_shared_preview.py",
+      "sha256": "ef89c1e277928b0e058f0b9ef119248601e61b3b893fd42709e8d4a2294fa127",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_small_holes.py",
+      "runtime": "candidates/usb_320_hdmifps/test_small_holes.py",
+      "sha256": "b6473281984c4955ad9f514d9c6388830e5180be030cecadba10bd9cb9d02ff4",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_small_holes_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_small_holes_board.py",
+      "sha256": "a6fcd3023f2386355a1311b05ccd5821f9db34ad20da7331da85301b168d1c5b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_small_holes_reference_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_small_holes_reference_board.py",
+      "sha256": "5aa8f7c65c762ab97558b36decb204d5d3e524b846bc8abd635364a26b803c4d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_surface_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_surface_board.py",
+      "sha256": "d3da2eed1d8765c8dd8a1f0a272285d66ad7de4af255f903b151870ec1881cb0",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_surface_native_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_surface_native_board.py",
+      "sha256": "025b6de70a77032f3fe85d8ba93e3f13f25e16c7577c3bf5fc949423025ca88a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_surface_native_full_board.py",
+      "runtime": "candidates/usb_320_hdmifps/test_surface_native_full_board.py",
+      "sha256": "f6ad0d003fc1bfb7578a3ae085d79bcaa1ab5ddae4662bffe02f48223a117e27",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_tone.py",
+      "runtime": "candidates/usb_320_hdmifps/test_tone.py",
+      "sha256": "92cd648a3ba0b4d0d520229b26cf0067e79ea2002c4644c8a72aed15f5e6d43f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/test_viewmodes.py",
+      "runtime": "candidates/usb_320_hdmifps/test_viewmodes.py",
+      "sha256": "4121427bca18186d3213d36057ba10fab6b373f7a55511b18ad855bf3a0e7e1b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/tone_map.py",
+      "runtime": "candidates/usb_320_hdmifps/tone_map.py",
+      "sha256": "12b83648f84d2436c57816afd39659fb3ec8aa394f7ae02afe2e478a20ea2f05",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/transfer_evidence.py",
+      "runtime": "candidates/usb_320_hdmifps/transfer_evidence.py",
+      "sha256": "3b7bee62d05512d0607a3270459794b7ebf264afe051780e8b5eaeedc5d1f81a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/update_hdmi_viewer_feedback.py",
+      "runtime": "candidates/usb_320_hdmifps/update_hdmi_viewer_feedback.py",
+      "sha256": "ee247c80c97830c8a1217a2949a8f311f6596b047b35fb4133d5d8c82ba953ad",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/usb_full_engine.py",
+      "runtime": "candidates/usb_320_hdmifps/usb_full_engine.py",
+      "sha256": "5b763310619e8261e019f2dfe3d607e7016f0a0213f49b83c062af158fee1912",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/usb_full_engine_v4_candidate.py",
+      "runtime": "candidates/usb_320_hdmifps/usb_full_engine_v4_candidate.py",
+      "sha256": "db9767b5a519d3a89a2c5dc223aa930e8df14b307480269498219dd04a66188d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_case_320_pc.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_case_320_pc.py",
+      "sha256": "47ceea9ac64c0bc8fa7a39d580029a290c41c60d150bb0a568ceed4be6ede893",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_dense.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_dense.py",
+      "sha256": "877a8254af89753a98b611a7b75e97d1016b843d897008ccfd6e448ec8b3e34e",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_dense_geometry.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_dense_geometry.py",
+      "sha256": "e69e388f90ef16012938e052feb5f480e117258d3387e06446a8e304ae7067c5",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_download.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_download.py",
+      "sha256": "3ac44625aac7d1b85118e1c911ebdcc72197fa12c71b29c027d3a6bab1609171",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_full_pipeline_pc.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_full_pipeline_pc.py",
+      "sha256": "ff0cc822d69b78c6651233f324278e54276ed848e7765decbcdae785145da506",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_geometry_replay.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_geometry_replay.py",
+      "sha256": "1804237c8a3679d34bf3d2fe7b1d489e6630cad354f10c4d8bc64330722c86da",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_live_320.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_live_320.py",
+      "sha256": "0f81e29c2d4897e97a4007dddfaf0b1d2d2639ff56331078bf2219a4efc3ca90",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_mesh_pc.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_mesh_pc.py",
+      "sha256": "1f2004d0a9bf25b23be1195ffde028e644d13770d5500376a5cf739f12476f89",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_plane_pc.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_plane_pc.py",
+      "sha256": "85d0ae800bc0854215b84732b904159b66d515c70051a07f06372ee124fba348",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_preservation_320.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_preservation_320.py",
+      "sha256": "40dc8a609687760dc36ebbd1a901674a257d4acd8e31ca7266dddfbe309810e3",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_replay.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_replay.py",
+      "sha256": "e0a00e03b8083169cc980443f29235b3b4e685a4b7db0a4f5a4fc0a3302537c4",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_sgm_v4_full.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_sgm_v4_full.py",
+      "sha256": "d83f89b46106d744b32f0d136d2d7e433dc088721aa6aaf5ba3cfb2c06d27c46",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/camera/verify_surface_pc.py",
+      "runtime": "candidates/usb_320_hdmifps/verify_surface_pc.py",
+      "sha256": "3b0fa3520bee196754d398520ac3d40ab9fdfba9fa85acffc72653eec5efbef8",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/vessel_enhance.py",
+      "runtime": "candidates/usb_320_hdmifps/vessel_enhance.py",
+      "sha256": "9bd70ab2d5ba96a044fd5d334dbbf0d136550e2e641480735c0937272c3c280f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/camera/viewer_export.py",
+      "runtime": "candidates/usb_320_hdmifps/viewer_export.py",
+      "sha256": "369aa69c5a66f20fc00c7c54faa7ab7d61a066e635e8b7615771940804dce0f5",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/archive_trial.py",
+      "runtime": "candidates/usb_fast_infer2/archive_trial.py",
+      "sha256": "842d7de244a02e98c507281de7eb9bf454c252d259c9747ee661390b09bd1baa",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/cache_release.py",
+      "runtime": "candidates/usb_fast_infer2/cache_release.py",
+      "sha256": "5e39cc62a8186cf6a185e475c1431522b008bfd55417be318162890e83ac615e",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/comparison.html",
+      "runtime": "candidates/usb_fast_infer2/comparison.html",
+      "sha256": "0f327aa291356d4e9f257466cb7af118c543171af9ff7bfeb18212ac0f951a69",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/inference/compress_completed_private_board.py",
+      "runtime": "candidates/usb_fast_infer2/compress_completed_private_board.py",
+      "sha256": "17a75597000c07d6eed32b6bb7f455801049008f49a3ddaa69ad180032be4343",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/inference/deploy.py",
+      "runtime": "candidates/usb_fast_infer2/deploy.py",
+      "sha256": "20d413c4db27d34b909a6359f7304447d3880ce15baafd95fbbc4b7ab4ae6ab2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/export_capture.py",
+      "runtime": "candidates/usb_fast_infer2/export_capture.py",
+      "sha256": "f1a8a20f38eca3d356be7b02a16587cde45ece8b04e1d423babfa6377449f30a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/fallback_runtime.py",
+      "runtime": "candidates/usb_fast_infer2/fallback_runtime.py",
+      "sha256": "ea5622f93867e4c83a9473ba39c921140e1d495809511e619de2a56b10ae7fc0",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/fast_capture_board.py",
+      "runtime": "candidates/usb_fast_infer2/fast_capture_board.py",
+      "sha256": "39e4a3ad69970fcb1881cca9b63fc11dcad3d75dc8b01c3100eb3b2fc5fc5506",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/fast_hdmi_host.py",
+      "runtime": "candidates/usb_fast_infer2/fast_hdmi_host.py",
+      "sha256": "888db4f9865e3222c3d686a0c4f74811fcc96d206baf5540307096ead25dc538",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/fast_infer_board.py",
+      "runtime": "candidates/usb_fast_infer2/fast_infer_board.py",
+      "sha256": "62828974e8ca1da84cc93b89f2c9044211f0b7696410dec451f3f4efeba44e8a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/fast_job_server.py",
+      "runtime": "candidates/usb_fast_infer2/fast_job_server.py",
+      "sha256": "bc0bd99b1cc876df00aad6c0ef380fcc5db605f7da3751d366fec9a146e1fefe",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/fast_pl_op.cpp",
+      "runtime": "candidates/usb_fast_infer2/fast_pl_op.cpp",
+      "sha256": "e0ef2f13a80263b59838b9639744717e9b1aa5ddf4210ff6a8e1698a3fcbad84",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/finalize_trial.py",
+      "runtime": "candidates/usb_fast_infer2/finalize_trial.py",
+      "sha256": "76c38e6b28c45fa3009c2d384b1da5e487b0ab49314cf400b6b0ac0b3a2a23be",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/geometry_preview.py",
+      "runtime": "candidates/usb_fast_infer2/geometry_preview.py",
+      "sha256": "4caae60fb00113d8156a890b7b4f12fef66c25dd17cb17d69dbdb79dc823812e",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/hdmi_ui.js",
+      "runtime": "candidates/usb_fast_infer2/hdmi_ui.js",
+      "sha256": "1c7cac667fe27dadfe43d6bb83128c88f5d4f55675aac0a2f698a3c90719b20d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/host.py",
+      "runtime": "candidates/usb_fast_infer2/host.py",
+      "sha256": "2f296d84f463c14d13290e780b22ece8121b364fae9be91d42abfa46b548c4c4",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/index.html",
+      "runtime": "candidates/usb_fast_infer2/index.html",
+      "sha256": "37f05c3b3523a20002a6401862be4935d2d2226f51818f7bf67d1dd2a8d9ca13",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/infer_runtime.py",
+      "runtime": "candidates/usb_fast_infer2/infer_runtime.py",
+      "sha256": "35c8f24a1d8cc8add879998b72efd108a64b76155518062c10a37ba7dadae331",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/infer_worker.py",
+      "runtime": "candidates/usb_fast_infer2/infer_worker.py",
+      "sha256": "d1a20934402229878827845cbb0ffde2798521b36b0808b9edfcfe6472c8ecee",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/inference/install_payload_board.py",
+      "runtime": "candidates/usb_fast_infer2/install_payload_board.py",
+      "sha256": "ab9315a03fae46869c1153adea481dedb2e398f0b4bb1fea1daf1afea68ada36",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/latency.js",
+      "runtime": "candidates/usb_fast_infer2/latency.js",
+      "sha256": "19d0957a4cdeaf2a99ec384ec0c27af58314f09de8590c1d2db9e1bf6a484912",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/latency_trace.py",
+      "runtime": "candidates/usb_fast_infer2/latency_trace.py",
+      "sha256": "69e5329f06d45ec15ebe0ed119f35e5dfb00c84068dcad525522c29840e3cb93",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/inference/pause_preview_board.py",
+      "runtime": "candidates/usb_fast_infer2/pause_preview_board.py",
+      "sha256": "426462decbca7c11c38a7372c9c4ecf82268b4a1bac4fc31cf080dcd7365d220",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/inference/pause_smoke_board.py",
+      "runtime": "candidates/usb_fast_infer2/pause_smoke_board.py",
+      "sha256": "f0fa60fb3c4975b852aa54d83b01da14fb1af57cec1c26b51344cd8b30491bde",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/photo_store.py",
+      "runtime": "candidates/usb_fast_infer2/photo_store.py",
+      "sha256": "ec95530bb8898fd951a9eac2f3a114d53b87cfe132d6b63064b4027e5f35b2b2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/point_coverage.py",
+      "runtime": "candidates/usb_fast_infer2/point_coverage.py",
+      "sha256": "6be5a653c296285700a52aae0576eca3fd61d5cc52b1a3c7c0f81c79033591bf",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/processing_preview_board.py",
+      "runtime": "candidates/usb_fast_infer2/processing_preview_board.py",
+      "sha256": "f219b8f763422df93d335db5af57588ee913113d180c95fa6e6b5b2ef2d078a4",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/inference/recover_paused_board.py",
+      "runtime": "candidates/usb_fast_infer2/recover_paused_board.py",
+      "sha256": "e6346d611f4e8fe286897822df02569ea59a8db57e843628a5abca354ca512b4",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/inference/repair_keys_board.py",
+      "runtime": "candidates/usb_fast_infer2/repair_keys_board.py",
+      "sha256": "d531cdf384892f101fee686313ab945070e159c715ad67a5bb4824bd24140037",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/replay_hdmi.py",
+      "runtime": "candidates/usb_fast_infer2/replay_hdmi.py",
+      "sha256": "90c3b6385f9b54ff79f061646d895d5fc5ea67dc97d25f88a0c4c8c44c9db383",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/inference/resident_switch_board.py",
+      "runtime": "candidates/usb_fast_infer2/resident_switch_board.py",
+      "sha256": "eb90ce19753f49fe46cbe870a80b0ce3351f7ea620d9197151768b75db402daf",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/inference/restart_job_server_board.py",
+      "runtime": "candidates/usb_fast_infer2/restart_job_server_board.py",
+      "sha256": "2c2bf3f1225b6a37ee5d5a31817f5dde4cbe46a884a5768804d8cff41d9c24a8",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/sample_op.cpp",
+      "runtime": "candidates/usb_fast_infer2/sample_op.cpp",
+      "sha256": "699f7a461ddfb0c5965f45d0043d034032605abf62bb9da9f9dad87f12d5f5ef",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/section_host.py",
+      "runtime": "candidates/usb_fast_infer2/section_host.py",
+      "sha256": "7c16463b2bb58a5ac4587deaaa26485ebfee21f73493720cce1cedc618b438a1",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/section_html.py",
+      "runtime": "candidates/usb_fast_infer2/section_html.py",
+      "sha256": "32d6d12e188a4dced855184f9c55a3d1e992fcfcc29582a16109acfe10ec3154",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/section_mesh.py",
+      "runtime": "candidates/usb_fast_infer2/section_mesh.py",
+      "sha256": "de75767e2447c25a110300746a831404957c9f744c36574411ce119b0def94ed",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/section/rollback_board.py",
+      "runtime": "candidates/usb_fast_infer2/section_payload/rollback_board.py",
+      "sha256": "36aefefe72787b587f341a7a39f606cbc21f80b867f64794d70f122c2c94f315",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/section/section_server.py",
+      "runtime": "candidates/usb_fast_infer2/section_payload/section_server.py",
+      "sha256": "c7d79705ed06427e9b7522bc2bd7983356bb7d2587a296076a52bbc7400a3276",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/section_ui.js",
+      "runtime": "candidates/usb_fast_infer2/section_ui.js",
+      "sha256": "2d50fdacbe9385889f53d0e506bc2981dd7b89a30416c819533bc6f17cc6dbb7",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/section_viewer.js",
+      "runtime": "candidates/usb_fast_infer2/section_viewer.js",
+      "sha256": "8cfe69f7e7da95e421f10197d30663dbb394bc406acf361efc9527d5c0ca4976",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/start.ps1",
+      "runtime": "candidates/usb_fast_infer2/start.ps1",
+      "sha256": "d6691958360eedd6b66c88b5fc7a4e17bfc426dce23964a2d3f949b5e2489097",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/inference/start_runtime_board.py",
+      "runtime": "candidates/usb_fast_infer2/start_runtime_board.py",
+      "sha256": "88445367a111f42e636856fd475a9155d8b906d0da3d47758ff7cfc795df7dbb",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/runtime/test_hardware_board.py",
+      "runtime": "candidates/usb_fast_infer2/test_hardware_board.py",
+      "sha256": "72ac4ffb71e1c2fbd9d1e7db52ca56b359399b97a3c903defb46ac49eaa841ed",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/runtime/test_key_exit.py",
+      "runtime": "candidates/usb_fast_infer2/test_key_exit.py",
+      "sha256": "cdea586714b7db41307a9e9d3f8710e90f2a8d191a7ee5a734925930c7e8fccc",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/ui.css",
+      "runtime": "candidates/usb_fast_infer2/ui.css",
+      "sha256": "fefa51e5fd75c1bc1ad860f8c69fada71c2c3b536eda2e13e9e7547433acb79b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/ui.js",
+      "runtime": "candidates/usb_fast_infer2/ui.js",
+      "sha256": "8d59f522cd12788214c2ec1802d6c9b04009b277df1f3d1afb7bc15a546b66a8",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/runtime/validate_replays_pc.py",
+      "runtime": "candidates/usb_fast_infer2/validate_replays_pc.py",
+      "sha256": "8df455a0e4594d099ab6360b632a6186f932e57df700b7154242efa578893c10",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/runtime/verify_binding.py",
+      "runtime": "candidates/usb_fast_infer2/verify_binding.py",
+      "sha256": "ce5a755b72830954a51aeda79d983800101f6943b443261a224c68a31abee149",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/runtime/verify_ui.py",
+      "runtime": "candidates/usb_fast_infer2/verify_ui.py",
+      "sha256": "bbc9b2fe9449460f0d3434a3b7d7aafc153e35369a481f68b8e631e1727fcbff",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/vessel_photo.py",
+      "runtime": "candidates/usb_fast_infer2/vessel_photo.py",
+      "sha256": "621c8aba39c7820ebabf88b195200e5600ef5e77477543c8b1700a1d9d1fda6f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/video_deploy.py",
+      "runtime": "candidates/usb_fast_infer2/video_deploy.py",
+      "sha256": "bbac36fce5cab6f55969f357298254c76ee9f5e08330765c322955c376586a2c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/app/video_store.py",
+      "runtime": "candidates/usb_fast_infer2/video_store.py",
+      "sha256": "d9dda28a9fef40db655f7dc6b50b2880f43fd5537542099a0d0c2b1b1bec4ba0",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/video_ui.js",
+      "runtime": "candidates/usb_fast_infer2/video_ui.js",
+      "sha256": "9c8b360da5930d681610a0e3210cb436a8195e7fe5f7cba770c0701c632a15fe",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/viewer_bridge.js",
+      "runtime": "candidates/usb_fast_infer2/viewer_bridge.js",
+      "sha256": "001f84cbc1ab9eda524cd174a6c9769741533382b2a2a3ecd204f1b07af9d19f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/web/viewer_template.html",
+      "runtime": "candidates/usb_fast_infer2/viewer_template.html",
+      "sha256": "151da3b6bd0de35ecb22d203745416fb1397e51cfc9a5c138f19d70abed79e21",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/boot/boot_reserved.py",
+      "runtime": "candidates/usb_full/boot_reserved.py",
+      "sha256": "e1632d531fe81c48f4a86d9e3ee10efc641e744ddfd6a04bce393ee205705d5a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/geometry/build_comparison.py",
+      "runtime": "experiments/cnn_stereo_20261018/build_comparison.py",
+      "sha256": "2b3e98b0078c85c06daf6ab08df6b60762fdcd3d52951e5bb2e857375c976f0a",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/geometry/download_fast.py",
+      "runtime": "experiments/cnn_stereo_20261018/download_fast.py",
+      "sha256": "0d644153c6b76480ddb4e6293c6663ea48be552ad80fc0d7addc8da49f31f5a2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/geometry/finalize.py",
+      "runtime": "experiments/cnn_stereo_20261018/finalize.py",
+      "sha256": "d8dfb86d6f1fd9b3cdd403375228c22012ef5607959aebfed9e477ee1cb8d22c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/geometry/mesh_limits.py",
+      "runtime": "experiments/cnn_stereo_20261018/mesh_limits.py",
+      "sha256": "47e513193c0dec81a7b2bde3448b0d26717b28b924ff95897742ee555dadaf17",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/geometry/prepare.py",
+      "runtime": "experiments/cnn_stereo_20261018/prepare.py",
+      "sha256": "de20c2c33451ea66cc77d91b7acada22a270ddf0cdfd345d3819f320d7da962f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/geometry/run_models.py",
+      "runtime": "experiments/cnn_stereo_20261018/run_models.py",
+      "sha256": "e2ecf7570e881aa29ebf9236f25a4155b6a806f4f3a927996393f59f3f617438",
+      "role": "historical_upstream_model_comparison",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/geometry/start_comparison.ps1",
+      "runtime": "experiments/cnn_stereo_20261018/start_comparison.ps1",
+      "sha256": "171e3f553a460fe48aef7e993746a043d98ac0f864940d641bae015d8058dd9e",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/geometry/viewer_export.py",
+      "runtime": "experiments/cnn_stereo_20261018/viewer_export.py",
+      "sha256": "b7340cc589979b722068db2788cdaaaa8c29334a93fd6bb39fd413a522d75798",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/host/geometry/viewer_template.html",
+      "runtime": "experiments/cnn_stereo_20261018/viewer_template.html",
+      "sha256": "7f9ec431ec8256407c3196fac9aa527851938f13447639a4304e8ca0bc9dd524",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/hdmi_video_hold_20261029/hdmi_capture_v2.py",
+      "runtime": "experiments/hdmi_video_hold_20261029/hdmi_capture_v2.py",
+      "sha256": "6c4627ff5ce57fa8f5e26422f705264730c510b4ec3011b02d99d116da79d9af",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/hdmi_video_hold_20261029/hdmi_job_server_v2.py",
+      "runtime": "experiments/hdmi_video_hold_20261029/hdmi_job_server_v2.py",
+      "sha256": "59e9c1a9e2e93cdf7d00a01e05825c8f8d8675ae8f19319abfd4297a7fc8463c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/hdmi_video_hold_20261029/hdmi_sitecustomize_v2.py",
+      "runtime": "experiments/hdmi_video_hold_20261029/hdmi_sitecustomize_v2.py",
+      "sha256": "166f80488206b752d063b6b1aeb4ec1860255a50d58d35371128d022e69032f9",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/hdmi_video_hold_20261029/hold_client_v2.py",
+      "runtime": "experiments/hdmi_video_hold_20261029/hold_client_v2.py",
+      "sha256": "54e0329545c921afaddacd51eb5b796df134e2a66ac5b6c24e7ab99160d9e7cb",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/hdmi_video_hold_20261029/hold_server_v1.py",
+      "runtime": "experiments/hdmi_video_hold_20261029/hold_server_v1.py",
+      "sha256": "9e8f645e20922603febb85bc8a60edf5dfbd2f9e7a70d4279314d743b25cb25c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/hdmi_video_hold_20261029/install_hdmi_v2.py",
+      "runtime": "experiments/hdmi_video_hold_20261029/install_hdmi_v2.py",
+      "sha256": "a16749321fdb3da19d56bbcced6d3d6aa34ff652e94085b68fa897c2f85ade6e",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/hdmi_video_hold_20261029/replay_console_v1.py",
+      "runtime": "experiments/hdmi_video_hold_20261029/replay_console_v1.py",
+      "sha256": "4d1f05a8c13ace5afc902ba63d46072580dd46a265bd2efbc5efdbf1bdf1af60",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/support/board44/fault_observer.py",
+      "runtime": "experiments/pl_pipeline_20261025/board44/fault_observer.py",
+      "sha256": "3f5937f52c4fcded804bb049669f16c1e9a2b2533cc5c2fa7bcd33b85befd035",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/support/board44/mmio_read.py",
+      "runtime": "experiments/pl_pipeline_20261025/board44/mmio_read.py",
+      "sha256": "59c8bd6f8304923ad70112b8184bcade8c372c99f555c743fa689ce2396febb2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/support/control/copyout4/copyout4.py",
+      "runtime": "experiments/pl_pipeline_20261025/control/copyout4/copyout4.py",
+      "sha256": "3a49978e343fdb657eed80f2fa70f06f66cd3620877af8c43a737971cb4bfb21",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/support/control/device_transport/owned_memory.py",
+      "runtime": "experiments/pl_pipeline_20261025/control/device_transport/owned_memory.py",
+      "sha256": "be6377843646404081e9168cca8857833b245438dcfae491de493bade5af148b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/support/control/direct_io4/direct_io4.py",
+      "runtime": "experiments/pl_pipeline_20261025/control/direct_io4/direct_io4.py",
+      "sha256": "2cf65bf2961021171bd1179b1542fb69566e2ea3ee4d7d5d9c7a7c6925d6e6a1",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/support/control/native_batch/native_runtime.py",
+      "runtime": "experiments/pl_pipeline_20261025/control/native_batch/native_runtime.py",
+      "sha256": "1c2d07cefe5cb1526ef28bef4e290c46f52a2a589a84d14cadf4775b5a63284f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/support/control/poll_spin/bind_spin.py",
+      "runtime": "experiments/pl_pipeline_20261025/control/poll_spin/bind_spin.py",
+      "sha256": "8c94721eaf410d87f54f0f6d6c5a8e1e13f8d66b4594052b55cf1f632416118d",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/support/graph/pl3_hook/retire_owned.py",
+      "runtime": "experiments/pl_pipeline_20261025/graph/pl3_hook/retire_owned.py",
+      "sha256": "123f90e5ab21f11a4766622e8f5965ac77e218f9ccbf84ae4e5798a16dc08f0c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/transport/transfer.py",
+      "runtime": "experiments/pl_pipeline_20261025/transfer.py",
+      "sha256": "517dafd2fc73ef1100bc7bb1f8a42098f1bc4583bff80c24637ed635a609a1c4",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/support/usable_v1/physical_bridge.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v1/physical_bridge.py",
+      "sha256": "fa9422833449b53c0bf2d6abc0591a8bf5386073ad337bd9e514e944d7286207",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/v5/activate_board.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/activate_board.py",
+      "sha256": "03529970bc39be5eb34ddfeac48f1749b8f9e113a284d4f1d9ca7fb99e91d202",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/v5/benchmark_v2.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/benchmark_v2.py",
+      "sha256": "06fbb2921a72ef4a3d82a6bca65a17ba06dfe813e7cc51f62d8ed93108655c84",
+      "role": "existing_ps_pl_model_runtime_adaptation",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/v5/fast_capture_pl3_v5_quad.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/fast_capture_pl3_v5_quad.py",
+      "sha256": "c170f82974ee6f5d1141f5d1b677c0923a45f6eac9537118a3ae13c5455ce5e9",
+      "role": "existing_ps_pl_model_runtime_adaptation",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/v5/fast_job_server_pl3_v5_quad.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/fast_job_server_pl3_v5_quad.py",
+      "sha256": "9d7103a81007b8184cf2525bf27a77750f633abb031147352ac1a6c53b337650",
+      "role": "existing_ps_pl_model_runtime_adaptation",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/v5/infer_runtime_pl3_v5_quad.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/infer_runtime_pl3_v5_quad.py",
+      "sha256": "5cb1f3453ac90af7748f57bec7dfbff05340fbff287b84ced19ed4445747460d",
+      "role": "existing_ps_pl_model_runtime_adaptation",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/v5/infer_worker_pl3_v5_quad.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/infer_worker_pl3_v5_quad.py",
+      "sha256": "03dc2bc57e94ef4ea623ef274ab724d7ac4e37b404bb9359e4d4096897c4f113",
+      "role": "existing_ps_pl_model_runtime_adaptation",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/v5/physical_bridge.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/physical_bridge.py",
+      "sha256": "aebaabffd58b9c37076101f6293fef72f314d3c674e3ab1caa2ae3fbfcb71a88",
+      "role": "existing_ps_pl_model_runtime_adaptation",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/v5/pl3_execute_v5_quad.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/pl3_execute_v5_quad.py",
+      "sha256": "d0eaabc782d3cac4488c83b6477c16df5395a0c5f26393f01d56387734751b2b",
+      "role": "existing_ps_pl_model_runtime_adaptation",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/v5/select_benchmark_board.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/select_benchmark_board.py",
+      "sha256": "d60b153c8939c7a1e14706a70d8c62aef9699bf8dccb522e69a3520c33b581c7",
+      "role": "existing_ps_pl_model_runtime_adaptation",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/v5/select_mode.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/select_mode.py",
+      "sha256": "2708a00bcef3ff396bd606c264ff0cffb1ac6c700261ad1ace6c702dabe690a3",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/v5/stage.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/stage.py",
+      "sha256": "4ef46d04ac3afd4236858d202b37e9934344aca5f6291e53485684f0e9834bb2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/v5/start.ps1",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/start.ps1",
+      "sha256": "791eeeb887b52d244ee95d2bf4197cb69c7a8694cb1ec8388753f7c127878c5b",
+      "role": "existing_ps_pl_model_runtime_adaptation",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/inference/v5/usable_v5_quad_infer_runtime_pl3_v5_quad_20261031.py",
+      "runtime": "experiments/pl_pipeline_20261025/usable_v5_quad/usable_v5_quad_infer_runtime_pl3_v5_quad_20261031.py",
+      "sha256": "a42150d78dec94ce66e417f14b98244075e56156c32bb27410ce5cb4db6d971d",
+      "role": "existing_ps_pl_model_runtime_adaptation",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/api_health_fix.py",
+      "runtime": "experiments/switch_latency_20261030/api_health_fix.py",
+      "sha256": "c7648ed21391c98c4bd0dbc1d84596e77389171ef4e87b126f5a5e52deaf0986",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/api_health_fix2.py",
+      "runtime": "experiments/switch_latency_20261030/api_health_fix2.py",
+      "sha256": "2577238c477c0f22f78be38749933d91ceb26536f9902f919c23ef249481ea23",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/finalize_payload.py",
+      "runtime": "experiments/switch_latency_20261030/finalize_payload.py",
+      "sha256": "d4fc9fb7c338737ea1b3e297f85f7a9cd087a73e97e755d45ab5812c7c6243af",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/finalize_payload2.py",
+      "runtime": "experiments/switch_latency_20261030/finalize_payload2.py",
+      "sha256": "3f3a3af7aefd08d2d636394b8f3d47f7153d8470f0dee19e60bc76d9718e3e74",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/hdmi_capture_overlap_v1.py",
+      "runtime": "experiments/switch_latency_20261030/hdmi_capture_overlap_v1.py",
+      "sha256": "810da2481ed96990fbb8363688c563546dbe3c1497d680c51cf15bd9b63904f8",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/hdmi_job_server_v4.py",
+      "runtime": "experiments/switch_latency_20261030/hdmi_job_server_v4.py",
+      "sha256": "26db55df6c1748ebe9fd24495ad4b49826d8ba594d13497cdaa17f9e251f3f6f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/hdmi_sitecustomize_v4.py",
+      "runtime": "experiments/switch_latency_20261030/hdmi_sitecustomize_v4.py",
+      "sha256": "72e794160d08a1581f57a6535bce0e6c2506418b1c9d86391389529d0c196627",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/hold_client_overlap_v1.py",
+      "runtime": "experiments/switch_latency_20261030/hold_client_overlap_v1.py",
+      "sha256": "df3fa251b4a145682e0ecd5fba8580c469cdb26df2ae9fa9f87c07bab1279a4f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/hold_server_overlap_v1.py",
+      "runtime": "experiments/switch_latency_20261030/hold_server_overlap_v1.py",
+      "sha256": "b6889416bd528414385425167219ad6d59709cd3851c2bbfbb9b3589cffa4c16",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/display/install_hdmi_v4.py",
+      "runtime": "experiments/switch_latency_20261030/install_hdmi_v4.py",
+      "sha256": "24c5b45af0a351a30d0b6bdd852ccd8111965f57ad99c2bcceb4edbdc7c178a6",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/physical_keys_overlap_v1.py",
+      "runtime": "experiments/switch_latency_20261030/physical_keys_overlap_v1.py",
+      "sha256": "8ce20c90abbe6b17cb81d7e30346c2dc50a75637d05e0344aab8fbabebc7b4af",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/replay_console_v1.py",
+      "runtime": "experiments/switch_latency_20261030/replay_console_v1.py",
+      "sha256": "4d1f05a8c13ace5afc902ba63d46072580dd46a265bd2efbc5efdbf1bdf1af60",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/replay_test.py",
+      "runtime": "experiments/switch_latency_20261030/replay_test.py",
+      "sha256": "c400a3cdc8a79284c3589f997131827f82c700874423fb0482d8478538d4ffd0",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/resume_overlap_v1.py",
+      "runtime": "experiments/switch_latency_20261030/resume_overlap_v1.py",
+      "sha256": "a02e08ae1710563242b6a460a67eb6f0269fd4023d256745a5316f61384ef373",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/verify_startup_payload.py",
+      "runtime": "experiments/switch_latency_20261030/verify_startup_payload.py",
+      "sha256": "b49ccf6d86e30e140cc4f9c2051f04244a3dd0ae7f8478733fda6c9fd3d5d7c2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/vessel_photo.py",
+      "runtime": "experiments/switch_latency_20261030/vessel_photo.py",
+      "sha256": "621c8aba39c7820ebabf88b195200e5600ef5e77477543c8b1700a1d9d1fda6f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/video_deploy_after.py",
+      "runtime": "experiments/switch_latency_20261030/video_deploy_after.py",
+      "sha256": "bbac36fce5cab6f55969f357298254c76ee9f5e08330765c322955c376586a2c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/transport/board_console.py",
+      "runtime": "experiments/usb_camera_20261016/board_console.py",
+      "sha256": "6de5919444b57ddb566de44ad6bdd69e37787c8ecf162f08d8451f5ddd890ec6",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/transport/deploy_receive.py",
+      "runtime": "experiments/usb_camera_20261016/deploy_receive.py",
+      "sha256": "6cd7f7fd62d021e7d7546c8325ee9e921047e866043b91424efed6b808ea3a8b",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/vessel_key_points_20261029/hdmi_capture_v2.py",
+      "runtime": "experiments/vessel_key_points_20261029/hdmi_capture_v2.py",
+      "sha256": "6c4627ff5ce57fa8f5e26422f705264730c510b4ec3011b02d99d116da79d9af",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/vessel_key_points_20261029/hdmi_job_server_v3.py",
+      "runtime": "experiments/vessel_key_points_20261029/hdmi_job_server_v3.py",
+      "sha256": "f718c0085c3ce97b989340c1d0d50d9b0dc38d87c68f47a0d841b95674e82142",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/vessel_key_points_20261029/hdmi_sitecustomize_v3.py",
+      "runtime": "experiments/vessel_key_points_20261029/hdmi_sitecustomize_v3.py",
+      "sha256": "44f3e521bb766b2bcefcf228f1a1f1a000acf35133d6b4986b8bc2a87000c155",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/vessel_key_points_20261029/hold_client_v2.py",
+      "runtime": "experiments/vessel_key_points_20261029/hold_client_v2.py",
+      "sha256": "54e0329545c921afaddacd51eb5b796df134e2a66ac5b6c24e7ab99160d9e7cb",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/vessel_key_points_20261029/hold_server_v1.py",
+      "runtime": "experiments/vessel_key_points_20261029/hold_server_v1.py",
+      "sha256": "9e8f645e20922603febb85bc8a60edf5dfbd2f9e7a70d4279314d743b25cb25c",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/vessel_key_points_20261029/install_hdmi_v3.py",
+      "runtime": "experiments/vessel_key_points_20261029/install_hdmi_v3.py",
+      "sha256": "07538ad23c06d3d5871e274d586d4098109fc4ac9c15826caa750c2532cf3a17",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/vessel_key_points_20261029/replay_console_v1.py",
+      "runtime": "experiments/vessel_key_points_20261029/replay_console_v1.py",
+      "sha256": "4d1f05a8c13ace5afc902ba63d46072580dd46a265bd2efbc5efdbf1bdf1af60",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/vessel_key_points_20261029/vessel_photo.py",
+      "runtime": "experiments/vessel_key_points_20261029/vessel_photo.py",
+      "sha256": "621c8aba39c7820ebabf88b195200e5600ef5e77477543c8b1700a1d9d1fda6f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/video_replay_20261029/start_video_board_v1.py",
+      "runtime": "experiments/video_replay_20261029/start_video_board_v1.py",
+      "sha256": "7138cb500f906e271bd0bed146adc9da2ad6371a2c04477ba1fa524ca2dc0a01",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/video_replay_20261029/start_video_board_v2.py",
+      "runtime": "experiments/video_replay_20261029/start_video_board_v2.py",
+      "sha256": "ceec3447517257c24f8e115a473e4eacc71671d6fd0ac5864301df4b58c4f655",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/video_replay_20261029/video_capture_v1.py",
+      "runtime": "experiments/video_replay_20261029/video_capture_v1.py",
+      "sha256": "3992ce1a8011fe5a844983182e8a40217f71ce4b602d8fea8918b101268c3417",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/video_replay_20261029/video_capture_v2.py",
+      "runtime": "experiments/video_replay_20261029/video_capture_v2.py",
+      "sha256": "e7e068b489c75925c2c67b2de126593bb0b55c0abd58ff0cd69669de3e536bbf",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/video_replay_20261029/video_job_server_v1.py",
+      "runtime": "experiments/video_replay_20261029/video_job_server_v1.py",
+      "sha256": "422b942a3ad2d0e7439bb17e210448f45c12ddff60f5d2a15fb9885be84bc253",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "src/ps/display/compatibility/video_replay_20261029/video_job_server_v2.py",
+      "runtime": "experiments/video_replay_20261029/video_job_server_v2.py",
+      "sha256": "302e366b3f0b6f32c66abc85a30f146a27f09eca35f328122c5a22a7e94044d7",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/compatibility/check_current.py",
+      "runtime": "handoff/check_current.py",
+      "sha256": "88f4eb958c148a900d6ae4dcf11c4ebf82c51b690a60cac4ed51f5f8ae8e4e5f",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/compatibility/open_web.ps1",
+      "runtime": "handoff/open_web.ps1",
+      "sha256": "ddff41c6c87f0a9fe3df1a84c105bb0fd439321a51cd7a69d1205b46b5a14393",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/compatibility/restore_fresh_ram.py",
+      "runtime": "handoff/restore_fresh_ram.py",
+      "sha256": "1d34571013158b1b34bc782b02b7b78cda5d547d529b958aa96da4dbcc197ba2",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/launcher/build_runtime_package.py",
+      "runtime": "launcher/build_runtime_package.py",
+      "sha256": "c882360aca27dda00faae63a1788890231ef3cdc28a933a28261a30346dabe18",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/launcher/entry.ps1",
+      "runtime": "launcher/entry.ps1",
+      "sha256": "aa6492bbeac53722188a44fa98792a2b63f41b074df2b48a6f871a0d725e8ab9",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/launcher/legacy_adapter.py",
+      "runtime": "launcher/legacy_adapter.py",
+      "sha256": "09c09d33c61ada19be3b8ea50d3232021e6aff6353fa96e0040d9f151b9a8442",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/launcher/managed_host.py",
+      "runtime": "launcher/managed_host.py",
+      "sha256": "e03568fcdd545677617bb11bd122d37d24e20f60c21d236c9455954da2aa2990",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/launcher/setup.ps1",
+      "runtime": "launcher/setup.ps1",
+      "sha256": "fcd5cc7d953c1228d7309cc9027328065eb5b9c88ba1e83494c581a6d3b610e9",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "board/deploy/launcher/startup.py",
+      "runtime": "launcher/startup.py",
+      "sha256": "7a302e2925c8d6e23e5965914368779b369e6f495d20ad832054b8e32489b759",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    },
+    {
+      "source": "sim/startup/test_startup.py",
+      "runtime": "launcher/test_startup.py",
+      "sha256": "59712bf9d863f301e20b04664ba8dbd1d7285aacb971e0734c4590b05a1a7971",
+      "role": "existing_project_source_pending_file_level_origin_review",
+      "unchanged_this_revision": true
+    }
+  ],
+  "new_design_files": [
+    {
+      "source": "src/ps/inference/adaptation/stereo_contract.py",
+      "sha256": "f823247ea6143188c2eea76791dcabd2502a5d7f1f837279f45eb01c6a6725f4",
+      "status": "offline_candidate_not_promoted"
+    },
+    {
+      "source": "build/create_model_adapter_candidate.py",
+      "sha256": "f246af51377d3c62b8428aeb97fc671b0b23c3f8815208bf7126023aeb15e9c0",
+      "status": "offline_candidate_not_promoted"
+    },
+    {
+      "source": "sim/test_model_adapter.py",
+      "sha256": "37d4da340004fd222305e53610bb5bc6ac11dcf86aa90738ac46d0a838dfe011",
+      "status": "offline_candidate_not_promoted"
+    },
+    {
+      "source": "src/host/app/adaptation/section_projection.py",
+      "sha256": "14bfffff748dd5c64b143a2b8ba81507a1d1d0211496426b7b010fcdcf0530b6",
+      "status": "offline_candidate_not_promoted"
+    },
+    {
+      "source": "build/create_section_adapter_candidate.py",
+      "sha256": "12be2157ca0c45b819662a2608dc643aecc28bc89cf2ca59ecfbeffe0c43eab4",
+      "status": "offline_candidate_not_promoted"
+    },
+    {
+      "source": "sim/test_section_adapter.py",
+      "sha256": "dbd22f9278f9f10dbd58ebd8dd0d98187993940d0176ca56e6644891db3e6a5c",
+      "status": "offline_candidate_not_promoted"
+    }
+  ],
+  "stable_source_bindings_changed": false,
+  "live_deployment_performed": false
+}

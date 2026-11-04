@@ -1,0 +1,76 @@
+{
+  "results": {
+    "baseline0": {
+      "total_seconds": 26.5807965099998,
+      "forward_seconds": 21.362643759999628,
+      "conv_device_seconds": 3.762645182000142,
+      "deconv_device_seconds": 2.978985234999982,
+      "exact13": true,
+      "stable_restored": true
+    },
+    "baseline1": {
+      "total_seconds": 26.576208863000375,
+      "forward_seconds": 21.311757551000028,
+      "conv_device_seconds": 3.762568773000112,
+      "deconv_device_seconds": 2.9792082969997864,
+      "exact13": true,
+      "stable_restored": true
+    },
+    "store20": {
+      "total_seconds": 25.74486714899831,
+      "forward_seconds": 20.488648848000594,
+      "conv_device_seconds": 2.9292578480017255,
+      "deconv_device_seconds": 2.9005692299979273,
+      "exact13": true,
+      "stable_restored": true
+    },
+    "store21": {
+      "total_seconds": 25.670487125000363,
+      "forward_seconds": 20.366237894002552,
+      "conv_device_seconds": 2.9287543920072494,
+      "deconv_device_seconds": 2.9002201269977377,
+      "exact13": true,
+      "stable_restored": true
+    }
+  },
+  "median": {
+    "total_seconds": {
+      "before": 26.578502686500087,
+      "after": 25.707677136999337,
+      "saved": 0.8708255495007506
+    },
+    "forward_seconds": {
+      "before": 21.337200655499828,
+      "after": 20.427443371001573,
+      "saved": 0.9097572844982551
+    },
+    "conv_device_seconds": {
+      "before": 3.762606977500127,
+      "after": 2.9290061200044875,
+      "saved": 0.8336008574956395
+    },
+    "deconv_device_seconds": {
+      "before": 2.979096765999884,
+      "after": 2.9003946784978325,
+      "saved": 0.07870208750205165
+    }
+  },
+  "board_input": "Same preserved photo; PC render timing not included",
+  "ps_convs_added": 0,
+  "pl2_clock_mhz": 115,
+  "pl3_unchanged": true,
+  "repeatable_gain": true,
+  "candidate_sha256": "8b74614cbcea280f18a8c26f34771a8c6a2fa7be3f74cfed5cde6d8409452ff8",
+  "baseline_sha256": "8c00ff9e1cc6dc60d15bb14c5c7b539f095410a8925392ea00cd53fe1f254955",
+  "qualification": "Candidate board checks only; promotion is separate",
+  "evidence_sha256": {
+    "baseline0_status.json": "d23b4e166c588e7988f691b8debb3794aa9e685809ed4d16e2fdbd7e4e9d1721",
+    "baseline0_exact.json": "645278756ad963cf2168cd6689a8310a0fb560090c999247dec92cb5858d8af9",
+    "baseline1_status.json": "47f131525fd8c22454b54040af6f952eaf7b4dbeb97d109a0d50091eee4f4e55",
+    "baseline1_exact.json": "645278756ad963cf2168cd6689a8310a0fb560090c999247dec92cb5858d8af9",
+    "store20_status.json": "b4b62f8ec1915dab7a5258726d67546b4d8c0ecbc1a1ba0a1cad59d8238d307d",
+    "store20_exact.json": "645278756ad963cf2168cd6689a8310a0fb560090c999247dec92cb5858d8af9",
+    "store21_status.json": "99eed8e0ae9f0eb75048f7eaf4d5475c79e51a8d7c68231c0207823225f82cd4",
+    "store21_exact.json": "645278756ad963cf2168cd6689a8310a0fb560090c999247dec92cb5858d8af9"
+  }
+}

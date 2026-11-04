@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scope": "Relocated saved-data export; no board or new hardware execution",
+  "input_sha256": "e7386d62268cdb0b3e919787c221ab9145eed104e9b5442495295f14b03444e0",
+  "coordinate_arrays_byte_exact": true,
+  "viewer_and_exports_generated": true,
+  "python": "3.12.14",
+  "imports_within_relocated_runtime": true
+}

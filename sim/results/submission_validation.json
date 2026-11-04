@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "toolchain": "2026.1",
+  "recommended_directories": [
+    "src",
+    "sim",
+    "build",
+    "board",
+    "data",
+    "skill",
+    "report"
+  ],
+  "runtime_sources": 346,
+  "native_source_records": 799,
+  "ip_file_references": 1289,
+  "hdl_logic_files_compared": 563,
+  "offline_tests": 29,
+  "exact_reference_arrays": 13,
+  "setup_in_separate_directory_passed": true,
+  "setup_in_separate_drive_passed": true,
+  "separate_drive_example": "D:/amd26_clean_copy",
+  "projects_created": 3,
+  "board_or_bitstream_modified": false,
+  "physical_new_computer_tested": false,
+  "license": "pending_user_choice",
+  "anonymous_english_final_poster": "pending",
+  "public_credentials_scan_suspect_files": [],
+  "final_project_path_audit_passed": true,
+  "source_file_counts": {
+    "pl1": 652,
+    "pl2": 557,
+    "pl3": 279
+  },
+  "report_render_pages": 41
+}

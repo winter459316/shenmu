@@ -1,0 +1,236 @@
+{
+  "root_kind": "workspace_root",
+  "purpose": "Report source evidence snapshot; not a deployment authorization manifest",
+  "files": [
+    {
+      "path": "zu4ev_stereo/HANDOFF_NEXT_CHAT.txt",
+      "sha256": "cc41659b3541f1bb1a844189037a9c6163c8d43b9fad6edaa08bfafd136c6503",
+      "bytes": 65713
+    },
+    {
+      "path": "zu4ev_stereo/AGENTS.md",
+      "sha256": "d8cbb09635fd594eb640bb3247d7db6afee08480bb6cc5af27afe353b538cead",
+      "bytes": 64122
+    },
+    {
+      "path": "zu4ev_stereo/handoff/check_current.py",
+      "sha256": "88f4eb958c148a900d6ae4dcf11c4ebf82c51b690a60cac4ed51f5f8ae8e4e5f",
+      "bytes": 4287
+    },
+    {
+      "path": "zu4ev_stereo/handoff/restore_fresh_ram.py",
+      "sha256": "1d34571013158b1b34bc782b02b7b78cda5d547d529b958aa96da4dbcc197ba2",
+      "bytes": 12293
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_benchmark.json",
+      "sha256": "dce5ec922e20c464d42befb6fd4a2e55239e22a5f931c2de07bc921c6dc475dc",
+      "bytes": 2866
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_hls_verified.json",
+      "sha256": "6d6e1a80bff2b437067adc526cad7643079137f3766781a49b1858e1995dbc1d",
+      "bytes": 2240
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/ps_conv_screening.json",
+      "sha256": "5713e023b643071215f7c8337437e9e024d11f45fd4b7ebb0de3764e953cf930",
+      "bytes": 61146
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/row_reuse_benchmark.json",
+      "sha256": "cbfbfb6786abadbc4de0fb0d31d20f221ec7823f7ed687d19296b3a2f44bea36",
+      "bytes": 885
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_implementation_verified.json",
+      "sha256": "aa2e0ad5d0838e062ec52c8368cb9a8236d25160fbd7cbbc24264a9d780f3ad8",
+      "bytes": 2845
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_feature_verified.json",
+      "sha256": "975c5777a5d0a84bf0a0453e3a7ef9224c9757a1e6c871495d98551a14585937",
+      "bytes": 2270
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/fast_compute_share.json",
+      "sha256": "21d843be9da0081702846ca7022879b1a5043399f0b62bd47822087b32eb20ee",
+      "bytes": 27855
+    },
+    {
+      "path": "zu4ev_stereo/candidates/usb_320_hdmifps/vessel_enhance.py",
+      "sha256": "9bd70ab2d5ba96a044fd5d334dbbf0d136550e2e641480735c0937272c3c280f",
+      "bytes": 1782
+    },
+    {
+      "path": "zu4ev_stereo/experiments/vessel_strength_20261024/phantom_original.png",
+      "sha256": "31196d013d0131996ba9e22c51daacd1ac4dcec030d061dd80e378c891418bfb",
+      "bytes": 13953
+    },
+    {
+      "path": "zu4ev_stereo/experiments/vessel_strength_20261024/phantom_enhanced.png",
+      "sha256": "58c5ea34353618788189d31280b237ec660d660275b275d66b47c8633d463c5d",
+      "bytes": 19195
+    },
+    {
+      "path": "zu4ev_stereo/experiments/section_fast_20261024/RESULT.txt",
+      "sha256": "1235ebacc89ba94bf277c5828e2f7f627ac739140eaa81f1197e96faa378995b",
+      "bytes": 3974
+    },
+    {
+      "path": "zu4ev_stereo/experiments/geometry_fast_20261024/result_summary.json",
+      "sha256": "0f1ce3df0a6a66ad1d53abb857ecfd30e250d17943d34be04971737731eaa3e1",
+      "bytes": 6853
+    },
+    {
+      "path": "zu4ev_stereo/candidates/usb_fast_infer2/geometry_config.json",
+      "sha256": "10a1d84fe150c78c0e544cb724f08ec51ab418433d4fbfb4c7f93b3dedf4b582",
+      "bytes": 1625
+    },
+    {
+      "path": "zu4ev_stereo/experiments/usb_camera_20261016/calibration_results/20261016_144056/report.json",
+      "sha256": "fc8e528712255e22c7ca4688b863529c2e315de8a790973a30f6ea5fe701bbe8",
+      "bytes": 46487
+    },
+    {
+      "path": "zu4ev_stereo/candidates/usb_fast_infer2/video_store.py",
+      "sha256": "d9dda28a9fef40db655f7dc6b50b2880f43fd5537542099a0d0c2b1b1bec4ba0",
+      "bytes": 4657
+    },
+    {
+      "path": "zu4ev_stereo/experiments/video_replay_20261029/feature_verified.json",
+      "sha256": "b8cec6ec33e1d96ded060cecaa658ee4a244652b3013a0255c7983dbc30d4cef",
+      "bytes": 3559
+    },
+    {
+      "path": "zu4ev_stereo/experiments/hdmi_30fps_20261024/RESULT.txt",
+      "sha256": "422b5c19e14fdbec476dcf3934f5096770c0673cc3dea731334ad3c18437fb42",
+      "bytes": 2160
+    },
+    {
+      "path": "zu4ev_stereo/experiments/preview_fps_fix_20261031/change.json",
+      "sha256": "f8ae09ee6190e4455298c14a42bbad76e47262076725feb6859189168acaab8d",
+      "bytes": 698
+    },
+    {
+      "path": "zu4ev_stereo/experiments/measure_distance_20261031/change.json",
+      "sha256": "81e5081e7af42e88aa6a2c3671769124c5b4a16b33e8864731082a29e2e9e7c5",
+      "bytes": 852
+    },
+    {
+      "path": "zu4ev_stereo/handoff/fix_worker_as_cap_20261031.json",
+      "sha256": "d2d9cdcb0f07d4c85779f490a587dea5da87e3e4556ff3e681ff32380c74f015",
+      "bytes": 5492
+    },
+    {
+      "path": "zu4ev_stereo/handoff/runtime_memory_recovery_20261031.json",
+      "sha256": "845e33e772f1a9c3c21bfbfc6b5b7b6c8b948b187a600d64b031f31b61c3849c",
+      "bytes": 2219
+    },
+    {
+      "path": "zu4ev_stereo/candidates/usb_fast_infer2/hardware_verified.json",
+      "sha256": "98aae7dea1b7a9472ae60ddc54da864767e38e0e3fa530b7aa160b2dadd27207",
+      "bytes": 37428
+    },
+    {
+      "path": "zu4ev_stereo/experiments/pl_pipeline_20261025/system/conv44_bcache_quad_board/implementation_attempts/20261028_190719/utilization.rpt",
+      "sha256": "a879f6bdb4a1fb03ec09b91424df24a4ef37466d1ebfb8c1159140b1087fe98e",
+      "bytes": 12635
+    },
+    {
+      "path": "zu4ev_stereo/experiments/pl_pipeline_20261025/system/conv44_bcache_quad_board/physical_qualified.json",
+      "sha256": "c7fb96cdbab20facd4e3143a42ecbe82f456cfc1c237de06c5ee30ae8c6af269",
+      "bytes": 31806
+    },
+    {
+      "path": "zu4ev_stereo/experiments/switch_latency_20261030/RESULT.txt",
+      "sha256": "bc5920e07f3b53fa13b6aaa48f11bc104e030b3701b75a882b066e1f8b1da8de",
+      "bytes": 687
+    },
+    {
+      "path": "zu4ev_stereo/experiments/pl_pipeline_20261025/usable_v5_quad/pl3_usable_v5_quad_manifest_20261028.json",
+      "sha256": "b76662cd4ee08df1321a74c2c561697f8d48bbadf37d6f5610740b4b52b2d947",
+      "bytes": 43492
+    },
+    {
+      "path": "zu4ev_stereo/handoff/startup_verified_20261101.json",
+      "sha256": "fa517fad3183296ac9ba3837905d980041d9b443acaee9cc52394e6bd6ebcb71",
+      "bytes": 10443
+    },
+    {
+      "path": "zu4ev_stereo/candidates/usb_320_hdmifps/usb320.bit.bin",
+      "sha256": "3d166a23a3dd3d60a2cc3a34d43b3b5dc76878edd6522f4f3de620688ac758fe",
+      "bytes": 7797692
+    },
+    {
+      "path": "zu4ev_stereo/candidates/usb_fast_infer2/fast_pl.bit.bin",
+      "sha256": "8b74614cbcea280f18a8c26f34771a8c6a2fa7be3f74cfed5cde6d8409452ff8",
+      "bytes": 7797692
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_source/mixed_conv.cpp",
+      "sha256": "9c02b1c9b749b711467cd5383cfee737ae452b4bddecc3b987521dc08b405dc8",
+      "bytes": 14283
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_source/build.tcl",
+      "sha256": "8fc09aab04802a69cf75467ecf4056f920cbb00000cc621dcf7c331d6edf41ca",
+      "bytes": 416
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_source/cosim_export.tcl",
+      "sha256": "2d9385d704d7650dfb9f05698d93a7049bf56eaf7ddbf4c4cb8050099269b6b7",
+      "bytes": 235
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_source/implement.tcl",
+      "sha256": "608278b40071186ed7f5cb7882f800731841b3337bad0280e0f8e7dd150fd712",
+      "bytes": 2711
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/store2_source/finish_review.tcl",
+      "sha256": "4bcb88808f44d67eb1bfe8b1656fc1e1abbe8e3e014d29d2e80d2fa624a0b2f5",
+      "bytes": 1852
+    },
+    {
+      "path": "zu4ev_stereo/experiments/cnn_stereo_20261018/Fast-FoundationStereo/LICENSE.txt",
+      "sha256": "31d25add799ce214240be337f584be7be1f4a6ae21a2ce04c33fdba939c8430e",
+      "bytes": 4432
+    },
+    {
+      "path": "zu4ev_stereo/experiments/conv_speed_20261030/release0_status.json",
+      "sha256": "c88b7af826444a03b7826139b7ffcc74b43cfb55dd1ffc2f6a68b2edff29b725",
+      "bytes": 8689
+    },
+    {
+      "path": "zu4ev_stereo/experiments/fast_inference2_20261022/light_board_result.json",
+      "sha256": "642c10e0a3d43245433947e8516354b9a637e7c1867d6de0f210db3f2b815035",
+      "bytes": 686
+    },
+    {
+      "path": "zu4ev_stereo/experiments/fast_inference2_20261022/light_quality.json",
+      "sha256": "88c3f8eafb84264261a11dba9d8716e912ea807bd36246f8579b3551b055557e",
+      "bytes": 3520
+    },
+    {
+      "path": "zu4ev_stereo/experiments/fast_inference2_20261022/cpu_benchmark_binding.json",
+      "sha256": "7dff6fa28c5e05922cc164514c734fed96d46a5e93a55fa12ce81804e0c740f1",
+      "bytes": 417
+    },
+    {
+      "path": "zu4ev_stereo/experiments/fast_inference2_20261022/light_board.py",
+      "sha256": "91d67605f1c001b6dbc6f0bd792209f7d24894c28e1e5ec485c0317a38c14b34",
+      "bytes": 2075
+    },
+    {
+      "path": "zu4ev_stereo/experiments/pl_pipeline_20261025/engine/window_gemm44_bcache/fp3_mac_array.sv",
+      "sha256": "4b70543ed676853ed34153a5978cc6f5276f51c71be9b4f0a6e67624e1a430d7",
+      "bytes": 3251
+    },
+    {
+      "path": "zu4ev_stereo/experiments/pl_pipeline_20261025/engine/window_gemm44_bcache/fp3_array_lane.sv",
+      "sha256": "047ba21a708c3a227438e65556816a81e821a6c2f01b7a613bfbc0975f253bf5",
+      "bytes": 4316
+    }
+  ]
+}

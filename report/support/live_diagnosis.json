@@ -1,0 +1,57 @@
+{
+  "toolchain": "2026.1",
+  "pc_identity_matches": true,
+  "local_profile_ok": true,
+  "realtime_ready": true,
+  "problems": [],
+  "endpoints": {
+    "pc": {
+      "reachable": true,
+      "status": {
+        "busy": false,
+        "error": "",
+        "stage": "idle"
+      }
+    },
+    "model": {
+      "reachable": true,
+      "status": {
+        "ready": true,
+        "version": "fast_pl3_usable_v5_quad"
+      },
+      "worker_state": "ready"
+    },
+    "camera": {
+      "reachable": true,
+      "status": {
+        "error": "",
+        "age_seconds": 0.004023131001304137
+      }
+    },
+    "hdmi": {
+      "reachable": true,
+      "status": {
+        "error": "",
+        "frames": 106347
+      }
+    },
+    "section": {
+      "reachable": true,
+      "status": {
+        "error": "",
+        "active": false,
+        "switching": false
+      }
+    },
+    "video": {
+      "reachable": true,
+      "status": {
+        "ready": true,
+        "version": "fast_pl3_usable_v5_quad",
+        "video_input_version": "video_stereo_v5_display",
+        "switch_latency_version": "overlap_v1"
+      }
+    }
+  },
+  "board_changed": false
+}

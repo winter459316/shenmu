@@ -1,0 +1,79 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date              : Fri Oct 30 20:03:49 2026
+| Host              : LAPTOP-GLT7S1ON running 64-bit major release  (build 9200)
+| Command           : report_clocks -file D:/convstore1030/clock_definitions_review.rpt
+| Design            : system_wrapper
+| Device            : xczu4ev-sfvc784
+| Speed File        : -2  
+| Temperature Grade : I
+-----------------------------------------------------------------------------------------
+
+Clock Report
+
+
+Attributes
+  P: Propagated
+  G: Generated
+  A: Auto-derived
+  R: Renamed
+  V: Virtual
+  I: Inverted
+  S: Pin phase-shifted with Latency mode
+
+Clock                                Period(ns)  Waveform(ns)   Attributes  Sources
+clk_pl_0                             10.000      {0.000 5.000}  P           {system_i/ps/inst/PS8_i/PLCLK[0]}
+system_i/compute_clock/inst/clk_in1  10.000      {0.000 5.000}  P           {system_i/compute_clock/inst/clk_in1}
+clk_out1_system_compute_clock_0      8.696       {0.000 4.348}  P,G,A       {system_i/compute_clock/inst/mmcme4_adv_inst/CLKOUT0}
+video_mmcm_clk_out1                  2.667       {0.000 1.333}  P,G,A       {system_i/video_mmcm/inst/mmcme4_adv_inst/CLKOUT0}
+hdmi_clocks_pixel_clk                13.333      {0.000 5.333}  P,G,A       {system_i/hdmi_clocks/inst/pixel_buffer/O}
+hdmi_clocks_serial_div_clk           5.333       {0.000 2.667}  P,G,A       {system_i/hdmi_clocks/inst/serial_div_buffer/O}
+
+
+====================================================
+Generated Clocks
+====================================================
+
+Generated Clock     : clk_out1_system_compute_clock_0
+Master Source       : system_i/compute_clock/inst/mmcme4_adv_inst/CLKIN1
+Master Clock        : system_i/compute_clock/inst/clk_in1
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -0.652 -1.304}
+Generated Sources   : {system_i/compute_clock/inst/mmcme4_adv_inst/CLKOUT0}
+
+Generated Clock     : video_mmcm_clk_out1
+Master Source       : system_i/video_mmcm/inst/mmcme4_adv_inst/CLKIN1
+Master Clock        : clk_pl_0
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -3.667 -7.333}
+Generated Sources   : {system_i/video_mmcm/inst/mmcme4_adv_inst/CLKOUT0}
+
+Generated Clock     : hdmi_clocks_pixel_clk
+Master Source       : system_i/hdmi_clocks/inst/pixel_buffer/I
+Master Clock        : video_mmcm_clk_out1
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 4.000 10.667}
+Generated Sources   : {system_i/hdmi_clocks/inst/pixel_buffer/O}
+
+Generated Clock     : hdmi_clocks_serial_div_clk
+Master Source       : system_i/hdmi_clocks/inst/serial_div_buffer/I
+Master Clock        : video_mmcm_clk_out1
+Divide By           : 2
+Generated Sources   : {system_i/hdmi_clocks/inst/serial_div_buffer/O}
+
+
+
+====================================================
+User Uncertainty
+====================================================
+
+
+
+====================================================
+User Jitter
+====================================================
+
+Clock                                Jitter(ns)
+system_i/compute_clock/inst/clk_in1  0.100
+

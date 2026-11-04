@@ -1,0 +1,10 @@
+{
+  "tool": "Vivado2026.1",
+  "diagnostic": "CPU stack in HAPRTelemetryDataMgr::dumpTelemetryData and HAPRDesign::prepAndTransmitTelemetryData after Bitgen Completed",
+  "workaround": "set_param debug.enable_data_collection false inside export process only",
+  "global_settings_changed": false,
+  "pl3_clean_export_elapsed_seconds": 42,
+  "pl3_export_peak_mb": 4290.086,
+  "electrical_or_algorithm_changes": false,
+  "board_qualified": false
+}
