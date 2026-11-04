@@ -132,10 +132,10 @@ if { $bCheckIPs == 1 } {
    set list_check_ips "\ 
 xilinx.com:ip:clk_wiz:6.0\
 xilinx.com:ip:proc_sys_reset:5.0\
-codex.local:stereo:fast_deconv:1.6\
+shenmu.local:stereo:fast_deconv:1.6\
 openedv.com:user:DVI_Transmitter:1.0\
-codex.local:stereo:usb_image_features:2.0\
-codex.local:stereo:mixed_conv:1.2\
+shenmu.local:stereo:usb_image_features:2.0\
+shenmu.local:stereo:mixed_conv:1.2\
 xilinx.com:ip:xlconstant:1.1\
 xilinx.com:ip:zynq_ultra_ps_e:3.2\
 xilinx.com:ip:axi_vdma:6.3\
@@ -263,7 +263,7 @@ proc create_root_design { parentCell } {
  ] $ddr
 
   # Create instance: fast_deconv, and set properties
-  set fast_deconv [ create_bd_cell -type ip -vlnv codex.local:stereo:fast_deconv:1.6 fast_deconv ]
+  set fast_deconv [ create_bd_cell -type ip -vlnv shenmu.local:stereo:fast_deconv:1.6 fast_deconv ]
   set_property -dict [ list \
    CONFIG.C_M_AXI_DDR_DATA_WIDTH {512} \
    CONFIG.C_M_AXI_RESULT_DDR_DATA_WIDTH {512} \
@@ -284,10 +284,10 @@ proc create_root_design { parentCell } {
   set hdmi_tx [ create_bd_cell -type ip -vlnv openedv.com:user:DVI_Transmitter:1.0 hdmi_tx ]
 
   # Create instance: images, and set properties
-  set images [ create_bd_cell -type ip -vlnv codex.local:stereo:usb_image_features:2.0 images ]
+  set images [ create_bd_cell -type ip -vlnv shenmu.local:stereo:usb_image_features:2.0 images ]
 
   # Create instance: mixed_conv, and set properties
-  set mixed_conv [ create_bd_cell -type ip -vlnv codex.local:stereo:mixed_conv:1.2 mixed_conv ]
+  set mixed_conv [ create_bd_cell -type ip -vlnv shenmu.local:stereo:mixed_conv:1.2 mixed_conv ]
 
   # Create instance: one, and set properties
   set one [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 one ]

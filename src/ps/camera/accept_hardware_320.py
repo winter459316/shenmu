@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parent;H=ROOT/'hdmi_v1';OLD=ROOT.parent/'usb_full/
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 for name in ('timing_100mhz.rpt','cdc.rpt','cdc_details.rpt','bus_skew_review.rpt','drc_review.rpt','key_synchronizers.txt','exceptions_review.rpt','usb_full.bit','usb_full.bit.bin'):
     assert (H/name).stat().st_mtime>(ROOT/'completion_verified.txt').stat().st_mtime,'Stale report or bitstream: '+name
-assert 'codex.local:stereo:completion_cg:1.1' in (H/'hardware_bd.tcl').read_text()
+assert re.search(r'\b[\w.]+:stereo:completion_cg:1\.1\b', (H/'hardware_bd.tcl').read_text())
 timing=(H/'timing_100mhz.rpt').read_text()
 assert 'All user specified timing constraints are met.' in timing
 assert 'There are 0 pins that are not constrained for maximum delay.' in timing

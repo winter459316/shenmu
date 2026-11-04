@@ -227,7 +227,7 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>images</spirit:instanceName>
-        <spirit:componentRef spirit:library="stereo" spirit:name="usb_image_features" spirit:vendor="codex.local" spirit:version="2.0"/>
+        <spirit:componentRef spirit:library="stereo" spirit:name="usb_image_features" spirit:vendor="shenmu.local" spirit:version="2.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_images_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -305,28 +305,28 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>filters</spirit:instanceName>
-        <spirit:componentRef spirit:library="stereo" spirit:name="preview_filters" spirit:vendor="codex.local" spirit:version="1.3"/>
+        <spirit:componentRef spirit:library="stereo" spirit:name="preview_filters" spirit:vendor="shenmu.local" spirit:version="1.3"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_filters_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>extra</spirit:instanceName>
-        <spirit:componentRef spirit:library="stereo" spirit:name="preview_extra" spirit:vendor="codex.local" spirit:version="1.2"/>
+        <spirit:componentRef spirit:library="stereo" spirit:name="preview_extra" spirit:vendor="shenmu.local" spirit:version="1.2"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_extra_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>section</spirit:instanceName>
-        <spirit:componentRef spirit:library="stereo" spirit:name="section_accel" spirit:vendor="codex.local" spirit:version="1.1"/>
+        <spirit:componentRef spirit:library="stereo" spirit:name="section_accel" spirit:vendor="shenmu.local" spirit:version="1.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_section_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>fast_geometry</spirit:instanceName>
-        <spirit:componentRef spirit:library="stereo" spirit:name="fast_geometry" spirit:vendor="codex.local" spirit:version="1.0"/>
+        <spirit:componentRef spirit:library="stereo" spirit:name="fast_geometry" spirit:vendor="shenmu.local" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_fast_geometry_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -6494,7 +6494,7 @@
   </spirit:component>
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>codex.local</spirit:vendor>
+    <spirit:vendor>shenmu.local</spirit:vendor>
     <spirit:library>Addressing/images</spirit:library>
     <spirit:name>usb_image_features</spirit:name>
     <spirit:version>2.0</spirit:version>
@@ -6574,7 +6574,7 @@
   </spirit:component>
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>codex.local</spirit:vendor>
+    <spirit:vendor>shenmu.local</spirit:vendor>
     <spirit:library>Addressing/filters</spirit:library>
     <spirit:name>preview_filters</spirit:name>
     <spirit:version>1.3</spirit:version>
@@ -6635,7 +6635,7 @@
   </spirit:component>
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>codex.local</spirit:vendor>
+    <spirit:vendor>shenmu.local</spirit:vendor>
     <spirit:library>Addressing/extra</spirit:library>
     <spirit:name>preview_extra</spirit:name>
     <spirit:version>1.2</spirit:version>
@@ -6717,7 +6717,7 @@
   </spirit:component>
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>codex.local</spirit:vendor>
+    <spirit:vendor>shenmu.local</spirit:vendor>
     <spirit:library>Addressing/section</spirit:library>
     <spirit:name>section_accel</spirit:name>
     <spirit:version>1.1</spirit:version>
@@ -6778,7 +6778,7 @@
   </spirit:component>
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>codex.local</spirit:vendor>
+    <spirit:vendor>shenmu.local</spirit:vendor>
     <spirit:library>Addressing/fast_geometry</spirit:library>
     <spirit:name>fast_geometry</spirit:name>
     <spirit:version>1.0</spirit:version>

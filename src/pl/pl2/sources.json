@@ -29,9 +29,9 @@
     }
   ],
   "custom_ips": [
-    "codex.local:stereo:fast_deconv:1.6",
-    "codex.local:stereo:mixed_conv:1.2",
-    "codex.local:stereo:usb_image_features:2.0",
+    "shenmu.local:stereo:fast_deconv:1.6",
+    "shenmu.local:stereo:mixed_conv:1.2",
+    "shenmu.local:stereo:usb_image_features:2.0",
     "openedv.com:user:DVI_Transmitter:1.0"
   ]
 }

@@ -136,15 +136,15 @@ set bCheckIPsPassed 1
 set bCheckIPs 1
 if { $bCheckIPs == 1 } {
    set list_check_ips "\ 
-codex.local:stereo:preview_extra:1.2\
-codex.local:stereo:fast_geometry:1.0\
-codex.local:stereo:preview_filters:1.3\
+shenmu.local:stereo:preview_extra:1.2\
+shenmu.local:stereo:fast_geometry:1.0\
+shenmu.local:stereo:preview_filters:1.3\
 openedv.com:user:DVI_Transmitter:1.0\
-codex.local:stereo:usb_image_features:2.0\
+shenmu.local:stereo:usb_image_features:2.0\
 xilinx.com:ip:xlconstant:1.1\
 xilinx.com:ip:zynq_ultra_ps_e:3.5\
 xilinx.com:ip:proc_sys_reset:5.0\
-codex.local:stereo:section_accel:1.1\
+shenmu.local:stereo:section_accel:1.1\
 xilinx.com:ip:axi_vdma:6.3\
 xilinx.com:ip:clk_wiz:6.0\
 xilinx.com:ip:v_axi4s_vid_out:4.0\
@@ -259,13 +259,13 @@ proc create_root_design { parentCell } {
 
 
   # Create instance: extra, and set properties
-  set extra [ create_bd_cell -type ip -vlnv codex.local:stereo:preview_extra:1.2 extra ]
+  set extra [ create_bd_cell -type ip -vlnv shenmu.local:stereo:preview_extra:1.2 extra ]
 
   # Create instance: fast_geometry, and set properties
-  set fast_geometry [ create_bd_cell -type ip -vlnv codex.local:stereo:fast_geometry:1.0 fast_geometry ]
+  set fast_geometry [ create_bd_cell -type ip -vlnv shenmu.local:stereo:fast_geometry:1.0 fast_geometry ]
 
   # Create instance: filters, and set properties
-  set filters [ create_bd_cell -type ip -vlnv codex.local:stereo:preview_filters:1.3 filters ]
+  set filters [ create_bd_cell -type ip -vlnv shenmu.local:stereo:preview_filters:1.3 filters ]
 
   # Create instance: hdmi_clocks, and set properties
   set block_name video_clock_tree
@@ -282,7 +282,7 @@ proc create_root_design { parentCell } {
   set hdmi_tx [ create_bd_cell -type ip -vlnv openedv.com:user:DVI_Transmitter:1.0 hdmi_tx ]
 
   # Create instance: images, and set properties
-  set images [ create_bd_cell -type ip -vlnv codex.local:stereo:usb_image_features:2.0 images ]
+  set images [ create_bd_cell -type ip -vlnv shenmu.local:stereo:usb_image_features:2.0 images ]
 
   # Create instance: one, and set properties
   set one [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 one ]
@@ -446,7 +446,7 @@ Port;FD4A0000;FD4AFFFF;0|FPD;DPDMA;FD4C0000;FD4CFFFF;0|FPD;DDR_XMPU5_CFG;FD05000
   set rst [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst ]
 
   # Create instance: section, and set properties
-  set section [ create_bd_cell -type ip -vlnv codex.local:stereo:section_accel:1.1 section ]
+  set section [ create_bd_cell -type ip -vlnv shenmu.local:stereo:section_accel:1.1 section ]
 
   # Create instance: video_dma, and set properties
   set video_dma [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 video_dma ]

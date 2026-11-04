@@ -2,7 +2,7 @@
   {
     "source": "src/ps/camera/accept_hardware_320.py",
     "runtime": "candidates/usb_320_hdmifps/accept_hardware_320.py",
-    "sha256": "6ef37a0878018c6c29fd325ea5c52b45a0cdb0a4899bb10a42cdfab7aa33c3b7",
+    "sha256": "adc70c276ff8779bb6cb6f948e802a3708653cb036f9cb56e156a46a231722ab",
     "before_submission_layout_sha256": "6ef37a0878018c6c29fd325ea5c52b45a0cdb0a4899bb10a42cdfab7aa33c3b7"
   },
   {

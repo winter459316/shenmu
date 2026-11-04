@@ -4,9 +4,9 @@ set work [file normalize [lindex $argv 1]]
 file mkdir $work
 set_param general.maxThreads 2
 create_project float_probe [file join $work project] -part xczu4ev-sfvc784-2-i -force
-set_property ip_repo_paths [list [file join $package src pl pl1 ip_repo codex_local_stereo_fast_geometry_1_0]] [current_project]
+set_property ip_repo_paths [list [file join $package src pl pl1 ip_repo shenmu_stereo_fast_geometry_1_0]] [current_project]
 update_ip_catalog
-create_ip -vlnv codex.local:stereo:fast_geometry:1.0 -module_name float_probe
+create_ip -vlnv shenmu.local:stereo:fast_geometry:1.0 -module_name float_probe
 generate_target all [get_ips float_probe]
 create_ip_run [get_files float_probe.xci]
 launch_runs float_probe_synth_1 -jobs 1

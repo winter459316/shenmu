@@ -227,7 +227,7 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>images</spirit:instanceName>
-        <spirit:componentRef spirit:library="stereo" spirit:name="usb_image_features" spirit:vendor="codex.local" spirit:version="2.0"/>
+        <spirit:componentRef spirit:library="stereo" spirit:name="usb_image_features" spirit:vendor="shenmu.local" spirit:version="2.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_images_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -313,7 +313,7 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>fast_deconv</spirit:instanceName>
-        <spirit:componentRef spirit:library="stereo" spirit:name="fast_deconv" spirit:vendor="codex.local" spirit:version="1.6"/>
+        <spirit:componentRef spirit:library="stereo" spirit:name="fast_deconv" spirit:vendor="shenmu.local" spirit:version="1.6"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_fast_deconv_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_M_AXI_DDR_DATA_WIDTH">512</spirit:configurableElementValue>
@@ -341,7 +341,7 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>mixed_conv</spirit:instanceName>
-        <spirit:componentRef spirit:library="stereo" spirit:name="mixed_conv" spirit:vendor="codex.local" spirit:version="1.2"/>
+        <spirit:componentRef spirit:library="stereo" spirit:name="mixed_conv" spirit:vendor="shenmu.local" spirit:version="1.2"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_mixed_conv_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -4786,7 +4786,7 @@
   </spirit:component>
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>codex.local</spirit:vendor>
+    <spirit:vendor>shenmu.local</spirit:vendor>
     <spirit:library>Addressing/images</spirit:library>
     <spirit:name>usb_image_features</spirit:name>
     <spirit:version>2.0</spirit:version>
@@ -4866,7 +4866,7 @@
   </spirit:component>
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>codex.local</spirit:vendor>
+    <spirit:vendor>shenmu.local</spirit:vendor>
     <spirit:library>Addressing/fast_deconv</spirit:library>
     <spirit:name>fast_deconv</spirit:name>
     <spirit:version>1.6</spirit:version>
@@ -4927,7 +4927,7 @@
   </spirit:component>
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>codex.local</spirit:vendor>
+    <spirit:vendor>shenmu.local</spirit:vendor>
     <spirit:library>Addressing/mixed_conv</spirit:library>
     <spirit:name>mixed_conv</spirit:name>
     <spirit:version>1.2</spirit:version>

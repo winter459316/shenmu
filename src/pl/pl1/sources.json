@@ -29,11 +29,11 @@
     }
   ],
   "custom_ips": [
-    "codex.local:stereo:fast_geometry:1.0",
-    "codex.local:stereo:preview_extra:1.2",
-    "codex.local:stereo:preview_filters:1.3",
-    "codex.local:stereo:section_accel:1.1",
-    "codex.local:stereo:usb_image_features:2.0",
+    "shenmu.local:stereo:fast_geometry:1.0",
+    "shenmu.local:stereo:preview_extra:1.2",
+    "shenmu.local:stereo:preview_filters:1.3",
+    "shenmu.local:stereo:section_accel:1.1",
+    "shenmu.local:stereo:usb_image_features:2.0",
     "openedv.com:user:DVI_Transmitter:1.0"
   ]
 }

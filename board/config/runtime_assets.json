@@ -78,7 +78,7 @@
       "sensitive": false
     },
     "candidates/usb_320_hdmifps/PRESERVED_LOWLATENCY_SHA256.json": {
-      "sha256": "36056e8e621a817617d8ec6611bf9e34fe4bf081f943c842c00871250bf45633",
+      "sha256": "6ce9a04b396920dc00b8231d293dfb385568a417debc5939a8f93b3550614b4d",
       "bytes": 19362,
       "sensitive": false
     },
@@ -378,7 +378,7 @@
       "sensitive": false
     },
     "experiments/cnn_stereo_20261018/preserved_sha256.json": {
-      "sha256": "6b81824e705c6ba532a86e08d6747ec738b01f165c1f34b9c4caf2ab4afae35b",
+      "sha256": "c392c17d38170d02d988729f70ecb7bc1a07e44a0332f4879de5e712d90d0455",
       "bytes": 76101,
       "sensitive": false
     },
