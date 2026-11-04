@@ -25,3 +25,6 @@ recordings/
 
 # Published offline installation wheels
 !/private_runtime/wheels/*.whl
+
+# Exported FPGA IP packages required by the source inventory
+!/src/pl/**/*.zip

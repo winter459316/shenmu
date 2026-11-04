@@ -8,8 +8,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 300,
-      "sha256": "2278c79a0e6e9eb8468a2a366f803c32c5a8aff2407d1cb91b6803517f962182"
+      "bytes": 383,
+      "sha256": "62fa894de1d539fee8265e9d65c8dd981619e2f0d2b04e384443b56cef73aa2c"
     },
     {
       "path": "board/bitstreams/pl1/binary_receipt.json",
